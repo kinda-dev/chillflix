@@ -1,5 +1,9 @@
+import React from 'react';
+
 const App = () => (
-    <h1>Yooooooooooo</h1>
+    <div>
+        <h1>Yooooooooooo</h1>
+    </div>
 );
 
 export default App;
