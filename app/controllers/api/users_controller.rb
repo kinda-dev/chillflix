@@ -5,11 +5,11 @@ class Api::UsersController < ApplicationController
         if @user.save
             login(@user)
             # check this render
-            # render "api/users/show"
-            render json: 'create successful'
+            render "api/users/show"
+            # render json: 'create successful'
         else
-            render json: 'can`t save'
-            # render json: @user.errors.full_messages, status: 422
+            # render json: 'can`t save'
+            render json: @user.errors.full_messages, status: 422
         end
 
     end
