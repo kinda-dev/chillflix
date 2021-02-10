@@ -2,16 +2,17 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import Root from './components/root';
-import { createStore } from "redux";
+import configureStore from './store/store';
 
-import {login, signup, logout} from '../frontend/util/session_api_util'
 document.addEventListener("DOMContentLoaded", () => {
-  const store = createStore();
+  const store = configureStore();
   const rootEl = document.getElementById("root");
 
-  window.login = login;
-  window.signup = signup;
-  window.logout = logout;
+  // TEST START
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
+  // TEST END
+
   ReactDOM.render(<Root store={store}/>, rootEl);
   // ReactDOM.render(<h1>you are here</h1>, rootEl);
 });
