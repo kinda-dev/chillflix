@@ -1,5 +1,5 @@
 {
-  "name": "streamFlix",
+  "name": "chillflix",
   "private": true,
   "dependencies": {
     "@babel/core": "^7.12.13",
