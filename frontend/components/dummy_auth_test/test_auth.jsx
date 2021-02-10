@@ -5,7 +5,7 @@ const Test = ({ currentUser, logout }) => {
     const loginOrSignupLinks = () => (
         <nav className="session-links">
             <Link to="/login">Login</Link>
-            {/* break line under here to fix */}
+            {/* break line under here to fix, this should work: &nbsp;or&nbsp; */}
                 <br/>
             <Link to="/signup">Sign Up</Link>
         </nav>
@@ -14,7 +14,7 @@ const Test = ({ currentUser, logout }) => {
     const sayHi = () => (
         <div className="welcome-user">
             <h2 className="welcome-user-email">Ciao, {currentUser.email}!</h2>
-            <button className="welcome-user-button" onClick={logout}>Log Out</button>
+            <button className="welcome-user-button" onClick={() => logout()}>Log Out</button>
         </div>
     );
 
