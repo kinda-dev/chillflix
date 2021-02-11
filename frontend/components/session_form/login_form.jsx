@@ -1,5 +1,5 @@
 import React from 'react';
-import { link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import { login } from '../../actions/session_actions'
 
@@ -49,9 +49,11 @@ class LoginForm extends React.Component {
                     <br/>
                     <input className="login-input" placeholder="Password" type="password" value={this.state.password} onChange={this.handlePassword}/>
                     <br/>
-                    {this.renderErrors}
+                    {this.renderErrors()}
                     <br/>
                     <button className="login-button">Sign In</button>
+                    <br/>
+                    <p className="sign-up-link">New to Chillflix? <Link to="/signup">Sign up now</Link>.</p>
                 </form>
             </div>
         )

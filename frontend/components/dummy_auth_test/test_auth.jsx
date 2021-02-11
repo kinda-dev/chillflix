@@ -7,7 +7,6 @@ const Test = ({ currentUser, logout }) => {
             <Link to="/login">Login</Link>
             {/* break line under here to fix, this should work: &nbsp;or&nbsp; */}
                 <br/>
-            <Link to="/signup">Sign Up</Link>
         </nav>
     );
 

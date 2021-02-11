@@ -4,7 +4,9 @@ import { Link, Route } from 'react-router-dom';
 import Test from './dummy_auth_test/test_auth_container';
 import LoginFormContainer from './session_form/login_form_container';
 
-const App = () => (
+const App = () => {
+    debugger
+ return(
     <div>
         <header>
             <Link to="/" className="header-link">
@@ -14,6 +16,7 @@ const App = () => (
         </header>
         <Route path="/login" component={LoginFormContainer} />
     </div>
-);
+ )
+};
 
 export default App;
