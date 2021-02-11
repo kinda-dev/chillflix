@@ -17,6 +17,10 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	background: black;
+	font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+	font-display: optional;
+    src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Md.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Md.woff) format('woff')
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -40,4 +44,27 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+button {
+    color: white;
+    background-color: #e50914;
+    font-weight: 400;
+	border-radius: 3px 3px 3px 3px;
+	font-size: 14.4px;
+	padding-bottom: 4px;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-top: 4px;
+	cursor: pointer;
+	text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	text-decoration-line: none;
+	text-decoration-color: white;
+	text-decoration-style: solid;
+	text-decoration-thickness: auto;
+	border: 0;
+	box-shadow: none;
+
+    
 }

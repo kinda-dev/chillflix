@@ -30,7 +30,11 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+  background: black;
+  font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-display: optional;
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Md.woff2) format("woff2"), url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Md.woff) format("woff"); }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -55,9 +59,55 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+button {
+  color: white;
+  background-color: #e50914;
+  font-weight: 400;
+  border-radius: 3px 3px 3px 3px;
+  font-size: 14.4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  cursor: pointer;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-decoration-line: none;
+  text-decoration-color: white;
+  text-decoration-style: solid;
+  text-decoration-thickness: auto;
+  border: 0;
+  box-shadow: none; }
+
 .navbar {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #d3d3d3; }
+
+.logo {
+  height: 32px;
+  width: 105.03px; }
+
+.form-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.pre-signup-form-container {
+  display: block;
+  font-weight: 400;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  text-size-adjust: 100%;
+  max-width: 950px;
+  font-size: 18px;
+  width: 288px;
+  color: white; }
 
 /*# sourceMappingURL=application.css.map */

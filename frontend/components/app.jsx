@@ -12,7 +12,7 @@ const App = () => {
     <div>
         <header className="navbar">
             <Link to="/" className="header-link">
-                <img src={window.logoImage} alt="Chillflix"/>
+                <img className="logo" src={window.logoImage} alt="Chillflix"/>
                 {/* <h1>Work In Progress</h1> */}
             </Link>
             {/* line below and logic related to fix, will be used in upper corner of navbar */}

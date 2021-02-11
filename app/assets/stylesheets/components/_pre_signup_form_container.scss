@@ -1,0 +1,23 @@
+.form-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pre-signup-form-container {
+    display: block;
+    font-weight: 400;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    text-size-adjust: 100%;
+    max-width: 950px;
+    font-size: 18px;
+    width: 288px;
+    color: white;
+}

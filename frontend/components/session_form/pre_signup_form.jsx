@@ -28,6 +28,7 @@ class PreSignupForm extends  React.Component {
 
     render() {
         return(
+            <div className="form-wrapper">
             <div className="pre-signup-form-container">
                 <h2 className="pre-signup-first-sentence">Unlimited movies, TV shows, and more.</h2>
                 <h3 className="pre-signup-second-sentence">Watch anywhere. Cancel anytime.</h3>
@@ -42,6 +43,7 @@ class PreSignupForm extends  React.Component {
                     <button className="pre-signup-button" >Get Started ></button>
                     </Link>
                 </form>
+            </div>
             </div>
         )
     }
