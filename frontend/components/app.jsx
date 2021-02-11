@@ -10,7 +10,7 @@ import { AuthRoute } from '../util/route_util';
 const App = () => {
  return(
     <div>
-        <header>
+        <header className="navbar">
             <Link to="/" className="header-link">
                 <img src={window.logoImage} alt="Chillflix"/>
                 {/* <h1>Work In Progress</h1> */}
