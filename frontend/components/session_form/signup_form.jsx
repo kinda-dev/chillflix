@@ -49,7 +49,7 @@ We hate paperwork, too.</h3>
                     <br/>
                     <input className="signup-input" placeholder="Email" type="text" value={this.state.email} onChange={this.handleEmail} />
                     <br/>
-                    <input className="signup-input" placeholder="Password" type="password" value={this.state.password} onChange={this.handlePassword}/>
+                    <input className="signup-input" placeholder="Add a password" type="password" value={this.state.password} onChange={this.handlePassword}/>
                     <br/>
                     {this.renderErrors()}
                     <br/>
