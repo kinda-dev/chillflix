@@ -1,18 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { login } from '../../actions/session_actions'
 
-class LoginForm extends React.Component {
+class SignupForm extends  React.Component {
     constructor(props) {
         super(props);
-        this.state = {
+        this.state ={
             email: '',
             password: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleEmail = this.handleEmail.bind(this);
         this.handlePassword = this.handlePassword.bind(this);
+
     }
 
     handleEmail(e) {
@@ -26,12 +26,12 @@ class LoginForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.login(user);
+        this.props.signup(user);
     }
 
     renderErrors() {
         return(
-            <ul className="login-errors">
+            <ul className="signup-errors">
                 {this.props.errors.map((error, i) => (
                     <li key={i}>{error}</li>
                 ))}
@@ -41,23 +41,23 @@ class LoginForm extends React.Component {
 
     render() {
         return(
-            <div className="login-form-container">
-                    <h2 className="sign-in-letters">Sign In</h2>
-                <form onSubmit={this.handleSubmit} className="login-form-box">
+            <div className="signup-form-container">
+                <h2 className="signup-first-sentence">Create a password to start your membership.</h2>
+                <h3 className="signup-second-sentence">Last step and you're done!
+We hate paperwork, too.</h3>
+                <form onSubmit={this.handleSubmit} className="signup-form-box">
                     <br/>
-                    <input className="login-input" placeholder="Email" type="text" value={this.state.email} onChange={this.handleEmail} />
+                    <input className="signup-input" placeholder="Email" type="text" value={this.state.email} onChange={this.handleEmail} />
                     <br/>
-                    <input className="login-input" placeholder="Password" type="password" value={this.state.password} onChange={this.handlePassword}/>
+                    <input className="signup-input" placeholder="Password" type="password" value={this.state.password} onChange={this.handlePassword}/>
                     <br/>
                     {this.renderErrors()}
                     <br/>
-                    <button className="login-button">Sign In</button>
-                    <br/>
-                    <p className="sign-up-link">New to Chillflix? <Link to="/signup">Sign up now</Link>.</p>
+                    <button className="signup-button">Complete Registration</button>
                 </form>
             </div>
         )
     }
 }
 
-export default LoginForm;
+export default SignupForm;
