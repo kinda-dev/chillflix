@@ -1,8 +1,15 @@
 .form-wrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    // position: absolute;
+    // top: 20%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    // display: block;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    max-width: 950px;
 }
 
 .pre-signup-form-container {
@@ -20,4 +27,42 @@
     font-size: 18px;
     width: 288px;
     color: white;
+}
+
+.pre-signup-first-sentence {
+    font-size: 1.75rem;
+    line-height: 1.1;
+    font-weight: 600;
+}
+
+.pre-signup-second-sentence {
+    font-size: 1.125rem;
+    line-height: 1.1;
+    margin: 1rem auto;
+    font-weight: 400;
+
+}
+
+.pre-signup-third-sentence {
+    line-height: 1.1;
+    font-size: 1.125rem;
+}
+
+.pre-signup-input {
+    height: 48px;
+    padding: 10px 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: none;
+    font-size: 16px;
+    display: block;
+    border-radius: 2px;
+    appearance: none;
+    color: black;
+    line-height: normal;
+    border: solid 1px #8c8c8c;
+}
+
+.pre-signup-button {
+    position: relative;
 }
