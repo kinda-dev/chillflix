@@ -14,7 +14,7 @@ const App = () => {
             </Link>
             <Test />
         </header>
-        <Route path="/login" component={LoginFormContainer} />
+        <Route exact path="/login" component={LoginFormContainer} />
     </div>
  )
 };

@@ -13,7 +13,7 @@ const Test = ({ currentUser, logout }) => {
     const sayHi = () => (
         <div className="welcome-user">
             <h2 className="welcome-user-email">Ciao, {currentUser.email}!</h2>
-            <button className="welcome-user-button" onClick={() => logout()}>Log Out</button>
+            <button className="logout-user-button" onClick={() => logout()}>Log Out</button>
         </div>
     );
 
