@@ -1,45 +1,60 @@
-.form-wrapper {
-    // position: absolute;
-    // top: 20%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
-    // display: block;
-    padding: 30px 0;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    width: 100%;
-    // max-width: 950px;
-}
+// .form-wrapper {
+//     // position: absolute;
+//     // top: 20%;
+//     left: 50%;
+//     // transform: translate(-50%, -50%);
+//     // display: block;
+//     padding: 30px 0;
+//     display: flex;
+//     // flex-direction: column;
+//     justify-content: center;
+//     // position: relative;
+//     width: 100%;
+//     // max-width: 950px;
+//     min-height: 950px;
+// }
+
+// .splash-outer-wrap {
+//     display: flex;
+//     // justify-content: center;
+// }
 
 .pre-signup-form-container {
-    // display: block;
-    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     // position: relative;
     text-align: center;
-    z-index: 1;
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
+    font-weight: 400;
+    // z-index: 1;
+    // padding-top: 0;
+    // padding-bottom: 0;
+    // padding-left: 0;
+    // padding-right: 0;
     text-size-adjust: 100%;
-    max-width: 950px;
+    // max-width: 950px;
     font-size: 18px;
-    width: 288px;
+    // width: 288px;
     color: white;
+    height: 640px;
+    border-bottom: 8px solid #222;
 }
 
-.pre-signup-form-box {
-    align-items: center;
+.pre-signup-form-text {
+    // position: relative;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    // align-items: stretch;
 }
+
 
 .splash-first-sentence {
+    align-items: stretch;
     font-size: 1.75rem;
     line-height: 1.1;
     font-weight: 600;
+    // position: relative;
 }
 
 .splash-second-sentence {
@@ -47,7 +62,7 @@
     line-height: 1.1;
     margin: 1rem auto;
     font-weight: 400;
-
+    
 }
 
 .splash-third-sentence {
@@ -55,10 +70,23 @@
     font-size: 1.125rem;
 }
 
+.pre-signup-form-box {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    // -webkit-box-orient: vertical;
+    // -webkit-box-direction: normal;
+    // flex-direction: column;
+    // justify-content: center;
+    flex-wrap: wrap;
+    // position: relative;
+}
+
 .pre-signup-input {
+    min-width: 450px;
     height: 48px;
     padding: 10px 10px 0;
-    width: 100%;
+    // width: 100%;
     box-sizing: border-box;
     box-shadow: none;
     font-size: 16px;
@@ -68,6 +96,7 @@
     color: black;
     line-height: normal;
     border: solid 1px #8c8c8c;
+    // position: relative;
 }
 
 .pre-signup-button {
@@ -76,6 +105,10 @@
     // align-items: center;
     padding: 0 1em;
     width: auto;
+    height: 100%;
     line-height: initial;
-    min-width: 74px;
+    width: auto;
+    min-height: 40px;
+    font-weight: 400;
+    box-sizing: border-box;
 }

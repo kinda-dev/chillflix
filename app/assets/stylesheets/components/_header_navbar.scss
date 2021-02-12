@@ -1,11 +1,37 @@
 .navbar {
 	padding-top: 20px;
 	padding-bottom: 20px;
-	padding-right: 3%;
-	padding-left: 3%;
+	// padding-right: 3%;
+	// padding-left: 3%;
 	display: flex;
     justify-content: space-between;
-	border-bottom: 1px solid #d3d3d3;
+	// border-bottom: 1px solid #d3d3d3;
 	align-items: center;
 	position: relative;
+	height: 4rem;
+	width: 100%;
+	// max-width: 1920px;
+	// margin-right: 2cm;
+}
+
+.login-button{
+	line-height: normal;
+    padding: 7px 17px;
+    font-weight: 400;
+    font-size: 1rem;
+    // float: right;
+	
+}
+
+.header-link{
+	padding-left: 3%;
+
+}
+
+.right-navbar-logged-out{
+	padding-right: 3%;
+}
+
+.logoChillflix{
+	height: 50px
 }

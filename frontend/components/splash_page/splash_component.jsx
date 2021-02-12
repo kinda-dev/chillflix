@@ -28,13 +28,18 @@ class SplashComponent extends  React.Component {
 
     render() {
         return(
-            <div>
-            <div className="form-wrapper">
+            <div className="splash-outer-wrap">
+
+            
+
                 <div className="pre-signup-form-container">
-                    <h2 className="splash-first-sentence">Unlimited movies, TV shows, and more.</h2>
-                    <h4 className="splash-second-sentence">Watch anywhere. Cancel anytime.</h4>
-                    <h4 className="splash-third-sentence">Ready to watch? Enter your email to create 
-                    or restart your membership.</h4>
+
+                    <div className="pre-signup-form-text">
+                        <h2 className="splash-first-sentence">Unlimited movies, TV shows, and more.</h2>
+                        <h4 className="splash-second-sentence">Watch anywhere. Cancel anytime.</h4>
+                        <h4 className="splash-third-sentence">Ready to watch? Enter your email to create 
+                        or restart your membership.</h4>
+                    </div>
 
                     <form onSubmit={this.handleSubmit} className="pre-signup-form-box">
                         <br/>
@@ -44,24 +49,27 @@ class SplashComponent extends  React.Component {
                         <button className="pre-signup-button" >Get Started ></button>
                         </Link>
                     </form>
+
                 </div>
+           
+
+
+                <div className="first-splash-wrapper">
+            
+                    <div className="first-splash-text">
+                        <h2 className="splash-first-sentence">Enjoy on your TV.</h2>
+                        <h3 className="splash-second-sentence">Watch on Smart TVs, Playstation, Xbox,</h3>
+                        <h4 className="splash-third-sentence">Chromecast, Apple TV, Blu-ray players, and more.</h4>
+                    </div>
+                    
+                    <div className="first-splash-img">
+                        <img className="tv" src={window.tvImage} alt="televisionImage"/>
+                    </div>
+                </div>
+
             </div>
 
-            <div className="first-splash-wrapper">
 
-                <div className="first-splash-text">
-                    <h2 className="splash-first-sentence">Enjoy on your TV.</h2>
-                    <h3 className="splash-second-sentence">Watch on Smart TVs, Playstation, Xbox,</h3>
-                    <h4 className="splash-third-sentence">Chromecast, Apple TV, Blu-ray players, and more.</h4>
-                </div>
-                
-                <div className="first-splash-img">
-                    <img className="tv" src={window.tvImage} alt="televisionImage"/>
-                </div>
-            </div>
-
-
-            </div>
         )
     }
 }

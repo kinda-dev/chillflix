@@ -1,3 +1,6 @@
+.right-navbar-logged-in{
+    padding: 3%;
+}
 .right-navbar-logged-in:hover .hover-menu  {
     // position: relative;
     display: block;
@@ -8,6 +11,7 @@
     height: 40px;
     cursor: pointer;
     border-radius: 3px 3px 3px 3px;
+    // padding-right: 3%;
 }
 
 

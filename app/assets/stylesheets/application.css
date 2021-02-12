@@ -82,46 +82,51 @@ button {
 .navbar {
   padding-top: 20px;
   padding-bottom: 20px;
-  padding-right: 3%;
-  padding-left: 3%;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #d3d3d3;
   align-items: center;
-  position: relative; }
+  position: relative;
+  height: 4rem;
+  width: 100%; }
+
+.login-button {
+  line-height: normal;
+  padding: 7px 17px;
+  font-weight: 400;
+  font-size: 1rem; }
+
+.header-link {
+  padding-left: 3%; }
+
+.right-navbar-logged-out {
+  padding-right: 3%; }
+
+.logoChillflix {
+  height: 50px; }
 
 .logo {
   height: 32px;
   width: 105.03px; }
 
-.form-wrapper {
-  padding: 30px 0;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  width: 100%; }
-
 .pre-signup-form-container {
-  font-weight: 400;
-  text-align: center;
-  z-index: 1;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  text-size-adjust: 100%;
-  max-width: 950px;
-  font-size: 18px;
-  width: 288px;
-  color: white; }
-
-.pre-signup-form-box {
-  align-items: center;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center; }
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-weight: 400;
+  text-size-adjust: 100%;
+  font-size: 18px;
+  color: white;
+  height: 640px;
+  border-bottom: 8px solid #222; }
+
+.pre-signup-form-text {
+  display: flex;
+  flex-direction: column; }
 
 .splash-first-sentence {
+  align-items: stretch;
   font-size: 1.75rem;
   line-height: 1.1;
   font-weight: 600; }
@@ -136,10 +141,16 @@ button {
   line-height: 1.1;
   font-size: 1.125rem; }
 
+.pre-signup-form-box {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+
 .pre-signup-input {
+  min-width: 450px;
   height: 48px;
   padding: 10px 10px 0;
-  width: 100%;
   box-sizing: border-box;
   box-shadow: none;
   font-size: 16px;
@@ -153,8 +164,12 @@ button {
   font-size: 1rem;
   padding: 0 1em;
   width: auto;
+  height: 100%;
   line-height: initial;
-  min-width: 74px; }
+  width: auto;
+  min-height: 40px;
+  font-weight: 400;
+  box-sizing: border-box; }
 
 .first-container {
   background-image: url("first-background.jpg");
@@ -171,12 +186,11 @@ button {
   background-color: black;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  border-bottom: 8px solid #222; }
 
-.first-splash-text {
-  display: block;
-  justify-content: center;
-  position: relative; }
+.right-navbar-logged-in {
+  padding: 3%; }
 
 .right-navbar-logged-in:hover .hover-menu {
   display: block; }
