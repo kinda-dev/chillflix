@@ -9,6 +9,7 @@ import { AuthRoute } from '../util/route_util';
 
 const App = () => {
  return(
+     <div className="first-container">
     <div>
         <header className="navbar">
             <Link to="/" className="header-link">
@@ -28,6 +29,7 @@ const App = () => {
         
             {/* <img src={window.logoURL} /> double check*/}
 
+    </div>
     </div>
  )
 };

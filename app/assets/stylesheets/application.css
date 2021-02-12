@@ -31,7 +31,7 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  background: black;
+  color: white;
   font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
   font-display: optional;
   src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Md.woff2) format("woff2"), url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Md.woff) format("woff"); }
@@ -93,8 +93,7 @@ button {
   display: flex;
   justify-content: center;
   position: relative;
-  width: 100%;
-  max-width: 950px; }
+  width: 100%; }
 
 .pre-signup-form-container {
   display: block;
@@ -111,6 +110,9 @@ button {
   font-size: 18px;
   width: 288px;
   color: white; }
+
+.pre-signup-form-box {
+  display: flex; }
 
 .pre-signup-first-sentence {
   font-size: 1.75rem;
@@ -142,6 +144,16 @@ button {
   border: solid 1px #8c8c8c; }
 
 .pre-signup-button {
-  position: relative; }
+  position: relative;
+  font-size: 1rem;
+  align-items: center;
+  padding: 0 1em;
+  width: auto;
+  line-height: initial;
+  min-width: 74px; }
+
+.first-container {
+  background-image: url("first-background.jpg");
+  background-color: black; }
 
 /*# sourceMappingURL=application.css.map */
