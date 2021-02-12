@@ -177,4 +177,10 @@ button {
   justify-content: center;
   position: relative; }
 
+.profileImg {
+  display: flex;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 3px 3px 3px 3px; }
+
 /*# sourceMappingURL=application.css.map */
