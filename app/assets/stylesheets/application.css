@@ -154,6 +154,11 @@ button {
 
 .first-container {
   background-image: url("first-background.jpg");
-  background-color: black; }
+  background-color: black;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute; }
 
 /*# sourceMappingURL=application.css.map */
