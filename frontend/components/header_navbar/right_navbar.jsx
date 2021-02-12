@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Test = ({ currentUser, logout }) => {
+const RightNavbar = ({ currentUser, logout }) => {
     const loginOrSignupLinks = () => (
         <nav className="session-links">
-            <Link to="/login"><button className="login-button">Log In</button></Link>
+            <Link to="/login"><button className="login-button">Sign In</button></Link>
             {/* break line under here to fix, this should work: &nbsp;or&nbsp; */}
                 <br/>
         </nav>
@@ -20,4 +20,4 @@ const Test = ({ currentUser, logout }) => {
     return currentUser ? sayHi() : loginOrSignupLinks();
 };
 
-export default Test;
+export default RightNavbar;

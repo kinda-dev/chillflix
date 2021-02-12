@@ -80,9 +80,14 @@ button {
   box-shadow: none; }
 
 .navbar {
+  padding-top: 20px;
+  padding-right: 3%;
+  padding-left: 3%;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #d3d3d3; }
+  border-bottom: 1px solid #d3d3d3;
+  align-items: center;
+  position: relative; }
 
 .logo {
   height: 32px;
@@ -96,9 +101,7 @@ button {
   width: 100%; }
 
 .pre-signup-form-container {
-  display: block;
   font-weight: 400;
-  position: relative;
   text-align: center;
   z-index: 1;
   padding-top: 0;
@@ -112,20 +115,23 @@ button {
   color: white; }
 
 .pre-signup-form-box {
-  display: flex; }
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
 
-.pre-signup-first-sentence {
+.splash-first-sentence {
   font-size: 1.75rem;
   line-height: 1.1;
   font-weight: 600; }
 
-.pre-signup-second-sentence {
+.splash-second-sentence {
   font-size: 1.125rem;
   line-height: 1.1;
   margin: 1rem auto;
   font-weight: 400; }
 
-.pre-signup-third-sentence {
+.splash-third-sentence {
   line-height: 1.1;
   font-size: 1.125rem; }
 
@@ -136,7 +142,6 @@ button {
   box-sizing: border-box;
   box-shadow: none;
   font-size: 16px;
-  display: block;
   border-radius: 2px;
   appearance: none;
   color: black;
@@ -144,9 +149,7 @@ button {
   border: solid 1px #8c8c8c; }
 
 .pre-signup-button {
-  position: relative;
   font-size: 1rem;
-  align-items: center;
   padding: 0 1em;
   width: auto;
   line-height: initial;
@@ -160,5 +163,18 @@ button {
   left: 0;
   right: 0;
   position: absolute; }
+
+.first-splash-wrapper {
+  padding: 30px 0;
+  display: flex;
+  background-color: black;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.first-splash-text {
+  display: block;
+  justify-content: center;
+  position: relative; }
 
 /*# sourceMappingURL=application.css.map */
