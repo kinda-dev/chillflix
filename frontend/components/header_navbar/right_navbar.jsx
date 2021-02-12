@@ -13,7 +13,9 @@ const RightNavbar = ({ currentUser, logout }) => {
     const sayHi = () => (
         <nav className="right-navbar-logged-in">
             <img className="profileImg" src={window.profileImage} alt="ProfileImg"/>
-            <button className="logout-button" onClick={() => logout()}>Log Out</button>
+            <div className="hover-menu">
+                <p className="logout-button" onClick={() => logout()}>Log Out</p>
+            </div>
         </nav>
     );
 
