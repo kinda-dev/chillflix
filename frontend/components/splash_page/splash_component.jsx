@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import RightNavbar from '../header_navbar/right_navbar_container';
 
 
 class SplashComponent extends  React.Component {
@@ -34,26 +35,36 @@ class SplashComponent extends  React.Component {
         return(
             <div className="splash-outer-wrap">
 
+                <header className="navbar">
+                    <Link to="/" className="header-link">
+                        <img className="logoChillflix" src={window.logoImage} alt="Chillflix"/>
+                    </Link>    
+                    <RightNavbar />
+                </header>
+
             
-
-                <div className="pre-signup-form-container">
-
-                    <div className="pre-signup-form-text">
-                        <h2 className="splash-first-sentence">Unlimited movies, TV shows, and more.</h2>
-                        <h4 className="splash-second-sentence">Watch anywhere. Cancel anytime.</h4>
-                        <h4 className="splash-third-sentence">Ready to watch? Enter your email to create 
-                        or restart your membership.</h4>
+                <div splash-second-wrapper>
+                    <div className="pre-signup-form-container">
+            
+                        <div className="pre-signup-form-text">
+                            <h2 className="splash-first-sentence">Unlimited movies, TV shows, and more.</h2>
+                            <h4 className="splash-second-sentence">Watch anywhere. Cancel anytime.</h4>
+                            <h4 className="splash-third-sentence">Ready to watch? Enter your email to create 
+                            or restart your membership.</h4>
+                        </div>
+            
+                        <form onSubmit={this.handleSubmit} className="pre-signup-form-box">
+                            <br/>
+                            <input className="pre-signup-input" placeholder="Email address" type="text" value={this.state.email} onChange={this.handleEmail} />
+                            <br/>
+                            <div className="pre-signup-button-container">
+                                <Link to="/signup">
+                                    <button className="pre-signup-button" >Get Started ></button>
+                                </Link>
+                            </div>
+                        </form>
+            
                     </div>
-
-                    <form onSubmit={this.handleSubmit} className="pre-signup-form-box">
-                        <br/>
-                        <input className="pre-signup-input" placeholder="Email address" type="text" value={this.state.email} onChange={this.handleEmail} />
-                        <br/>
-                        <Link to="/signup">
-                        <button className="pre-signup-button" >Get Started ></button>
-                        </Link>
-                    </form>
-
                 </div>
            
 

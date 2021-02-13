@@ -5,8 +5,6 @@ const RightNavbar = ({ currentUser, logout }) => {
     const loginLink = () => (
         <nav className="right-navbar-logged-out">
             <Link to="/login"><button className="login-button">Sign In</button></Link>
-            {/* break line under here to fix, this should work: &nbsp;or&nbsp; */}
-                <br/>
         </nav>
     );
 

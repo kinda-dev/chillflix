@@ -1,4 +1,4 @@
-.first-container {
+.splash-outer-wrap {
     background-image: image_url('first-background.jpg');
     background-color: black;
     top: 0;
@@ -8,6 +8,7 @@
     // display: flex;
     position: absolute;
     height: 100vw;
+    border-bottom: 8px solid #222;
   
 }
 
