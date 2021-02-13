@@ -43,8 +43,8 @@ class LoginForm extends React.Component {
         return(
             <div className="login-page">
 
-            <header>
-
+            <header className="login-header">
+                <h1>DUMMY</h1>
             </header>
 
             <div className="login-form-container">
@@ -57,9 +57,9 @@ class LoginForm extends React.Component {
                     <br/>
                     {this.renderErrors()}
                     <br/>
-                    <Link to="/home">
+                    {/* <Link to="/home"> */}
                         <button className="login-button">Sign In</button>
-                    </Link>
+                    {/* </Link> */}
                     <br/>
                     <p className="sign-up-link">New to Chillflix? <Link to="/signup">Sign up now</Link>.</p>
                 </form>
