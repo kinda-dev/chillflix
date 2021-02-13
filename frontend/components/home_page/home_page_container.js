@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import RightNavbar from './right_navbar';
+import HomeComponent from './home_component';
 import { logout } from '../../actions/session_actions';
 
 const mapStateToProps = ({ session, entities: { users } }) => {
@@ -15,4 +15,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(RightNavbar);
+export default connect(mapStateToProps, mapDispatchToProps)(HomeComponent);

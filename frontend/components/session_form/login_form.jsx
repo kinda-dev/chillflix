@@ -41,6 +41,12 @@ class LoginForm extends React.Component {
 
     render() {
         return(
+            <div className="login-page">
+
+            <header>
+
+            </header>
+
             <div className="login-form-container">
                     <h2 className="sign-in-letters">Sign In</h2>
                 <form onSubmit={this.handleSubmit} className="login-form-box">
@@ -51,10 +57,18 @@ class LoginForm extends React.Component {
                     <br/>
                     {this.renderErrors()}
                     <br/>
-                    <button className="login-button">Sign In</button>
+                    <Link to="/home">
+                        <button className="login-button">Sign In</button>
+                    </Link>
                     <br/>
                     <p className="sign-up-link">New to Chillflix? <Link to="/signup">Sign up now</Link>.</p>
                 </form>
+            </div>
+
+            <footer>
+
+            </footer>
+
             </div>
         )
     }

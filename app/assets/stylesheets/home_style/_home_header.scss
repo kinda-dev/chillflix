@@ -1,0 +1,61 @@
+.home-header {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	// padding-right: 3%;
+	// padding-left: 3%;
+	display: flex;
+    justify-content: space-between;
+	// border-bottom: 1px solid #d3d3d3;
+	align-items: center;
+	position: relative;
+	height: 4rem;
+	width: 100%;
+	// max-width: 1920px;
+	// margin-right: 2cm;
+}
+
+.home-header-home-link{
+	padding-left: 3%;
+
+}
+
+.home-header-logo {
+    height: 50px;
+    width: 105.03px;
+}
+
+.right-navbar-logged-in{
+    padding: 3%;
+}
+
+.profile-img {
+    display: flex;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 3px 3px 3px 3px;
+    // padding-right: 3%;
+}
+
+.right-navbar-logged-in:hover .hover-menu  {
+    // position: relative;
+    display: block;
+}
+
+.hover-menu {
+    padding-top: 30px;
+    position: absolute;
+	display: none;
+    right: 3%;
+	background-color: rgba(0, 0, 0, 0.76);
+	border: 1px solid rgba(0, 0, 0, 0.76);
+	padding: 10px;
+	width: 125px;
+	z-index: 1;
+	text-align: left;
+}
+
+.logout-button {
+    font-weight: 700;
+    cursor: pointer;
+    text-align: left;
+}

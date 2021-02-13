@@ -69,7 +69,9 @@ We hate paperwork, too.</h3>
                     <br/>
                     {this.renderErrors()}
                     <br/>
-                    <button className="signup-button">Complete Registration</button>
+                    <Link  to='/home'>
+                        <button className="signup-button">Complete Registration</button>
+                    </Link>
                 </form>
             </div>
         )
