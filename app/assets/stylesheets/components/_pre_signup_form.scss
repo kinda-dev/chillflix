@@ -37,7 +37,8 @@
     font-size: 18px;
     // width: 288px;
     color: white;
-    height: 640px;
+    width: 100%;
+    padding: 75px 0;
     border-bottom: 8px solid #222;
 }
 
@@ -50,24 +51,48 @@
 
 
 .splash-first-sentence {
-    align-items: stretch;
-    font-size: 1.75rem;
+    // align-items: stretch;
+    font-size: 3.25rem;
     line-height: 1.1;
-    font-weight: 600;
+    font-weight: bold;
+    // font-weight: 600;
+    max-width: 640px;
+    // margin: 0 auto;
     // position: relative;
+
+    //make this avaible for h1
+    // display: block;
+    // margin-block-start: 0.67em;
+    // margin-block-end: 0.67em;
+    // margin-inline-start: 0px;
+    // margin-inline-end: 0px;
+    // text-align: center;
 }
+
+
+@media screen and (max-width: 550px) {
+    .splash-first-sentence {
+        font-size: 1.75rem;
+        line-height: 1.1;
+        font-weight: bold;
+
+
+    }
+}
+
 
 .splash-second-sentence {
     font-size: 1.125rem;
     line-height: 1.1;
     margin: 1rem auto;
-    font-weight: 400;
+    font-weight: bold;
     
 }
 
 .splash-third-sentence {
     line-height: 1.1;
     font-size: 1.125rem;
+    font-weight: bold;
 }
 
 .pre-signup-form-box {
