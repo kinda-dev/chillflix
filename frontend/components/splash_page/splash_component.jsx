@@ -26,6 +26,10 @@ class SplashComponent extends  React.Component {
         // this.props.signup(user);
     }
 
+    componentDidUpdate() {
+        localStorage.setItem('email', JSON.stringify(this.state))
+    }
+
     render() {
         return(
             <div className="splash-outer-wrap">
@@ -55,13 +59,13 @@ class SplashComponent extends  React.Component {
 
 
                 <div className="first-splash-wrapper">
-            
+
                     <div className="first-splash-text">
                         <h2 className="splash-first-sentence">Enjoy on your TV.</h2>
                         <h3 className="splash-second-sentence">Watch on Smart TVs, Playstation, Xbox,</h3>
                         <h4 className="splash-third-sentence">Chromecast, Apple TV, Blu-ray players, and more.</h4>
                     </div>
-                    
+
                     <div className="first-splash-img">
                         <img className="tv" src={window.tvImage} alt="televisionImage"/>
                     </div>

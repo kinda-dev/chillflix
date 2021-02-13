@@ -12,7 +12,7 @@ const RightNavbar = ({ currentUser, logout }) => {
 
     const rightNav = () => (
         <nav className="right-navbar-logged-in">
-            <img className="profileImg" src={window.profileImage} alt="ProfileImg"/>
+            <img className="profile-img" src={window.profileImage} alt="ProfileImg"/>
             <div className="hover-menu">
                 <p className="logout-button" onClick={() => logout()}>Log Out</p>
             </div>

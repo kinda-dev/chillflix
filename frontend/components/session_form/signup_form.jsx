@@ -39,6 +39,22 @@ class SignupForm extends  React.Component {
         );
     }
 
+    componentDidMount() {
+        this.splashData = JSON.parse(localStorage.getItem('email'));
+        
+        if (localStorage.getItem('email')) {
+        this.setState({
+        email: this.splashData.email,
+        password: ''
+        })
+        } else {
+        this.setState({
+        email: '',
+        password: ''
+        })
+        }
+    } 
+
     render() {
         return(
             <div className="signup-form-container">
