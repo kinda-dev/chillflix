@@ -37,12 +37,13 @@ class SplashComponent extends  React.Component {
                 <div className="hero">
                 
                     <header className="splash-header">
-                        <Link to="/" className="splash-header-home-link">
-                            <img className="splash-header-logo" src={window.logoImage} alt="Chillflix"/>
-                        </Link>   
-                        <div className="right-navbar-logged-out">
-                            <Link to="/login"><button className="login-button">Sign In</button></Link>
-                        </div> 
+                            <div className="splash-header-wrapper">
+                            <Link to="/" className="splash-header-home-link">
+                                <img className="splash-header-logo" src={window.logoImage} alt="Chillflix"/>
+                            </Link>   
+
+                                <Link to="/login"><button className="splash-login-button">Sign In</button></Link>
+                        </div>
                     </header>
 
 
