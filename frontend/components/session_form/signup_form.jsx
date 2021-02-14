@@ -26,7 +26,7 @@ class SignupForm extends  React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.signup(user);
+        this.props.signup(user).then(() => this.props.history.push('/home'));
     }
 
     renderErrors() {
@@ -43,15 +43,15 @@ class SignupForm extends  React.Component {
         this.splashData = JSON.parse(localStorage.getItem('email'));
         
         if (localStorage.getItem('email')) {
-        this.setState({
-        email: this.splashData.email,
-        password: ''
-        })
+            this.setState({
+            email: this.splashData.email,
+            password: ''
+            })
         } else {
-        this.setState({
-        email: '',
-        password: ''
-        })
+            this.setState({
+            email: '',
+            password: ''
+            })
         }
     } 
 
@@ -68,9 +68,7 @@ class SignupForm extends  React.Component {
                     <br/>
                     {this.renderErrors()}
                     <br/>
-                    <Link  to='/home'>
                         <button className="signup-button">Complete Registration</button>
-                    </Link>
                 </form>
             </div>
         )

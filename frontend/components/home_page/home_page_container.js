@@ -10,7 +10,6 @@ const mapStateToProps = ({ session, entities: { users } }) => {
 };
 
 const mapDispatchToProps = dispatch => {
-    debugger
     return {
         logout: () => dispatch(logout())
     };
