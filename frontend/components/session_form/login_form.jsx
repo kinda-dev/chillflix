@@ -43,31 +43,44 @@ class LoginForm extends React.Component {
         return(
             <div className="login-page">
 
-            <header className="login-header">
-                <h1>DUMMY</h1>
-            </header>
+                <header className="login-header">
+                    <h1>DUMMY</h1>
+                </header>
 
-            <div className="login-form-container">
-                    <h2 className="sign-in-letters">Sign In</h2>
-                <form onSubmit={this.handleSubmit} className="login-form-box">
-                    <br/>
-                    <input className="login-input" placeholder="Email" type="text" value={this.state.email} onChange={this.handleEmail} />
-                    <br/>
-                    <input className="login-input" placeholder="Password" type="password" value={this.state.password} onChange={this.handlePassword}/>
-                    <br/>
-                    {this.renderErrors()}
-                    <br/>
-                    {/* <Link to="/home"> */}
-                        <button className="login-button">Sign In</button>
-                    {/* </Link> */}
-                    <br/>
-                    <p className="sign-up-link">New to Chillflix? <Link to="/signup">Sign up now</Link>.</p>
-                </form>
-            </div>
+                <div className="login-body">
 
-            <footer>
+                    <div className="login-form-container">
+                            <h2 className="sign-in-letters">Sign In</h2>
+                        <form onSubmit={this.handleSubmit} className="login-form-box">
+                            <br/>
+                            <div className="login-input-little-box">
+                                <input className="login-input-email" placeholder="Email" type="text" value={this.state.email} onChange={this.handleEmail} />
+                            </div>
+                            <br/>
+                            <div className="login-input-little-box">
+                                <input className="login-input-password" placeholder="Password" type="password" value={this.state.password} onChange={this.handlePassword}/>
+                            </div>
+                            <br/>
+                            {this.renderErrors()}
+                            <br/>
+                            {/* <Link to="/home"> */}
+                                <button className="login-button">Sign In</button>
+                        </form>
+                            {/* </Link> */}
+                            <br/>
+                        <div className="sing-up-link-login-form">
+                            <p className="sign-up-link">New to Chillflix? <Link to="/signup">Sign up now</Link>.</p>
+                        </div>
+                    </div>
 
-            </footer>
+                    <div className="login-footer-wrapper">   
+                        <div className="footer-divider"></div>
+                        <footer className="login-footer">
+                            <p className="footer-top">THIS IS A FOOTERONY</p>
+                        </footer>
+                    </div> 
+
+                </div>
 
             </div>
         )
