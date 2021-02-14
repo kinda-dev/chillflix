@@ -1,4 +1,12 @@
-.splash-header-wrapper {
+.signup-page{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+  
+}
+
+.signup-header-wrapper {
 	background-color: transparent;
     position: relative;
     max-width: 1920px;
@@ -13,24 +21,28 @@
 	
 }
 
-.splash-header{
+.signup-header{
 	position: relative;
     margin: 0 3.5rem;
     height: 100%;
 
 }
 
-.splash-login-button{
+.signup-login-link{
 	line-height: normal;
-    padding: 7px 17px;
-    font-weight: 400;
-    font-size: 1rem;
+    padding: 20px 17px;
     float: right;
 	border-radius: 3px;
+
+    text-decoration: none;
+    color: black;
+
+    font-weight: 700;
+    font-size: 19px;
 	
 }
 
 
-.splash-header-logo {
-	width: 134px;
+.signup-header-logo {
+	width: 180px;
 }

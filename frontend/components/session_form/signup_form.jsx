@@ -57,19 +57,34 @@ class SignupForm extends  React.Component {
 
     render() {
         return(
-            <div className="signup-form-container">
-                <h2 className="signup-first-sentence">Create a password to start your membership.</h2>
-                <h3 className="signup-second-sentence">Last step and you're done! We hate paperwork, too.</h3>
-                <form onSubmit={this.handleSubmit} className="signup-form-box">
-                    <br/>
-                    <input className="signup-input" placeholder="Email" type="text" value={this.state.email} onChange={this.handleEmail} />
-                    <br/>
-                    <input className="signup-input" placeholder="Add a password" type="password" value={this.state.password} onChange={this.handlePassword}/>
-                    <br/>
-                    {this.renderErrors()}
-                    <br/>
-                        <button className="signup-button">Complete Registration</button>
-                </form>
+            <div className="signup-page">
+
+                <header className="signup-header">
+                    <div className="signup-header-wrapper">
+                        <Link to="/" className="signup-header-home-link">
+                            <img className="signup-header-logo" src={window.logoImage} alt="Chillflix"/>
+                        </Link>  
+
+                        <Link to="/login" className="signup-login-link">Sign In</Link>
+                    </div>
+                </header>
+
+
+                <div className="signup-form-container">
+                    <h2 className="signup-first-sentence">Create a password to start your membership.</h2>
+                    <h3 className="signup-second-sentence">Last step and you're done! We hate paperwork, too.</h3>
+                    <form onSubmit={this.handleSubmit} className="signup-form-box">
+                        <br/>
+                        <input className="signup-input" placeholder="Email" type="text" value={this.state.email} onChange={this.handleEmail} />
+                        <br/>
+                        <input className="signup-input" placeholder="Add a password" type="password" value={this.state.password} onChange={this.handlePassword}/>
+                        <br/>
+                        {this.renderErrors()}
+                        <br/>
+                            <button className="signup-button">Complete Registration</button>
+                    </form>
+                </div>
+
             </div>
         )
     }

@@ -22,11 +22,8 @@ class HomeComponent extends  React.Component {
                     <nav className="right-navbar-logged-in">
                         <img className="profile-img" src={window.profileImage} alt="ProfileImg"/>
                         <div className="hover-menu">
-                            {/* <Link to="/"> */}
                                 {/* <div className="logout-button" onClick={() => dispatch(logout())}>Log Out</div> */}
                                 <div className="logout-button" onClick={() => dispatch(logout())}>Log Out</div>
-
-                            {/* </Link> */}
                         </div>
                     </nav>
                 </header>

@@ -73,7 +73,7 @@ class LoginForm extends React.Component {
                             </form>
                                 <br/>
                             <div className="sing-up-link-login-form">
-                                <p className="sign-up-new">New to Chillflix? <Link className="sign-up-link" to="/signup">Sign up now</Link>.</p>
+                                <a className="sign-up-new">New to Chillflix? <Link className="sign-up-link" to="/signup">Sign up now</Link>.</a>
                                 <p className="not-terms-of-use" >This page was made by Fabio. <a className="fabio-link" href="https://en.wikipedia.org/wiki/Fabio" target="_blank">Learn more.</a></p>
                             </div>
                         </div>
