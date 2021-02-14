@@ -13,6 +13,7 @@ class LoginForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleEmail = this.handleEmail.bind(this);
         this.handlePassword = this.handlePassword.bind(this);
+        // this.navigateToHome = this.navigateToHome.bind(this);
     }
 
     handleEmail(e) {
@@ -26,7 +27,8 @@ class LoginForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.login(user);
+        this.props.login(user).then(() => this.props.history.push('/home'));
+        // if (user) this.props.history.push('/home');
     }
 
     renderErrors() {
@@ -41,46 +43,50 @@ class LoginForm extends React.Component {
 
     render() {
         return(
+            
             <div className="login-page">
 
-                <header className="login-header">
-                    <h1>DUMMY</h1>
-                </header>
+                    <div className="login-background"></div>  
 
-                <div className="login-body">
+                    <header className="login-header">
+                         <Link to="/" className="login-header-home-link">
+                                <img className="login-header-logo" src={window.logoImage} alt="Chillflix"/>
+                        </Link>   
+                    </header>
 
-                    <div className="login-form-container">
-                            <h2 className="sign-in-letters">Sign In</h2>
-                        <form onSubmit={this.handleSubmit} className="login-form-box">
-                            <br/>
-                            <div className="login-input-little-box">
-                                <input className="login-input-email" placeholder="Email" type="text" value={this.state.email} onChange={this.handleEmail} />
+                    <div className="login-body">
+                        <div className="login-form-container">
+                                <h2 className="sign-in-letters">Sign In</h2>
+                            <form onSubmit={this.handleSubmit} className="login-form-box">
+                                <br/>
+                                <div className="login-input-little-box">
+                                    <input className="login-input-email" placeholder="Email" type="text" value={this.state.email} onChange={this.handleEmail} />
+                                </div>
+                                <br/>
+                                <div className="login-input-little-box">
+                                    <input className="login-input-password" placeholder="Password" type="password" value={this.state.password} onChange={this.handlePassword}/>
+                                </div>
+                                <br/>
+                                {this.renderErrors()}
+                                <br/>
+                                    <button className="login-button" >Sign In</button>
+                            </form>
+                                <br/>
+                            <div className="sing-up-link-login-form">
+                                <p className="sign-up-link">New to Chillflix? <Link to="/signup">Sign up now</Link>.</p>
                             </div>
-                            <br/>
-                            <div className="login-input-little-box">
-                                <input className="login-input-password" placeholder="Password" type="password" value={this.state.password} onChange={this.handlePassword}/>
-                            </div>
-                            <br/>
-                            {this.renderErrors()}
-                            <br/>
-                            {/* <Link to="/home"> */}
-                                <button className="login-button">Sign In</button>
-                        </form>
-                            {/* </Link> */}
-                            <br/>
-                        <div className="sing-up-link-login-form">
-                            <p className="sign-up-link">New to Chillflix? <Link to="/signup">Sign up now</Link>.</p>
                         </div>
+
+
                     </div>
 
                     <div className="login-footer-wrapper">   
                         <div className="footer-divider"></div>
                         <footer className="login-footer">
-                            <p className="footer-top">THIS IS A FOOTERONY</p>
+                            <p className="footer-top">MY INFO HERE</p>
                         </footer>
                     </div> 
-
-                </div>
+                   
 
             </div>
         )

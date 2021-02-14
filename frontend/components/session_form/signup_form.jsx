@@ -59,8 +59,7 @@ class SignupForm extends  React.Component {
         return(
             <div className="signup-form-container">
                 <h2 className="signup-first-sentence">Create a password to start your membership.</h2>
-                <h3 className="signup-second-sentence">Last step and you're done!
-We hate paperwork, too.</h3>
+                <h3 className="signup-second-sentence">Last step and you're done! We hate paperwork, too.</h3>
                 <form onSubmit={this.handleSubmit} className="signup-form-box">
                     <br/>
                     <input className="signup-input" placeholder="Email" type="text" value={this.state.email} onChange={this.handleEmail} />

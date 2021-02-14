@@ -1,17 +1,9 @@
-.login-page {
+.login-background {
     background-image: image_url('first-background.jpg');
     background-color: black;
-    // top: 0;
-    // bottom: 0;
-    // left: 0;
-    // right: 0;
-    // display: flex;
-    // position: absolute;
-    // height: 100vw;
-    // border-bottom: 8px solid #222;
     
     background-size: cover;
-    display: flex;
+    display: block;
     height: 100%;
     min-height: 100vh;
     overflow: hidden;
@@ -19,9 +11,12 @@
     width: 100%;
     z-index: -1;
     
-    align-items: center;
-    flex-direction: column;
 }
+
+// .login-page {
+//     align-items: center;
+//     flex-direction: column;
+// }
 
 .login-header {
     // position: absolute;
@@ -33,6 +28,18 @@
     // z-index: 2;
     
     height: 90px;
+    padding-top: 20px;
+}
+
+.login-header-home-link{
+    margin-left: 3%;
+}
+
+.login-header-logo{
+ 
+    line-height: 90px;
+    height: 45px;
+    width: 167px;
 }
 
 .login-body{
@@ -42,9 +49,9 @@
     max-width: 450px;
     padding: 0 5%;
     
-    content: "";
-    height: 91px;
-    display: block;
+    // content: "";
+    // height: 236px;
+    // display: block;
 }
 
 .login-form-container{
@@ -74,9 +81,10 @@
     font-size: 1em;
     color: #757575;
     height: 100%;
-    // position: relative;
+    position: relative;
     // z-index: 1;
-    display: block;
+    // display: block;
+    padding-bottom: 100vw;
 
 }
 
@@ -93,12 +101,13 @@
     max-width: 1000px;
     margin: 0 auto;
     padding: 30px 0;
-    width:  100%;
+    width:  90%;
 }
 
 .footer-top{
     padding: 0;
     margin: 0 0 30;
+    color: #757575;
 
 }
 
@@ -118,6 +127,8 @@
 }
 
 .login-input-email{
+    background: #333;
+    color: #fff;
     border-radius: 4px;
     /* border: 0; */
     /* color: #fff; */
@@ -128,12 +139,14 @@
     box-shadow: none;
     box-sizing: border-box;
     font-size: 16px;
-    border: solid 1px #8c8c8c;
+    border: solid 1px #333;;
 }
 
 .login-input-password{
+    background: #333;
+    color: #fff;
     border-radius: 4px;
-    /* border: 0; */
+    // border: 0;
     /* color: #fff; */
     height: 50px;
     line-height: 50px;
@@ -142,5 +155,5 @@
     box-shadow: none;
     box-sizing: border-box;
     font-size: 16px;
-    border: solid 1px #8c8c8c;
+    border: solid 1px #333;;
 }

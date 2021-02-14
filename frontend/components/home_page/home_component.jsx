@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { logout } from '../../actions/session_actions';
+// import { logout } from '../../actions/session_actions';
 
 
 
@@ -8,7 +8,7 @@ class HomeComponent extends  React.Component {
     constructor(props) {
         super(props);
     }
-
+    
     render() {
         return(
             <div className='home-outer-wrap'>
@@ -23,7 +23,9 @@ class HomeComponent extends  React.Component {
                         <img className="profile-img" src={window.profileImage} alt="ProfileImg"/>
                         <div className="hover-menu">
                             {/* <Link to="/"> */}
-                                <p className="logout-button" onClick={() => logout()}>Log Out</p>
+                                {/* <div className="logout-button" onClick={() => dispatch(logout())}>Log Out</div> */}
+                                <div className="logout-button" onClick={() => dispatch(logout())}>Log Out</div>
+
                             {/* </Link> */}
                         </div>
                     </nav>
