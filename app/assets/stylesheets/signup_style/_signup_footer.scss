@@ -1,0 +1,68 @@
+// .signup-footer-wrapper{
+//     opacity: 1;
+//     margin-top: 0;
+//     background-color: #f3f3f3;
+
+//     min-width: 190px;
+//     width: 100%;
+//     margin-top: 80px;
+//     padding-bottom: 20px;
+//     font-size: 1em;
+//     color: #757575;
+//     position: relative;
+// }
+
+.signup-footer-wrapper{
+    position: relative;
+
+    border-bottom: none;
+    // padding-bottom: 0;
+
+    padding: 70px 45px;
+
+    margin: 0 auto;
+
+    color: #757575;
+    background-color: #f3f3f3;
+    z-index: 1;
+
+    display: block;
+    
+    
+}
+
+.signup-footer-first-child{
+    margin-top: 0;
+    
+    min-width: 190px;
+    width: 100%;
+    padding-bottom: 20px;
+    font-size: 1em;
+    
+    position: relative;
+}
+
+.signup-footer-divider {
+    display: none;
+
+    height: 0;
+    width: 100%;
+    border-top: 1px solid #e5e5e5;
+}
+
+.signup-footer{
+    padding-top: 0;
+    margin: 0 auto;
+    width:  90%;
+}
+
+.signup-footer-top{
+    font-size: medium;
+    padding: 15px;
+    color: #757575;
+}
+
+.fabio-email{
+    text-decoration: none;
+    color: #0071eb;
+}

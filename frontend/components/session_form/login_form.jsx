@@ -88,7 +88,7 @@ class LoginForm extends React.Component {
                             <div className="sing-up-link-login-form">
                                 <p className="demo-user-wrap"><button onClick={this.handleDemoLogin} className="demo-user-button">Demo User</button></p>
                                 <div className="sign-up-new">New to Chillflix? <Link className="sign-up-link" to="/">Sign up now</Link>.</div>
-                                <p className="not-terms-of-use" >This page was made by Fabio. <a className="fabio-link" href="https://en.wikipedia.org/wiki/Fabio" target="_blank">Learn more.</a></p>
+                                <p className="not-terms-of-use" >This page was made by Fabio. <a className="fabio-link" href="https://github.com/kinda-dev" target="_blank">Learn more.</a></p>
                             </div>
                         </div>
                         <div className="center-pixel"></div>

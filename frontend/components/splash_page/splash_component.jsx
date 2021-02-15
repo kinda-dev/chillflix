@@ -14,7 +14,8 @@ class SplashComponent extends  React.Component {
     }
 
     handleEmail(e) {
-        this.setState({email: e.target.value})
+        this.setState({email: e.target.value});
+        this.setState({errorsplash: ''});
     }
 
 

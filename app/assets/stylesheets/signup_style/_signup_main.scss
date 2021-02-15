@@ -1,0 +1,9 @@
+.signup-outer-wrap{
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+    color: black;
+}
+
+@import "_signup_header";
+@import "_signup_sections";
