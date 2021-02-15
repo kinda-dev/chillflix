@@ -85,8 +85,8 @@ class SplashComponent extends  React.Component {
                         <div className="splash-television-first-child">
                             
                             <div className="splash-television-text-container">
-                                <h2 className="splash-first-sentence">Enjoy on your TV.</h2>
-                                <h3 className="splash-second-sentence">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</h3>
+                                <h2 className="television-first-sentence">Enjoy on your TV.</h2>
+                                <h3 className="television-second-sentence">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</h3>
                             </div>
 
                             <div className="splash-television-image-container">

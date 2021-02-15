@@ -10,14 +10,14 @@ class SignupForm extends  React.Component {
             password: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleEmail = this.handleEmail.bind(this);
+        // this.handleEmail = this.handleEmail.bind(this);
         this.handlePassword = this.handlePassword.bind(this);
 
     }
 
-    handleEmail(e) {
-        this.setState({email: e.target.value})
-    }
+    // handleEmail(e) {
+    //     this.setState({email: e.target.value})
+    // }
 
     handlePassword(e) {
         this.setState({password: e.target.value})
@@ -75,7 +75,8 @@ class SignupForm extends  React.Component {
                     <h3 className="signup-second-sentence">Last step and you're done! We hate paperwork, too.</h3>
                     <form onSubmit={this.handleSubmit} className="signup-form-box">
                         <br/>
-                        <input className="signup-input" placeholder="Email" type="text" value={this.state.email} onChange={this.handleEmail} />
+                        <div>{this.state.email}</div>
+                        {/* <input className="signup-input" placeholder="Email" type="text" value={this.state.email} onChange={this.handleEmail} /> */}
                         <br/>
                         <input className="signup-input" placeholder="Add a password" type="password" value={this.state.password} onChange={this.handlePassword}/>
                         <br/>
