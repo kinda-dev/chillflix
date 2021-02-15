@@ -98,7 +98,7 @@ class LoginForm extends React.Component {
                         <div className="-login-footer-first-child">
                             <div className="login-footer-divider"></div>
                             <footer className="login-footer">
-                                <div className="login-footer-top">MY INFO HERE</div>
+                                <div className="login-footer-top">Work in progress. Developed by Fabio: <a className="fabio-email" href="mailto:maybe.fabio.com">Mail me for information!!</a></div>
                             </footer>
                             <div className="center-pixel"></div>
                         </div>

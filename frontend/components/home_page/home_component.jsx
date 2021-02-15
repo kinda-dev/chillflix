@@ -27,7 +27,7 @@ class HomeComponent extends  React.Component {
                         </div>
                     </nav>
                 </header>
-                <h1>WASSSSUUUUUUUUUUUUPPPPP!!!</h1>
+                <h1>WORK IN PROGRESS</h1>
 
                 </div>
 
