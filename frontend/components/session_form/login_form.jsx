@@ -13,7 +13,7 @@ class LoginForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleEmail = this.handleEmail.bind(this);
         this.handlePassword = this.handlePassword.bind(this);
-        // this.navigateToHome = this.navigateToHome.bind(this);
+        this.handleDemoLogin = this.handleDemoLogin.bind(this);
     }
 
     handleEmail(e) {
@@ -31,11 +31,21 @@ class LoginForm extends React.Component {
         // if (user) this.props.history.push('/home');
     }
 
+    handleDemoLogin(e) {
+        e.preventDefault()
+        this.state = {
+            email: 'the_dude@google.com',
+            password: 'qwerty123456'
+        };
+        const user = Object.assign({}, this.state);
+        this.props.login(user).then(() => this.props.history.push('/home'));
+    }
+
     renderErrors() {
         return(
             <ul className="login-errors">
                 {this.props.errors.map((error, i) => (
-                    <li key={i}>{error}</li>
+                    <li className="login-errors" key={i}>{error}</li>
                 ))}
             </ul>
         );
@@ -44,17 +54,21 @@ class LoginForm extends React.Component {
     render() {
         return(
             
-            <div className="login-page">
+            <div className="login-outer-wrap">
 
-                    <div className="login-background"></div>  
 
-                    <header className="login-header">
+                <header className="login-header">
+                    <div className="login-header-wrapper">
                          <Link to="/" className="login-header-home-link">
                                 <img className="login-header-logo" src={window.logoImage} alt="Chillflix"/>
                         </Link>   
-                    </header>
+                    </div>
+                </header>
+
+                <div className="login-sections">
 
                     <div className="login-body">
+                        <div className="login-background"></div>  
                         <div className="login-form-container">
                                 <h2 className="sign-in-letters">Sign In</h2>
                             <form onSubmit={this.handleSubmit} className="login-form-box">
@@ -65,30 +79,32 @@ class LoginForm extends React.Component {
                                 <br/>
                                 <div className="login-input-little-box">
                                     <input className="login-input-password" placeholder="Password" type="password" value={this.state.password} onChange={this.handlePassword}/>
+                                    <div>{this.renderErrors()}</div>
                                 </div>
-                                <br/>
-                                {this.renderErrors()}
                                 <br/>
                                     <button className="login-button" >Sign In</button>
                             </form>
                                 <br/>
                             <div className="sing-up-link-login-form">
-                                <p className="demo-user-wrap"><button className="demo-user-button">Demo User</button></p>
-                                <a className="sign-up-new">New to Chillflix? <Link className="sign-up-link" to="/signup">Sign up now</Link>.</a>
+                                <p className="demo-user-wrap"><button onClick={this.handleDemoLogin} className="demo-user-button">Demo User</button></p>
+                                <div className="sign-up-new">New to Chillflix? <Link className="sign-up-link" to="/signup">Sign up now</Link>.</div>
                                 <p className="not-terms-of-use" >This page was made by Fabio. <a className="fabio-link" href="https://en.wikipedia.org/wiki/Fabio" target="_blank">Learn more.</a></p>
                             </div>
                         </div>
-
-
+                        <div className="center-pixel"></div>
                     </div>
 
                     <div className="login-footer-wrapper">   
-                        <div className="footer-divider"></div>
-                        <footer className="login-footer">
-                            <p className="footer-top">MY INFO HERE</p>
-                        </footer>
+                        <div className="-login-footer-first-child">
+                            <div className="login-footer-divider"></div>
+                            <footer className="login-footer">
+                                <div className="login-footer-top">MY INFO HERE</div>
+                            </footer>
+                            <div className="center-pixel"></div>
+                        </div>
                     </div> 
-                   
+                
+                </div>
 
             </div>
         )
