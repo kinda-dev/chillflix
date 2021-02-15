@@ -6,7 +6,8 @@ class SplashComponent extends  React.Component {
     constructor(props) {
         super(props);
         this.state ={
-            email: ''
+            email: '',
+            errorsplash: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleEmail = this.handleEmail.bind(this);
@@ -16,12 +17,14 @@ class SplashComponent extends  React.Component {
         this.setState({email: e.target.value})
     }
 
-    handlePassword(e) {
-        this.setState({password: e.target.value})
-    }
 
     handleSubmit(e) {
         e.preventDefault();
+        if (this.state.email === '') {
+            this.setState({errorsplash: 'Email is required!'})
+        } else {
+            this.props.history.push('/signup')
+        }
         // const user = Object.assign({}, this.state);
         // this.props.signup(user);
     }
@@ -65,12 +68,9 @@ class SplashComponent extends  React.Component {
                                  <div className="pre-signup-inputs-lockup">
                                     <input className="pre-signup-input" placeholder="Email address" type="text" value={this.state.email} onChange={this.handleEmail} />
                                     <br/>
-                                    {/* <div className="pre-signup-button-container"> */}
-                                        <Link to="/signup">
-                                            <button className="pre-signup-button" ><span className="pre-signup-button-text">Get Started {'>'}</span></button>
-                                        </Link>
-                                    {/* </div> */}
+                                    <button className="pre-signup-button" ><span className="pre-signup-button-text">Get Started {'>'}</span></button>
                                  </div>
+                                    <p className="splash-sign-up-error">{this.state.errorsplash}</p>
 
                              </form>
                              <div className="random-obj"></div>
