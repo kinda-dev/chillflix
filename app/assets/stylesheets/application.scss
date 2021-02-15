@@ -19,11 +19,16 @@
  // Components
  @import "components/_body";
  
+
+ // Main container
+ .body-container{
+     background-color: black;
+ }
  // Splash Page
- @import "splash_page_style/_hero";
- @import "splash_page_style/_splash_header";
- @import "splash_page_style/_pre_signup_form";
- @import "splash_page_style/splash_television_element";
+//  @import "splash_page_style/_hero";
+ @import "splash_page_style/_splash_main";
+//  @import "splash_page_style/_pre_signup_form";
+//  @import "splash_page_style/splash_television_element";
 
  // Home Page
  @import "home_style/home_header";
