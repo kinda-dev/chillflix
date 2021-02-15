@@ -93,7 +93,7 @@ class SplashComponent extends  React.Component {
                                 <div className="splash-television-animation-container">
                                     <img className="tv-img" src={window.tvImage} alt="televisionImage"/>
                                     <div className="splash-videoanimation">
-                                        <video className="splash-video" controls autoPlay muted><source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v"></source></video>
+                                        <video className="splash-video" controls autoPlay loop muted><source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v"></source></video>
                                         <div className="splash-television-animation-text"></div>
                                     </div>
                                 </div>
@@ -102,7 +102,18 @@ class SplashComponent extends  React.Component {
 
                         </div>
 
+
                     </section>
+
+                        <div className="splash-footer-wrapper">   
+                            <div className="-splash-footer-first-child">
+                                <div className="splash-footer-divider"></div>
+                                <footer className="splash-footer">
+                                    <div className="splash-footer-top">MY INFO HERE</div>
+                                </footer>
+                                <div className="center-pixel"></div>
+                            </div>
+                        </div> 
 
                 </div>   
 

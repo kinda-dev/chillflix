@@ -1,0 +1,45 @@
+.splash-footer-wrapper{
+    position: relative;
+
+    border-bottom: none;
+    padding-bottom: 0;
+
+    padding: 70px 45px;
+
+    max-width: 1000px;
+    margin: 0 auto;
+    
+}
+
+.splash-footer-first-child{
+    margin-top: 0;
+    
+    min-width: 190px;
+    width: 100%;
+    padding-bottom: 20px;
+    font-size: 1em;
+    color: #757575;
+    position: relative;
+}
+
+.splash-footer-divider {
+    display: none;
+
+    height: 0;
+    width: 100%;
+    border-top: 1px solid #e5e5e5;
+}
+
+.splash-footer{
+    padding-top: 0;
+    margin: 0 auto;
+    width:  90%;
+}
+
+.splash-footer-top{
+    // padding: 0;
+    // margin: 0 0 30;
+    // color: #757575;
+    font-size: medium;
+    padding: 15px;
+}
