@@ -17,10 +17,12 @@ class SignupForm extends  React.Component {
     }
 
     handleEmail(e) {
+        this.props.resetErrors();
         this.setState({email: e.target.value})
     }
 
     handlePassword(e) {
+        this.props.resetErrors();
         this.setState({password: e.target.value})
     }
 
@@ -61,14 +63,18 @@ class SignupForm extends  React.Component {
         this.props.resetErrors();
     }
 
-    renderErrors() {
+    renderEmailError() {
+        if (this.props.errors.includes("Email can't be blank")) {
         return(
-            <ul className="signup-errors">
-                {this.props.errors.map((error, i) => (
-                    <li key={i}>{error}</li>
-                ))}
-            </ul>
-        );
+                <div className="signup-errors">Email can't be blank</div>
+        )};
+    }
+
+    renderPasswordError() {
+        if (this.props.errors.includes("Password is too short (minimum is 6 characters)")) {
+        return(
+                <div className="signup-errors">Password is too short (minimum is 6 characters)</div>
+        )};
     }
 
     render() {
@@ -99,11 +105,12 @@ class SignupForm extends  React.Component {
                                 <br/>
                                 <div className="signup-input-little-box">
                                     <input className="signup-input-email" placeholder="Email" type="text" value={this.state.email} onChange={this.handleEmail} />
+                                    <div>{this.renderEmailError()}</div>
                                 </div>
                                 {/* <br/> */}
                                 <div className="signup-input-little-box">
                                     <input className="signup-input-password" placeholder="Add a password" type="password" value={this.state.password} onChange={this.handlePassword}/>
-                                    <div>{this.renderErrors()}</div>
+                                    <div>{this.renderPasswordError()}</div>
                                 </div>
                                 <br/>
                                     <button className="signup-button" >Complete Registration</button>
