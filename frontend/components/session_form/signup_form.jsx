@@ -40,6 +40,24 @@ class SignupForm extends  React.Component {
         this.props.login(user).then(() => this.props.history.push('/home'));
     }
 
+    
+    componentDidMount() {
+        // this.setState({errors: ""});
+        this.splashData = JSON.parse(localStorage.getItem('email'));
+        
+        if (localStorage.getItem('email')) {
+            this.setState({
+                email: this.splashData.email,
+                password: ''
+            })
+        } else {
+            this.setState({
+                email: '',
+                password: ''
+            })
+        }
+    }
+
     renderErrors() {
         return(
             <ul className="signup-errors">
@@ -49,22 +67,6 @@ class SignupForm extends  React.Component {
             </ul>
         );
     }
-
-    componentDidMount() {
-        this.splashData = JSON.parse(localStorage.getItem('email'));
-        
-        if (localStorage.getItem('email')) {
-            this.setState({
-            email: this.splashData.email,
-            password: ''
-            })
-        } else {
-            this.setState({
-            email: '',
-            password: ''
-            })
-        }
-    } 
 
     render() {
         return(

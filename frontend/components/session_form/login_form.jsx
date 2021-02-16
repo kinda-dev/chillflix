@@ -51,6 +51,10 @@ class LoginForm extends React.Component {
         );
     }
 
+    componentDidMount() {
+        this.setState({errors: ""});
+    }
+
     render() {
         return(
             
