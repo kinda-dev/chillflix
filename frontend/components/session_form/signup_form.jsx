@@ -64,9 +64,9 @@ class SignupForm extends  React.Component {
     }
 
     renderEmailError() {
-        if (this.props.errors.includes("Email can't be blank")) {
+        if (this.props.errors.includes("Email can't be blank") || this.props.errors.includes("Email has already been taken")) {
         return(
-                <div className="signup-errors">Email can't be blank</div>
+                <div className="signup-errors">{this.props.errors}</div>
         )};
     }
 
