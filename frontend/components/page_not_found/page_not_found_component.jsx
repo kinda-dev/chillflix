@@ -11,7 +11,6 @@ const PageNotFound = () => (
                     <div className="not-found-text">
                     <h1 className="error-404">404 - Not Found</h1>
                     <h2 className="not-found-sentence">Error occoured has, apologize we do.</h2>
-                    {/* <h2 className="not-found-sentence"></h2> */}
                     <Link to="/home" className="not-found-home-link">
                         <button className="not-found-button">Home You Go</button>
                     </Link>

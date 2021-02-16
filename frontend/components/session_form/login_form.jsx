@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { login } from '../../actions/session_actions'
+// import { login, resetErrors } from '../../actions/session_actions';
 
 class LoginForm extends React.Component {
     constructor(props) {
@@ -40,6 +40,14 @@ class LoginForm extends React.Component {
         const user = Object.assign({}, this.state);
         this.props.login(user).then(() => this.props.history.push('/home'));
     }
+    
+    // componentDidMount() {
+    //     this.props.resetErrors();
+    // }
+
+    componentWillUnmount() {
+        this.props.resetErrors();
+    }
 
     renderErrors() {
         return(
@@ -49,10 +57,6 @@ class LoginForm extends React.Component {
                 ))}
             </ul>
         );
-    }
-
-    componentDidMount() {
-        this.setState({errors: ""});
     }
 
     render() {

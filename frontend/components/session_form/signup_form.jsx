@@ -42,7 +42,6 @@ class SignupForm extends  React.Component {
 
     
     componentDidMount() {
-        // this.setState({errors: ""});
         this.splashData = JSON.parse(localStorage.getItem('email'));
         
         if (localStorage.getItem('email')) {
@@ -56,6 +55,10 @@ class SignupForm extends  React.Component {
                 password: ''
             })
         }
+    }
+
+    componentWillUnmount() {
+        this.props.resetErrors();
     }
 
     renderErrors() {
