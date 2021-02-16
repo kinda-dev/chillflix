@@ -8,7 +8,7 @@ class MoviesGenre < ApplicationRecord
 
     belongs_to :genre,
         foreign_key: :genre_id,
-        class_name: :
+        class_name: :Genre
 
     
 end
