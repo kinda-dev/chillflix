@@ -27,7 +27,7 @@ class SignupForm extends  React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.signup(user).then(() => this.props.history.push('/home'));
+        this.props.signup(user).then(() => this.props.history.push('/browse'));
     }
 
     handleDemoLogin(e) {
@@ -37,7 +37,7 @@ class SignupForm extends  React.Component {
             password: 'qwerty123456'
         };
         const user = Object.assign({}, this.state);
-        this.props.login(user).then(() => this.props.history.push('/home'));
+        this.props.login(user).then(() => this.props.history.push('/browse'));
     }
 
     

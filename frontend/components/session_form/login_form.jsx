@@ -27,8 +27,7 @@ class LoginForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.login(user).then(() => this.props.history.push('/home'));
-        // if (user) this.props.history.push('/home');
+        this.props.login(user).then(() => this.props.history.push('/browse'));
     }
 
     handleDemoLogin(e) {
@@ -38,7 +37,7 @@ class LoginForm extends React.Component {
             password: 'qwerty123456'
         };
         const user = Object.assign({}, this.state);
-        this.props.login(user).then(() => this.props.history.push('/home'));
+        this.props.login(user).then(() => this.props.history.push('/browse'));
     }
     
     // componentDidMount() {

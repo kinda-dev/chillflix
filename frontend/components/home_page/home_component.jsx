@@ -16,7 +16,7 @@ class HomeComponent extends  React.Component {
                 <div className="hero">
 
                 <header className="home-header">
-                    <Link to="/home" className="home-header-home-link">
+                    <Link to="/browse" className="home-header-home-link">
                         <img className="home-header-logo" src={window.logoImage} alt="Chillflix"/>
                     </Link>   
                     <nav className="right-navbar-logged-in">
