@@ -4,7 +4,10 @@ Rails.application.routes.draw do
 		resource :session, only: [:create, :destroy]
 		resources :genres, only: [:index, :show]
 		resources :movies, only: [:index, :show]
-		resources :movies_genres, only: [:index, :show]
+		resources :movies_genres, only: [:index, :show] 
+		# do
+            # resources :movies, only: [:index]
+        # end
 		resources :my_lists_lists, only: [:index, :show, :create, :destroy]
 
 
@@ -12,4 +15,3 @@ Rails.application.routes.draw do
 
 	root "static_pages#root"
 end
-#

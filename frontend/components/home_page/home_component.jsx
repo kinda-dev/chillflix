@@ -9,6 +9,23 @@ class HomeComponent extends  React.Component {
         super(props);
     }
     
+    componentDidMount() {
+        this.props.fetchAllMovies();
+    }
+
+    renderAllMovies() {
+        return(
+            <ul>
+            {this.props.movies.map((movie, i) => (
+                <li key={`movie-${i}`}>
+                     {movie.title}
+                     {/* <p>{movie.description}</p> */}
+                </li>
+            ))}
+            </ul>
+        );
+    }
+
     render() {
         return(
             <div className='home-outer-wrap'>
@@ -27,7 +44,13 @@ class HomeComponent extends  React.Component {
                         </div>
                     </nav>
                 </header>
-                <h1>WORK IN PROGRESS</h1>
+
+                <h1>
+                    <video className="splash-video" controls autoPlay loop muted><source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v"></source></video>
+
+                    {this.renderAllMovies()}
+
+                </h1>
 
                 </div>
 

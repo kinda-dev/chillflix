@@ -4,6 +4,8 @@ import ReactDOM from "react-dom";
 import Root from './components/root';
 import configureStore from './store/store';
 import { login, logout, signup } from './actions/session_actions';
+import { fetchAllMovies, fetchMovie } from './actions/movie_actions';
+
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
@@ -23,11 +25,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const rootEl = document.getElementById("root");
 
   // TEST START
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
-  window.login = login;
-  window.logout = logout;
-  window.signup = signup;
+    window.getState = store.getState;
+    window.dispatch = store.dispatch;
+  // window.login = login;
+  // window.logout = logout;
+  // window.signup = signup;
+    window.fetchAllMovies = fetchAllMovies;
+    window.fetchMovie = fetchMovie;
   // TEST END
 
   ReactDOM.render(<Root store={store}/>, rootEl);
