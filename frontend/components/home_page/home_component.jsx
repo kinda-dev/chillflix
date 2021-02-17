@@ -30,28 +30,37 @@ class HomeComponent extends  React.Component {
         return(
             <div className='home-outer-wrap'>
 
-                <div className="hero">
 
-                <header className="home-header">
-                    <Link to="/browse" className="home-header-home-link">
-                        <img className="home-header-logo" src={window.logoImage} alt="Chillflix"/>
-                    </Link>   
-                    <nav className="right-navbar-logged-in">
-                        <img className="profile-img" src={window.profileImage} alt="ProfileImg"/>
-                        <div className="hover-menu">
-                                {/* <div className="logout-button" onClick={() => dispatch(logout())}>Log Out</div> */}
-                                <div className="logout-button" onClick={() => dispatch(logout())}>Log Out</div>
-                        </div>
-                    </nav>
-                </header>
+                <div className="home-navbar">
+                    <div className="home-navbar-contents">
 
-                <h1>
-                    <video className="splash-video" controls autoPlay loop muted><source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v"></source></video>
+                        <nav className="home-header-left-nav">
+                            <Link to="/browse" className="home-header-home-link">
+                                <img className="home-header-logo" src={window.logoImage} alt="Chillflix"/>
+                            </Link>  
+                            <div className="my-list">My List</div>
+                        </nav>
 
-                    {this.renderAllMovies()}
+                        <nav className="home-header-right-nav">
 
-                </h1>
+                            <div className="search-menu-wrapper">
+                                <i className="fas fa-search">O</i>
+                                <input type="text" className="search-box"/>
+                            </div>
 
+                            <nav className="home-profile-menu-wrapper">
+                                <div className="profile-img-wrap">
+                                    <img className="profile-img" src={window.profileImage} alt="ProfileImg"/>
+                                    <div className="fas fa-sort-down">^</div>
+                                </div>
+                                <div className="hover-profile-menu">
+                                    <div className="logout-button" onClick={() => dispatch(logout())}>Log Out</div>
+                                </div>
+                            </nav>
+
+                        </nav>
+
+                    </div>
                 </div>
 
             </div>

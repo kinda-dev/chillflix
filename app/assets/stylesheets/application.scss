@@ -13,29 +13,28 @@
  *= require_self
  */
 
- // CSS Reset
- @import "base/reset";
+// CSS Reset
+@import "base/reset";
 
- // Components
- @import "components/_body";
- 
+// Components
+@import "components/_body";
 
- // Main container
- .body-container{
-     background-color: black;
- }
- // Splash Page
+// Main container
+.body-container {
+  background-color: black;
+}
+// Splash Page
 
-    @import "splash_page_style/_splash_main";
+@import "splash_page_style/_splash_main";
 
- // Home Page
- @import "home_style/home_header";
+// Home Page
+@import "home_style/_home_main";
 
- // Login Page
- @import "login_style/_login_main";
+// Login Page
+@import "login_style/_login_main";
 
- // Signup Page
- @import "signup_style/_signup_main";
+// Signup Page
+@import "signup_style/_signup_main";
 
- // Not-found Page
- @import "components/error_404"
+// Not-found Page
+@import "components/error_404";

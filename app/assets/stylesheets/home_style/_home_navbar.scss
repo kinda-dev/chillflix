@@ -1,0 +1,141 @@
+.home-navbar {
+  height: 70px;
+  position: fixed;
+  top: 0;
+  color: white;
+  background-color: black;
+  width: 100vw;
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-between;
+}
+
+.home-navbar-contents {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 55px;
+  // align-items: center;
+  // height: 100%;
+  min-height: 70px;
+}
+
+.home-header-left-nav {
+  display: flex;
+  // justify-content: space-between;
+  align-items: center;
+}
+
+.home-header-home-link {
+  display: flex;
+}
+
+.home-header-logo {
+  margin-right: 25px;
+
+  height: 30px;
+}
+
+// .my-list {
+// }
+
+.home-header-right-nav {
+  display: flex;
+  align-items: center;
+}
+
+// .search-menu-wrapper {
+// }
+
+.fas fa-search {
+  color: white;
+}
+
+.search-box {
+  display: none;
+}
+
+// .home-profile-menu-wrapper {
+// }
+
+.profile-img-wrap {
+  margin-left: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.profile-img {
+  height: 32px;
+  width: 32px;
+  border-radius: 4px;
+}
+
+.hover-profile-menu {
+  display: none;
+}
+
+// .home-navbar-dropdown-arrow {
+// }
+
+// .logout-button {
+// }
+
+// .home-header {
+//   padding-top: 20px;
+//   padding-bottom: 20px;
+//   // padding-right: 3%;
+//   // padding-left: 3%;
+//   display: flex;
+//   justify-content: space-between;
+//   // border-bottom: 1px solid #d3d3d3;
+//   align-items: center;
+//   position: relative;
+//   height: 4rem;
+//   width: 100%;
+//   // max-width: 1920px;
+//   // margin-right: 2cm;
+// }
+
+// .home-header-home-link {
+//   padding-left: 3%;
+// }
+
+// .home-header-logo {
+//   height: 50px;
+//   width: 105.03px;
+// }
+
+// .home-profile-menu-wrapper {
+//   padding: 3%;
+// }
+
+// .profile-img {
+//   display: flex;
+//   height: 40px;
+//   cursor: pointer;
+//   border-radius: 3px 3px 3px 3px;
+//   // padding-right: 3%;
+// }
+
+// .home-profile-menu-wrapper:hover .hover-menu {
+//   // position: relative;
+//   display: block;
+// }
+
+// .hover-profile-menu {
+//   padding-top: 30px;
+//   position: absolute;
+//   display: none;
+//   right: 3%;
+//   background-color: rgba(0, 0, 0, 0.76);
+//   border: 1px solid rgba(0, 0, 0, 0.76);
+//   padding: 10px;
+//   width: 125px;
+//   z-index: 1;
+//   text-align: left;
+// }
+
+// .logout-button {
+//   font-weight: 700;
+//   cursor: pointer;
+//   text-align: left;
+// }
