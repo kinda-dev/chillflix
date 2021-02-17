@@ -26,10 +26,15 @@ class HomeComponent extends  React.Component {
         );
     }
 
+
+
+
     render() {
+
         return(
             <div className='home-outer-wrap'>
-
+                
+                
 
                 <div className="home-navbar">
                     <div className="home-navbar-contents">
@@ -44,24 +49,29 @@ class HomeComponent extends  React.Component {
                         <nav className="home-header-right-nav">
 
                             <div className="search-menu-wrapper">
-                                <i className="fas fa-search">O</i>
+                                <i className="icon-search">O</i>
                                 <input type="text" className="search-box"/>
                             </div>
 
                             <nav className="home-profile-menu-wrapper">
                                 <div className="profile-img-wrap">
                                     <img className="profile-img" src={window.profileImage} alt="ProfileImg"/>
-                                    <div className="fas fa-sort-down">^</div>
+                                    <div className="profile-menu-arrow-down">^</div>
                                 </div>
                                 <div className="hover-profile-menu">
-                                    <div className="logout-button" onClick={() => dispatch(logout())}>Log Out</div>
+                                    <div className="profile-menu-arrow-up">^</div>
+                                    <div className="home-nav-little-menu-wrap">
+                                        <div className="logout-button" onClick={() => dispatch(this.props.logout())}>Log Out</div>
+                                    </div>
                                 </div>
                             </nav>
 
-                        </nav>
 
+                        </nav>
                     </div>
                 </div>
+
+                {/* <div className="dummy">SOMETHING HERE</div> */}
 
             </div>
         )
