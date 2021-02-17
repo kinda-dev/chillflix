@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 
@@ -26,37 +26,58 @@ class HomeComponent extends  React.Component {
         );
     }
 
-
-
-
+    // makeNavbarFading() {
+    // const [show, handleShow] = useState(false);
+ 
+    //  const fadingNavBar = () => {
+    //      if (window.scrollY > 100) {
+    //          handleShow(true);
+    //      } else {
+    //          handleShow(false)
+    //      }
+    //  }
+ 
+    //  useEffect(() => {
+    //      window.addEventListener('scroll', fadingNavBar);
+    //      return () => {
+    //          window.removeEventListener('scroll', fadingNavBar)
+    //      }
+    //  }, [])
+    // }
+    
+    
     render() {
-
+        
+        
+        
         return(
+            
+            
+
             <div className='home-outer-wrap'>
                 
-                
+                {/* {this.makeNavbarFading()} */}
 
-                <div className="home-navbar">
+                <div className="home-navbar nav-black">
                     <div className="home-navbar-contents">
 
-                        <nav className="home-header-left-nav">
+                        {/* <nav className="home-header-left-nav"> */}
                             <Link to="/browse" className="home-header-home-link">
                                 <img className="home-header-logo" src={window.logoImage} alt="Chillflix"/>
                             </Link>  
-                            <div className="my-list">My List</div>
-                        </nav>
+                            {/* <div className="my-list">My List</div> */}
+                        {/* </nav> */}
 
-                        <nav className="home-header-right-nav">
+                        {/* <nav className="home-header-right-nav"> */}
 
-                            <div className="search-menu-wrapper">
+                            {/* <div className="search-menu-wrapper">
                                 <i className="icon-search">O</i>
                                 <input type="text" className="search-box"/>
-                            </div>
+                            </div> */}
 
                             <nav className="home-profile-menu-wrapper">
                                 <div className="profile-img-wrap">
                                     <img className="profile-img" src={window.profileImage} alt="ProfileImg"/>
-                                    <div className="profile-menu-arrow-down">^</div>
                                 </div>
                                 <div className="hover-profile-menu">
                                     <div className="profile-menu-arrow-up">^</div>
@@ -67,9 +88,84 @@ class HomeComponent extends  React.Component {
                             </nav>
 
 
-                        </nav>
+                        {/* </nav> */}
                     </div>
                 </div>
+
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+
 
                 {/* <div className="dummy">SOMETHING HERE</div> */}
 
