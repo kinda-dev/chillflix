@@ -8,8 +8,10 @@
 .home-header-contents {
   margin-left: 50px;
   padding-top: 140px;
-  max-width: 400px;
+  max-width: 640px;
   // background-color: violet;
+  // min-height: 400px;
+  height: 370px;
 }
 
 .home-header-movie-title {
@@ -45,6 +47,7 @@
 .home-header-play-button-hover:hover .home-header-play-button {
   background-color: rgba(255, 255, 255, 0.582);
   // border-radius: 3px;
+  transition: all 0.2s;
 }
 
 .add-to-list-button {
@@ -64,6 +67,7 @@
 .add-to-list-button-hover:hover .add-to-list-button {
   background-color: rgba(71, 71, 71, 0.453);
   border-radius: 50%;
+  transition: all 0.2s;
 }
 
 .home-header-movie-rating-wrap {
@@ -71,7 +75,7 @@
   float: right;
   border-left: solid white;
   background-color: rgba(0, 0, 0, 0.63);
-  width: 100px;
+  width: 130px;
   height: 30px;
   text-align: left;
   font-weight: 300;

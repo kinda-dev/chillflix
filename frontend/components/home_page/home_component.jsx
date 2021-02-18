@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import MovieComponent from './movie_component';
+import HeaderComponent from './header_component';
 
 
 
@@ -15,6 +17,7 @@ class HomeComponent extends  React.Component {
     }
     
     componentDidMount() {
+        //condition logic for hitting db
         this.props.fetchAllMovies();
         document.addEventListener('scroll', this.makeNavbarFading);
 
@@ -25,16 +28,32 @@ class HomeComponent extends  React.Component {
     }
 
     renderAllMovies() {
-        debugger
+        // return(
+        //     <ul>
+        //     {this.props.movies.map((movie, i) => (
+        //         <li key={`movie-${i}`}>
+        //              {movie.title}
+        //         </li>
+        //     ))}
+        //     </ul>
+        // );
+
         return(
-            <ul>
+            <ul className="all-movies-row">
             {this.props.movies.map((movie, i) => (
                 <li key={`movie-${i}`}>
-                     {movie.title}
+                     <MovieComponent movie={movie}/>
                 </li>
             ))}
             </ul>
         );
+
+    }
+
+    renderHeaderMovie() {
+        return(
+            <HeaderComponent movie = {this.props.movies[0]} />
+        )
     }
 
 
@@ -50,12 +69,15 @@ class HomeComponent extends  React.Component {
     
     
     render() {
+        
+        if (this.props.movies.length === 0) return null;
 
         return(
             
             
 
-            <div className='home-outer-wrap' onScroll={this.makeNavbarFading}>
+            <div className='home-outer-wrap' >
+
                 
                 <div className={`home-navbar ${this.state.navbarBackground}`}>
 
@@ -84,7 +106,7 @@ class HomeComponent extends  React.Component {
                                     
                                     <div className="profile-menu-arrow-up"><i className="fas fa-caret-up"></i></div>
                                     <div className="home-nav-little-menu-wrap">
-                                        <div className="logout-button" onClick={() => dispatch(this.props.logout())}>Log Out</div>
+                                        <div className="logout-button" onClick={() => this.props.logout()}>Log Out</div>
                                     </div>
                                 </div>
                             </nav>
@@ -95,26 +117,12 @@ class HomeComponent extends  React.Component {
                 </div>
 
 
-                <header className="home-header"
-                    style={{
-                        backgroundImage: `url("https://wallpaperaccess.com/full/38539.jpg")`,
-                        backgroundPosition: "center center",
-                        backgroundSize: "cover",
-                    }}
-                >
-                    <div className="home-header-contents">
-                        <h1 className="home-header-movie-title">Back to the future</h1>
-                        <h2 className="home-header-movie-description">Are you chicken Mc Flyy?</h2>
-                        <div className="home-header-buttons">
-                            <div className="home-header-play-button-hover"><button className="home-header-play-button">Play</button></div>
-                            <div className="add-to-list-button-hover"><button className="add-to-list-button">+</button></div>
-                        </div>
-                    </div> 
-                        <div className="home-header-movie-rating-wrap"><div className="home-header-movie-rating">PG-13</div></div>
-                </header>           
+                <div>{this.renderHeaderMovie()}</div>
 
                 
-
+                <div className="all-movies">
+                    {this.renderAllMovies()}
+                </div>
 
 
 

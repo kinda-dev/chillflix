@@ -16,6 +16,12 @@
   background-color: transparent;
 }
 
+// html:not([data-scroll="0"]) {
+//   .nav-transparent {
+//     background-color: rgb(20, 20, 20);
+//   }
+// }
+
 .nav-black {
   background-color: rgb(20, 20, 20);
 }
@@ -199,6 +205,7 @@
 .home-profile-menu-wrapper:hover .hover-profile-menu {
   position: relative;
   display: block;
+  transition: all 0.4s;
 }
 
 // .hover-profile-menu {
