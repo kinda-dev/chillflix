@@ -10,7 +10,8 @@ import PageNotFound from './page_not_found/page_not_found_component';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => {
- return(
+    
+    return(
      <div className="body-container">
                 <Switch>
                     <AuthRoute exact path="/" component={SplashComponent} />

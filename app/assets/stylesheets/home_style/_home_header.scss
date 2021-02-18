@@ -1,0 +1,81 @@
+.home-header {
+  height: 655px;
+  position: relative;
+  object-fit: contain;
+  color: white;
+}
+
+.home-header-contents {
+  margin-left: 50px;
+  padding-top: 140px;
+  max-width: 400px;
+  // background-color: violet;
+}
+
+.home-header-movie-title {
+  font-weight: bolder;
+  font-size: 70px;
+}
+
+.home-header-movie-description {
+  font-weight: 400;
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.home-header-buttons {
+  display: flex;
+}
+
+.home-header-play-button {
+  height: 40px;
+  width: 120px;
+  background-color: white;
+  color: black;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.home-header-play-button-hover {
+  margin-right: 20px;
+}
+
+.home-header-play-button-hover:hover .home-header-play-button {
+  background-color: rgba(255, 255, 255, 0.582);
+  // border-radius: 3px;
+}
+
+.add-to-list-button {
+  height: 40px;
+  width: 40px;
+  color: white;
+  background-color: rgba(71, 71, 71, 0.753);
+  border: solid rgba(71, 71, 71, 0.753);
+  border-radius: 50%;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+.add-to-list-button-hover:hover .add-to-list-button {
+  background-color: rgba(71, 71, 71, 0.453);
+  border-radius: 50%;
+}
+
+.home-header-movie-rating-wrap {
+  right: 0;
+  float: right;
+  border-left: solid white;
+  background-color: rgba(0, 0, 0, 0.63);
+  width: 100px;
+  height: 30px;
+  text-align: left;
+  font-weight: 300;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+}

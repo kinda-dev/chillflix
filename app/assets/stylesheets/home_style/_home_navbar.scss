@@ -7,15 +7,18 @@
   z-index: 100;
 
   transition-timing-function: ease-in;
-  transition: all 0.5s;
+  transition: all 1s;
 
-  background-color: rgb(20, 20, 20);
   height: 28px;
 }
 
-// .nav-black {
-//   background-color: black;
-// }
+.nav-transparent {
+  background-color: transparent;
+}
+
+.nav-black {
+  background-color: rgb(20, 20, 20);
+}
 
 .home-navbar-contents {
   display: flex;
@@ -193,46 +196,51 @@
 // //   // padding-right: 3%;
 // // }
 
-// .home-profile-menu-wrapper:hover .hover-profile-menu {
-//   position: relative;
-//   display: block;
-// }
+.home-profile-menu-wrapper:hover .hover-profile-menu {
+  position: relative;
+  display: block;
+}
 
 // .hover-profile-menu {
 //   display: none;
 // }
 
-// .profile-menu-arrow-up {
-//   background-color: rgba(0, 0, 0, 0);
-//   // text-align: right;
-//   align-items: center;
-//   right: 50px;
-//   padding-top: 5px;
-//   // margin-bottom: 2px;
-//   // top: 100px;
-//   //for testing
-//   color: rgb(58, 204, 21);
-//   // margin-top: 5px;
-//   font-weight: bold;
-// }
+.profile-menu-arrow-up {
+  background-color: rgba(0, 0, 0, 0);
+  // text-align: right;
+  align-items: center;
+  // right: 50px;
+  // padding-top: 0px;
+  // margin-bottom: 2px;
+  // top: 100px;
+  //for testing
+  color: white;
+  // margin-top: -5px;
+  font-weight: bold;
+  font-size: 20px;
+}
 
-// .home-nav-little-menu-wrap {
-//   position: absolute;
-//   right: -6px;
-//   background-color: rgb(255, 0, 0);
-//   // background-color: rgba(0, 0, 0, 0.76);
-//   border: 1px solid rgba(0, 0, 0, 0.76);
-//   padding: 10px;
-//   width: 125px;
-//   z-index: 1;
-//   text-align: left;
-// }
+.home-nav-little-menu-wrap {
+  position: absolute;
+  right: -6px;
+  background-color: rgba(20, 20, 20, 0.9);
+  // background-color: rgba(0, 0, 0, 0.76);
+  border: 1px solid rgba(156, 154, 154, 0.76);
+  padding: 10px;
+  width: 125px;
+  z-index: 1;
+  text-align: left;
+  height: 20px;
+  margin-top: -5px;
+  display: flex;
+  align-items: center;
+}
 
-// .logout-button {
-//   font-weight: 700;
-//   cursor: pointer;
-//   // text-align: left;
-// }
+.logout-button {
+  font-weight: 700;
+  cursor: pointer;
+  // text-align: left;
+}
 
 // // .dummy {
 // //   height: 1400px;

@@ -8,14 +8,16 @@ import moviesReducer from '../../reducers/movies_reducer';
 const mapStateToProps = ({ session, entities: { users, movies } }) => {
     return {
         currentUser: users[session.id],
-        movies: Object.values(movies)
+        movies: Object.values(movies),
+        movie: movies[1]
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
         logout: () => dispatch(logout()),
-        fetchAllMovies: () => dispatch(fetchAllMovies())
+        fetchAllMovies: () => dispatch(fetchAllMovies()),
+        // fetchMovie: (movieId) => dispatch(fetchMovie(movieId))
     };
 };
 
