@@ -7,7 +7,7 @@ const MovieComponent = ({movie}) => {
 
             <li className="movie-preview" movieid={movie.id}
                 style={{
-                    backgroundImage: `url("https://c4.wallpaperflare.com/wallpaper/831/222/412/edward-norton-fight-club-helena-bonham-carter-movies-wallpaper-preview.jpg")`,
+                    backgroundImage: `url("https://www.themarysue.com/wp-content/uploads/2020/03/hook.jpg")`,
                     backgroundPosition: "center",
                     backgroundSize: "cover",
                 }}
