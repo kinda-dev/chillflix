@@ -1,4 +1,19 @@
 .row-elements {
+  margin: 20px;
   display: flex;
   flex-direction: row;
+  transition: all 0.4s;
+  justify-content: space-around;
+}
+
+.carousel-arrow {
+  position: relative;
+  //   display: block;
+  //   position: absolute;
+  background-color: transparent;
+  border: none;
+}
+
+.little-movies-wrap {
+  display: flex;
 }

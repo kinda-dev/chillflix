@@ -7,55 +7,57 @@ class RowComponent extends  React.Component {
         super(props);
 
         this.state = {
-            firstImageIndex: 0,
-            // lastImageIndex: 5,
-            rowMovies: ''
+            allMovies:'',
+            rowMovies:''
           };
 
-        //   have to bind arrows click 
-        this.previousSlide = this.previousSlide.bind(this);
-        this.nextSlide = this.nextSlide.bind(this);
+        this.previous = this.previous.bind(this);
+        this.next = this.next.bind(this);
 
     }
 
     componentDidMount () {
         // debugger
-        this.renderMovies()
-    }
+        // this.renderMovies()
+        const movies = []
+        this.props.movies.map((movie) => (
+            movies.push(movie)
+        ))
+        this.setState({allMovies: movies})
+        this.setState({rowMovies: movies.slice(0, 5)})
 
-    
 
-    previousSlide() {
-    //   if (this.state.firstImageIndex > 0) {
-        const previousIndex = this.state.firstImageIndex - 1;
-          this.setState({firstImageIndex: previousIndex})
-        //   this.setState({lastImageIndex: this.state.lastImageIndex --})
-          this.renderMovies()
-    //   }
 
     }
-    nextSlide() {
+
+    previous() {
+        this.renderMovies('previous')
+    }
+
+    next() {
         // debugger
-        const nextIndex = this.state.firstImageIndex + 1;
-    //   if (this.state.lastImageIndex < this.props.movies.length) {
-          this.setState({firstImageIndex: nextIndex})
-        //   this.setState({lastImageIndex: this.state.lastImageIndex ++})
-          this.renderMovies()
-    //   }
-
+        this.renderMovies('next')
     }
-    renderMovies() {
-        const movies = [];
-        const lastIndex = this.state.firstImageIndex + 5
 
-        if (lastIndex === this.props.movies.length) this.setState({firstImageIndex: 0})
-        
-        // const firstIndex = this.state.firstImageIndex
+    renderMovies(direction) {
+        let movies = this.state.allMovies
 
-        for(let i = this.state.firstImageIndex; i < lastIndex; i ++){
-            movies.push(this.props.movies[i])
+
+
+        if (direction === 'previous') {
+            movies = movies.reverse()
+            movies.push(movies.shift())
+            this.setState({allMovies: movies.reverse()})
+            this.setState({rowMovies: this.state.allMovies.slice(0, 5)})
+        } else if (direction === 'next') {
+            movies.push(movies.shift())
+            this.setState({allMovies: movies})
+            this.setState({rowMovies: this.state.allMovies.slice(0, 5)})
+        } else {
+            this.setState({rowMovies: movies.slice(0, 5)})
         }
-        this.setState({rowMovies: movies})
+        
+        
     }
 
     render() {
@@ -68,22 +70,19 @@ class RowComponent extends  React.Component {
 
             
             <div className="row">
-                <h2 className="row-title">Top Trending</h2>
                 <ul className="row-elements">
-                    <button className="arrow-left" onClick={this.previousSlide}>ARROW LEFT</button>
 
-                    {/* {this.props.movies.map((movie) => (
-                        <MovieComponent movie={movie}/>
-                    ))} */}
-
-
-
-                    {this.state.rowMovies.map((movie) => (
-                        <MovieComponent movie={movie}/>
-                    ))}
-
-
-                    <button className="arrow-right" onClick={this.nextSlide}>ARROW RIGHT</button>
+                    <button className="carousel-arrow" onClick={this.previous}><i className="fas fa-chevron-left"></i></button>
+                    <div className="row-movies-wrap">
+                        <h2 className="row-title">Top Trending</h2>
+                        <div className="little-movies-wrap">
+                            {this.state.rowMovies.map((movie) => (
+                                <MovieComponent key={movie.id} movie={movie}/>
+                                ))}
+                        </div>
+                    </div>
+                    <button className="carousel-arrow" onClick={this.next}><i className="fas fa-chevron-right"></i></button>
+                    
                 </ul>
             </div>
 
