@@ -8,7 +8,7 @@ class RowComponent extends  React.Component {
 
         this.state = {
             firstImageIndex: 0,
-            lastImageIndex: 5,
+            // lastImageIndex: 5,
             rowMovies: ''
           };
 
@@ -19,32 +19,42 @@ class RowComponent extends  React.Component {
     }
 
     componentDidMount () {
-        debugger
+        // debugger
         this.renderMovies()
     }
 
+    
+
     previousSlide() {
     //   if (this.state.firstImageIndex > 0) {
-          this.setState({firstImageIndex: this.state.firstImageIndex --})
-          this.setState({lastImageIndex: this.state.lastImageIndex --})
+        const previousIndex = this.state.firstImageIndex - 1;
+          this.setState({firstImageIndex: previousIndex})
+        //   this.setState({lastImageIndex: this.state.lastImageIndex --})
           this.renderMovies()
     //   }
 
     }
     nextSlide() {
-        debugger
+        // debugger
+        const nextIndex = this.state.firstImageIndex + 1;
     //   if (this.state.lastImageIndex < this.props.movies.length) {
-          this.setState({firstImageIndex: this.state.firstImageIndex ++})
-          this.setState({lastImageIndex: this.state.lastImageIndex ++})
+          this.setState({firstImageIndex: nextIndex})
+        //   this.setState({lastImageIndex: this.state.lastImageIndex ++})
           this.renderMovies()
     //   }
 
     }
     renderMovies() {
-      const movies = [];
-      for(let i = this.state.firstImageIndex; i < this.state.lastImageIndex; i ++){
-          movies.push(this.props.movies[i])
-      }
+        const movies = [];
+        const lastIndex = this.state.firstImageIndex + 5
+
+        if (lastIndex === this.props.movies.length) this.setState({firstImageIndex: 0})
+        
+        // const firstIndex = this.state.firstImageIndex
+
+        for(let i = this.state.firstImageIndex; i < lastIndex; i ++){
+            movies.push(this.props.movies[i])
+        }
         this.setState({rowMovies: movies})
     }
 
