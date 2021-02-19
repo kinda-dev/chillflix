@@ -47,12 +47,13 @@ class HomeComponent extends  React.Component {
 
     // }
 
-    renderHeaderMovie() {
-        index = Math.floor(Math.random() * this.props.movies.length);
-        return(
-            <HeaderComponent movie = {this.props.movies[index]} />
-        )
-    }
+    // renderHeaderMovie(movie = null) {
+    //     index = Math.floor(Math.random() * this.props.movies.length);
+    //     movie || this.props.movies[index];
+    //     return(
+    //         <HeaderComponent movie = {movie} />
+    //     )
+    // }
 
 
     makeNavbarFading() {
@@ -137,66 +138,77 @@ class HomeComponent extends  React.Component {
 
 
                 
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
-                <p>dummy</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+                <p className="random-pixel">A</p>
+
 
 
 
