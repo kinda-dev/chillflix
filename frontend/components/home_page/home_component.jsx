@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import MovieComponent from './movie_component';
 import HeaderComponent from './header_component';
+import RowComponent from './row_component'
 
 
 
@@ -27,28 +28,24 @@ class HomeComponent extends  React.Component {
         document.removeEventListener('scroll', this.makeNavbarFading);
     }
 
-    renderAllMovies() {
-        // return(
-        //     <ul>
-        //     {this.props.movies.map((movie, i) => (
-        //         <li key={`movie-${i}`}>
-        //              {movie.title}
-        //         </li>
-        //     ))}
-        //     </ul>
-        // );
+    // renderAllMovies() {
+    //     // return(
+    //     //     <ul>
+    //     //     {this.props.movies.map((movie, i) => (
+    //     //         <li key={`movie-${i}`}>
+    //     //              {movie.title}
+    //     //         </li>
+    //     //     ))}
+    //     //     </ul>
+    //     // );
 
-        return(
-            <ul className="all-movies-row">
-            {this.props.movies.map((movie, i) => (
-                <li key={`movie-${i}`}>
-                     <MovieComponent movie={movie}/>
-                </li>
-            ))}
-            </ul>
-        );
+    //     return(
+    //         this.props.movies.map((movie) => (
+    //             <MovieComponent movie={movie}/>
+    //         ))
+    //     );
 
-    }
+    // }
 
     renderHeaderMovie() {
         return(
@@ -116,13 +113,23 @@ class HomeComponent extends  React.Component {
                     </div>
                 </div>
 
+                <HeaderComponent movie = {this.props.movies[0]} />
+                <RowComponent movies = {this.props.movies} />
 
-                <div>{this.renderHeaderMovie()}</div>
 
                 
-                <div className="all-movies">
+                {/* <div className="all-movies">
                     {this.renderAllMovies()}
-                </div>
+                </div> */}
+
+                {/* following rows to display different genres */}
+
+                {/* <div className="row">
+                    <h2 className="row-title">Top Trending</h2>
+                    <ul className="row-elements">
+                        {this.renderAllMovies()}
+                    </ul>
+                </div> */}
 
 
 
