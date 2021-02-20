@@ -8,7 +8,7 @@
 
 ActiveRecord::Base.transaction do
     
-    user1 = User.create!(email: 'the_dude@google.com', password: 'qwerty123456')
+    user1 = User.create!(email: 'the_dude@gmail.com', password: 'qwerty123456')
 
     movie1 = Movie.create!(title: 'BACK TO THE FUTURE', description: 'Back to the Future is an American science fiction/comedy movie directed by Robert Zemeckis and released in 1985. It is about a young man named Marty McFly who accidentally travels into the past and jeopardizes his own future existence.', rating: 'PG-13', year: 1985, duration: '1h 56m')
     movie2 = Movie.create!(title: 'FIGHT CLUB', description: "It is based on the 1996 novel of the same name by Chuck Palahniuk. Norton plays the unnamed narrator, who is discontented with his white-collar job. He forms a 'fight club' with soap salesman Tyler Durden (Pitt), and becomes embroiled in a relationship with a destitute woman, Marla Singer (Bonham Carter).", rating: 'PG-13', year: 1999, duration: '2h 31m')
