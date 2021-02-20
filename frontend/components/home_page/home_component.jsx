@@ -11,7 +11,7 @@ class HomeComponent extends  React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            navbarBackground: 'nav-transparent'
+            navbarBackground: 'nav-transparent',
         };
 
         this.makeNavbarFading =this.makeNavbarFading.bind(this);
@@ -116,6 +116,7 @@ class HomeComponent extends  React.Component {
                 </div>
 
                 <HeaderComponent movie = {this.props.movies[0]} />
+
                 <RowComponent movies = {this.props.movies} />
 
 

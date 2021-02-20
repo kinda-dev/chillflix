@@ -17,4 +17,6 @@ class Movie < ApplicationRecord
         # through: :lists,
         # source: :user
 
+    has_one_attached :image
+    has_one_attached :trailer
 end
