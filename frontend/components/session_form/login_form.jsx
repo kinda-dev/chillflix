@@ -33,7 +33,7 @@ class LoginForm extends React.Component {
     handleDemoLogin(e) {
         e.preventDefault()
         this.state = {
-            email: 'the_dude@google.com',
+            email: 'the_dude@gmail.com',
             password: 'qwerty123456'
         };
         const user = Object.assign({}, this.state);
