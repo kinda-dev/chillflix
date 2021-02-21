@@ -117,7 +117,7 @@ class HomeComponent extends  React.Component {
 
                 <HeaderComponent movie = {this.props.movies[0]} />
 
-                <RowComponent movies = {this.props.movies} />
+                <RowComponent movies = {this.props.movies} fetchMovie = {this.props.fetchMovie} />
 
 
                 
@@ -134,10 +134,7 @@ class HomeComponent extends  React.Component {
                     </ul>
                 </div> */}
 
-
-
-
-
+                <img src={this.props.movies[0].movieImage} alt="PICTURE"/> 
                 
                 <p className="random-pixel">A</p>
                 <p className="random-pixel">A</p>

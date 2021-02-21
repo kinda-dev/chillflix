@@ -13,9 +13,9 @@ class Movie < ApplicationRecord
         foreign_key: :movie_id,
         class_name: :MyList
     
-    # has_many :users,
-        # through: :lists,
-        # source: :user
+    has_many :users,
+        through: :lists,
+        source: :user
 
     has_one_attached :image
     has_one_attached :trailer

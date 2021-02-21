@@ -77,7 +77,7 @@ class RowComponent extends  React.Component {
                         <h2 className="row-title">Top Trending</h2>
                         <div className="little-movies-wrap">
                             {this.state.rowMovies.map((movie) => (
-                                <MovieComponent key={movie.id} movie={movie}/>
+                                <MovieComponent key={movie.id} movie={movie} fetchMovie = {this.props.fetchMovie}/>
                                 ))}
                         </div>
                     </div>

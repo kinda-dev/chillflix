@@ -5,7 +5,17 @@
   color: white;
   width: 300px;
   height: 180px;
-  background-image: url("https://www.themarysue.com/wp-content/uploads/2020/03/hook.jpg");
+  // background-image: url("https://www.themarysue.com/wp-content/uploads/2020/03/hook.jpg");
+}
+
+.movie-image {
+  max-height: 100%;
+  display: flex;
+  max-width: 100%;
+}
+
+.movie-preview :hover .movie-image {
+  display: none;
 }
 
 .movie-preview-info {
