@@ -20,12 +20,12 @@ class HomeComponent extends  React.Component {
     componentDidMount() {
         //condition logic for hitting db
         this.props.fetchAllMovies();
-        document.addEventListener('scroll', this.makeNavbarFading);
+        // document.addEventListener('scroll', this.makeNavbarFading);
 
     }
 
     componentWillUnmount() {
-        document.removeEventListener('scroll', this.makeNavbarFading);
+        // document.removeEventListener('scroll', this.makeNavbarFading);
     }
 
     // renderAllMovies() {
