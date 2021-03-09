@@ -41,7 +41,7 @@ class SplashComponent extends  React.Component {
                     <header className="splash-header">
                         <div className="splash-header-wrapper">
                             <Link to="/" className="splash-header-home-link">
-                                <img className="splash-header-logo" src={window.logoImage} alt="Chillflix"/>
+                                <img className="splash-header-logo" src="https://chillflix-seeds.s3-us-west-1.amazonaws.com/misc/chillflix_logo.png" alt="Chillflix"/>
                             </Link>   
         
                             <Link to="/login"><button className="splash-login-button">Sign In</button></Link>
@@ -92,7 +92,7 @@ class SplashComponent extends  React.Component {
 
                             <div className="splash-television-image-container">
                                 <div className="splash-television-animation-container">
-                                    <img className="tv-img" src={window.tvImage} alt="televisionImage"/>
+                                    <img className="tv-img" src="https://chillflix-seeds.s3-us-west-1.amazonaws.com/misc/tv.png" alt="televisionImage"/>
                                     <div className="splash-videoanimation">
                                         <video className="splash-video" controls autoPlay loop muted><source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v"></source></video>
                                         <div className="splash-television-animation-text"></div>

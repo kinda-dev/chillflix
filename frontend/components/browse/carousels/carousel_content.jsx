@@ -65,7 +65,7 @@ class CarouselContent extends React.Component {
 
 
                      <div className="movie-preview-info">
-                         <video className="movie-preview-video" autoPlay loop muted><source src={"https://chillflix-seeds.s3-us-west-1.amazonaws.com/full_stack_video_trailers/back_to_the_future_trailer.mp4"}></source></video>
+                         <video className="movie-preview-video" autoPlay loop muted><source src={movie.movieTrailer}></source></video>
                          <div className="movie-info">
                             <h1 className="movie-title-hidden">{movie.title}</h1>
                              <h2 className="movie-description">{movie.description}</h2>

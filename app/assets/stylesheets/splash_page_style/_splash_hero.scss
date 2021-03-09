@@ -1,33 +1,32 @@
 @import "_splash_signup_email_form";
 
-.hero{
-    padding: 70px 45px;
+.hero {
+  padding: 70px 45px;
 
-    position: relative;
-    border-bottom: 8px solid #222;
-    // padding: 50px 5%;
-    margin-bottom: 0;
-    background: 0 0;
-    color: #fff;
+  position: relative;
+  border-bottom: 8px solid #222;
+  // padding: 50px 5%;
+  margin-bottom: 0;
+  background: 0 0;
+  color: #fff;
 }
 
-.hero-background{
-    background-image: image_url('first-background.jpg');
-    top: -100px;
+.hero-background {
+  background-image: url("https://chillflix-seeds.s3-us-west-1.amazonaws.com/misc/first-background.jpg");
+  top: -100px;
 
-    // top: -70px; when reduced size
+  // top: -70px; when reduced size
 
-    z-index: 0;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
+  z-index: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
 }
 
-
-.center-pixel{
-    top: 50%;
-    left: 50%;
-    position: absolute;
+.center-pixel {
+  top: 50%;
+  left: 50%;
+  position: absolute;
 }

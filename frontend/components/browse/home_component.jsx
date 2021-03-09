@@ -99,7 +99,7 @@ class HomeComponent extends  React.Component {
 
                             <nav className="home-profile-menu-wrapper">
                                 <div className="profile-img-wrap">
-                                    <img className="profile-img" src={window.profileImage} alt="ProfileImg"/>
+                                    <img className="profile-img" src="https://chillflix-seeds.s3-us-west-1.amazonaws.com/misc/profile_img.png" alt="ProfileImg"/>
                                 </div>
 
                                 <div className="hover-profile-menu">    
