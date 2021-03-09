@@ -19,12 +19,12 @@ class HomeComponent extends  React.Component {
     componentDidMount() {
         //condition logic for hitting db
         this.props.fetchAllMovies();
-        // document.addEventListener('scroll', this.makeNavbarFading);
+        document.addEventListener('scroll', this.makeNavbarFading);
 
     }
 
     componentWillUnmount() {
-        // document.removeEventListener('scroll', this.makeNavbarFading);
+        document.removeEventListener('scroll', this.makeNavbarFading);
     }
 
     // renderAllMovies() {
@@ -85,7 +85,7 @@ class HomeComponent extends  React.Component {
 
                         {/* <nav className="home-header-left-nav"> */}
                             <Link to="/browse" className="home-header-home-link">
-                                <img className="home-header-logo" src={window.logoImage} alt="Chillflix"/>
+                                <img className="home-header-logo" src="https://chillflix-seeds.s3-us-west-1.amazonaws.com/misc/chillflix_logo.png" alt="Chillflix"/>
                             </Link>  
                             {/* <div className="my-list">My List</div> */}
                         {/* </nav> */}
@@ -105,6 +105,7 @@ class HomeComponent extends  React.Component {
                                 <div className="hover-profile-menu">    
                                     <div className="profile-menu-arrow-up"><i className="fas fa-caret-up"></i></div>
                                     <div className="home-nav-little-menu-wrap">
+                                        <a class="github-button-wrap" href="https://github.com/kinda-dev" target="_blank"><i class="fab fa-github"> GitHub</i></a>
                                         <div className="logout-button" onClick={() => this.props.logout()}>Log Out</div>
                                     </div>
                                 </div>

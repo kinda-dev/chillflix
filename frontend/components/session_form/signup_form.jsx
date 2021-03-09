@@ -88,7 +88,7 @@ class SignupForm extends  React.Component {
                 <header className="signup-header">
                     <div className="signup-header-wrapper">
                         <Link to="/" className="signup-header-home-link">
-                            <img className="signup-header-logo" src={window.logoImage} alt="Chillflix"/>
+                            <img className="signup-header-logo" src="https://chillflix-seeds.s3-us-west-1.amazonaws.com/misc/chillflix_logo.png" alt="Chillflix"/>
                         </Link>  
 
                         <Link to="/logIn" className="signup-login-link">Sign In</Link>
@@ -134,7 +134,7 @@ class SignupForm extends  React.Component {
                         <div className="-signup-footer-first-child">
                             <div className="signup-footer-divider"></div>
                             <footer className="signup-footer">
-                                <div className="signup-footer-top">Work in progress. Developed by Fabio: <a className="fabio-email" href="mailto:maybe.fabio.com">Mail me for information!!</a></div>
+                                <div className="signup-footer-top">Work in progress. Developed by Fabio: <a className="fabio-email" href="mailto:maybe.fabio.com">Mail me for information!! </a><a class="github-button-wrap" href="https://github.com/kinda-dev" target="_blank"><i class="fab fa-github"></i></a></div>
                             </footer>
                             <div className="center-pixel"></div>
                         </div>

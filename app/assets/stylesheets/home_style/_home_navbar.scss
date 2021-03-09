@@ -11,11 +11,15 @@
 
   height: 28px;
 
-  background-color: rgba(20, 20, 20, 0.493);
+  // background-color: rgba(20, 20, 20, 0.493);
 }
 
 .nav-black {
-  background-color: rgb(20, 20, 20);
+  background-color: rgba(20, 20, 20, 0.822);
+}
+
+.nav-transparent {
+  background-color: transparent;
 }
 
 .home-navbar-contents {
@@ -72,17 +76,30 @@
   right: -6px;
   background-color: rgba(20, 20, 20, 0.9);
   border: 1px solid rgba(156, 154, 154, 0.76);
-  padding: 10px;
+  padding-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+
   width: 125px;
   z-index: 1;
   text-align: left;
-  height: 20px;
+  height: 60px;
   margin-top: -10px;
   display: flex;
-  align-items: center;
+  // align-items: center;
+  flex-direction: column;
+}
+
+.github-button-wrap {
+  padding-bottom: 10px;
+  color: white;
+  font-size: large;
 }
 
 .logout-button {
+  padding-top: 10px;
+  border-top: 1px solid rgba(156, 154, 154, 0.76);
+
   font-weight: 700;
   cursor: pointer;
 }
