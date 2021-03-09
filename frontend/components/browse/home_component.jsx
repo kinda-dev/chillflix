@@ -69,6 +69,7 @@ class HomeComponent extends  React.Component {
     render() {
         
         if (this.props.movies.length === 0) return null;
+        const idx = Math.random() * 9;
 
         return(
             
@@ -113,13 +114,13 @@ class HomeComponent extends  React.Component {
                         {/* </nav> */}
                     </div>
                 </div>
-
-                <HeaderComponent movie = {this.props.movies[0]} />
+    
+                <HeaderComponent movie = {this.props.movies[Math.floor(Math.random() * 9)]} />
 
                 {/* <RowComponent movies = {this.props.movies} fetchMovie = {this.props.fetchMovie} /> */}
                 <div className="browse-genre-rows">
                     <div className="browse-row">
-                        <h2 className="row-title">trending Now</h2>
+                        <h2 className="row-title">TRENDING NOW</h2>
                         <CarouselComponent movies = {this.props.movies} />
                     </div>
                 </div>

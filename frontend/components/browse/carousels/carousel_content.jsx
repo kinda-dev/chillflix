@@ -31,20 +31,14 @@ class CarouselContent extends React.Component {
       <div className="slider-wrap" slide={this.state.currentSliderItem}>
 
         {this.props.movies.map((movie) => (
-            <li className="slider-item" key={movie.id} movieid={movie.id} src={movie.movieImage}
-                style={{
-                    // backgroundImage: `url("https://www.themarysue.com/wp-content/uploads/2020/03/hook.jpg")`,
-                    // backgroundPosition: "center",
-                    // backgroundSize: "cover",
-                }}
-                >
+            <li className="slider-item" key={movie.id} movieid={movie.id} src={movie.movieImage}>
                 <div className="movie-preview-hover-wrap">
                     <img className="movie-image" src={movie.movieImage} alt={movie.title}/>
                     <h1 className="movie-title">{movie.title}</h1>
 
 
                      <div className="movie-preview-info">
-                         <video className="movie-preview-video" autoPlay loop muted><source src={"https://chillflix-seeds.s3-us-west-1.amazonaws.com/full_stack_video_trailers/back_to_the_future_trailer.mp4"}></source></video>
+                         <video className="movie-preview-video" autoPlay loop muted><source src={movie.movieTrailer}></source></video>
                          <div className="movie-info">
                             <h1 className="movie-title-hidden">{movie.title}</h1>
                              <h2 className="movie-description">{movie.description}</h2>

@@ -14,7 +14,7 @@ class HeaderComponent extends  React.Component {
 
             <header className="home-header"
                 style={{
-                    backgroundImage: `url("https://wallpaperaccess.com/full/38539.jpg")`,
+                    backgroundImage: `url(${this.props.movie.movieImage})`,
                     backgroundPosition: "center center",
                     backgroundSize: "cover",
                 }}
