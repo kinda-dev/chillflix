@@ -1,9 +1,7 @@
 import { connect } from 'react-redux';
 
-import HomeComponent from './home_component';
-import { logout } from '../../actions/session_actions';
+import RowComponent from './row_component';
 import { fetchAllMovies, fetchMovie } from '../../actions/movie_actions';
-import moviesReducer from '../../reducers/movies_reducer';
 
 const mapStateToProps = ({ session, entities: { users, movies } }) => {
     return {
@@ -20,4 +18,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomeComponent);
+export default connect(mapStateToProps, mapDispatchToProps)(RowComponent);

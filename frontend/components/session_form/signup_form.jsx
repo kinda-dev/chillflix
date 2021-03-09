@@ -114,7 +114,7 @@ class SignupForm extends  React.Component {
                                 {/* <br/> */}
                                 <div className="signup-input-little-box">
                                     <input className="signup-input-password" placeholder="Add a password" type="password" value={this.state.password} onChange={this.handlePassword}/>
-                                    <div>{this.renderPasswordError()}</div>
+                                    <div >{this.renderPasswordError()}</div>
                                 </div>
                                 <br/>
                                     <button className="signup-button" >Complete Registration</button>

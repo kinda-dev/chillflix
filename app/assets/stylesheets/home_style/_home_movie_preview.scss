@@ -1,10 +1,14 @@
-.movie-preview {
+.slider-item {
   margin: 2px;
   border-radius: 3px;
   object-fit: contain;
   color: white;
   width: 300px;
   height: 180px;
+  left: 0;
+  list-style: none;
+  float: left;
+
   // background-image: url("https://www.themarysue.com/wp-content/uploads/2020/03/hook.jpg");
 }
 
@@ -12,9 +16,10 @@
   max-height: 100%;
   display: flex;
   max-width: 100%;
+  border-radius: 3px;
 }
 
-.movie-preview :hover .movie-image {
+.slider-item :hover .movie-image {
   display: none;
 }
 
@@ -28,19 +33,21 @@
 
 .movie-title {
   font-weight: 800;
-  font-size: 30px;
+  font-size: 20px;
   text-align: end;
   padding-right: 5px;
   background-color: rgba(0, 0, 0, 0.144);
   border-radius: 3px;
+  display: flex;
+  // position: absolute;
 }
 
-.movie-preview :hover .movie-preview-info {
+.slider-item :hover .movie-preview-info {
   display: block;
-  position: relative;
-  z-index: 5;
-  width: 400px;
-  height: 240px;
+  // position: relative;
+  // z-index: 5;
+  // width: 400px;
+  // height: 240px;
   background-image: none;
   display: flex;
 }
@@ -56,20 +63,28 @@
   padding-bottom: 20px;
 }
 
-.movie-preview :hover .movie-title {
+.slider-item :hover .movie-title {
   display: none;
 }
 
-.movie-preview :hover .movie-title-hidden {
+.slider-item :hover .movie-title-hidden {
   display: block;
 }
 
-.movie-preview :hover .movie-info {
+.slider-item :hover .movie-info {
   position: absolute;
   background: rgba(0, 0, 0, 0.562);
   z-index: 6;
-  min-width: 100%;
-  min-height: 100%;
-  // display: block;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
   padding: 12px;
+  border-radius: 3px;
+}
+
+.movie-preview-video {
+  max-height: 100%;
+  display: flex;
+  max-width: 100%;
+  border-radius: 3px;
 }

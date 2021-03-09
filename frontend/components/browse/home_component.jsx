@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import MovieComponent from './movie_component';
 import HeaderComponent from './header_component';
-import RowComponent from './row_component'
+import CarouselComponent from './carousels/carousel_component';
 
 
 
@@ -101,8 +100,8 @@ class HomeComponent extends  React.Component {
                                 <div className="profile-img-wrap">
                                     <img className="profile-img" src={window.profileImage} alt="ProfileImg"/>
                                 </div>
-                                <div className="hover-profile-menu">
-                                    
+
+                                <div className="hover-profile-menu">    
                                     <div className="profile-menu-arrow-up"><i className="fas fa-caret-up"></i></div>
                                     <div className="home-nav-little-menu-wrap">
                                         <div className="logout-button" onClick={() => this.props.logout()}>Log Out</div>
@@ -117,7 +116,16 @@ class HomeComponent extends  React.Component {
 
                 <HeaderComponent movie = {this.props.movies[0]} />
 
-                <RowComponent movies = {this.props.movies} fetchMovie = {this.props.fetchMovie} />
+                {/* <RowComponent movies = {this.props.movies} fetchMovie = {this.props.fetchMovie} /> */}
+                <div className="browse-genre-rows">
+                    <div className="browse-row">
+                        <h2 className="row-title">trending Now</h2>
+                        <CarouselComponent movies = {this.props.movies} />
+                    </div>
+                </div>
+
+                {/* <RowComponent /> */}
+
 
 
                 
@@ -134,7 +142,6 @@ class HomeComponent extends  React.Component {
                     </ul>
                 </div> */}
 
-                <img src={this.props.movies[0].movieImage} alt="PICTURE"/> 
                 
                 <p className="random-pixel">A</p>
                 <p className="random-pixel">A</p>
