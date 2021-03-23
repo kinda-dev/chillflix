@@ -5,6 +5,7 @@ class Api::MoviesController < ApplicationController
         #     @movies = Movie.joins(:genres).where(genres: {id: params[:genre_id]})
         # else
         @movies = Movie.all
+        # debugger
         # end
         render :index
     end

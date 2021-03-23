@@ -8,7 +8,7 @@
     require 'open-uri'
   
     User.destroy_all
-    # Movie.destroy_all
+    Movie.destroy_all
 
     ActiveRecord::Base.connection.tables.each do |t|
       ActiveRecord::Base.connection.reset_pk_sequence!(t)
