@@ -17,7 +17,6 @@ class HomeComponent extends  React.Component {
     }
     
     componentDidMount() {
-        //condition logic for hitting db
         this.props.fetchAllMovies();
         document.addEventListener('scroll', this.makeNavbarFading);
 
@@ -26,33 +25,6 @@ class HomeComponent extends  React.Component {
     componentWillUnmount() {
         document.removeEventListener('scroll', this.makeNavbarFading);
     }
-
-    // renderAllMovies() {
-    //     // return(
-    //     //     <ul>
-    //     //     {this.props.movies.map((movie, i) => (
-    //     //         <li key={`movie-${i}`}>
-    //     //              {movie.title}
-    //     //         </li>
-    //     //     ))}
-    //     //     </ul>
-    //     // );
-
-    //     return(
-    //         this.props.movies.map((movie) => (
-    //             <MovieComponent movie={movie}/>
-    //         ))
-    //     );
-
-    // }
-
-    // renderHeaderMovie(movie = null) {
-    //     index = Math.floor(Math.random() * this.props.movies.length);
-    //     movie || this.props.movies[index];
-    //     return(
-    //         <HeaderComponent movie = {movie} />
-    //     )
-    // }
 
 
     makeNavbarFading() {
@@ -83,19 +55,9 @@ class HomeComponent extends  React.Component {
 
                     <div className="home-navbar-contents">
 
-                        {/* <nav className="home-header-left-nav"> */}
                             <Link to="/browse" className="home-header-home-link">
                                 <img className="home-header-logo" src="https://chillflix-seeds.s3-us-west-1.amazonaws.com/misc/chillflix_logo.png" alt="Chillflix"/>
                             </Link>  
-                            {/* <div className="my-list">My List</div> */}
-                        {/* </nav> */}
-
-                        {/* <nav className="home-header-right-nav"> */}
-
-                            {/* <div className="search-menu-wrapper">
-                                <i className="icon-search">O</i>
-                                <input type="text" className="search-box"/>
-                            </div> */}
 
                             <nav className="home-profile-menu-wrapper">
                                 <div className="profile-img-wrap">
@@ -110,111 +72,18 @@ class HomeComponent extends  React.Component {
                                     </div>
                                 </div>
                             </nav>
-                            
 
-                        {/* </nav> */}
                     </div>
                 </div>
     
                 <HeaderComponent movie = {this.props.movies[Math.floor(Math.random() * 9)]} />
 
-                {/* <RowComponent movies = {this.props.movies} fetchMovie = {this.props.fetchMovie} /> */}
                 <div className="browse-genre-rows">
                     <div className="browse-row">
                         <h2 className="row-title">TRENDING NOW</h2>
                         <CarouselComponent movies = {this.props.movies} />
                     </div>
                 </div>
-
-                {/* <RowComponent /> */}
-
-
-
-                
-                {/* <div className="all-movies">
-                    {this.renderAllMovies()}
-                </div> */}
-
-                {/* following rows to display different genres */}
-
-                {/* <div className="row">
-                    <h2 className="row-title">Top Trending</h2>
-                    <ul className="row-elements">
-                        {this.renderAllMovies()}
-                    </ul>
-                </div> */}
-
-                
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
 
 
 

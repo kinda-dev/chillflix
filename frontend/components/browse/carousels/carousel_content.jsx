@@ -8,13 +8,6 @@ class CarouselContent extends React.Component {
     };
   }
 
-  componentDidMount() {
-    //condition logic for hitting db
-    // this.props.fetchAllMovies();
-    // document.addEventListener('scroll', this.makeNavbarFading);
-
-}
-
   static getDerivedStateFromProps(nextProps, prevState) {
     if (nextProps.currentSliderItem !== prevState.currentSliderItem) {
       return { currentSliderItem: nextProps.currentSliderItem };
@@ -77,60 +70,6 @@ class CarouselContent extends React.Component {
                 </div>
             </li>
         ))}
-        {/* <div className="slider-item">
-          <img src={window.thepest} alt="thepest" />
-        </div>
-        <div className="slider-item">
-          <img src={window.thepest} alt="thepest" />
-        </div>
-        <div className="slider-item">
-          <img src={window.thepest} alt="thepest" />
-        </div>
-        <div className="slider-item">
-          <img src={window.thepest} alt="thepest" />
-        </div>
-        <div className="slider-item">
-          <img src={window.thepest} alt="thepest" />
-        </div>
-        <div className="slider-item">
-          <img src={window.thepest} alt="thepest" />
-        </div>
-        <div className="slider-item">
-          <img src={window.kindergartencop} alt="kindergartencop" />
-        </div>
-        <div className="slider-item">
-          <img src={window.kindergartencop} alt="kindergartencop" />
-        </div>
-        <div className="slider-item">
-          <img src={window.kindergartencop} alt="kindergartencop" />
-        </div>
-        <div className="slider-item">
-          <img src={window.kindergartencop} alt="kindergartencop" />
-        </div>
-        <div className="slider-item">
-          <img src={window.kindergartencop} alt="kindergartencop" />
-        </div>
-        <div className="slider-item">
-          <img src={window.kindergartencop} alt="kindergartencop" />
-        </div>
-        <div className="slider-item">
-          <img src={window.surfninjas} alt="surfninjas" />
-        </div>
-        <div className="slider-item">
-          <img src={window.surfninjas} alt="surfninjas" />
-        </div>
-        <div className="slider-item">
-          <img src={window.surfninjas} alt="surfninjas" />
-        </div>
-        <div className="slider-item">
-          <img src={window.surfninjas} alt="surfninjas" />
-        </div>
-        <div className="slider-item">
-          <img src={window.surfninjas} alt="surfninjas" />
-        </div>
-        <div className="slider-item">
-          <img src={window.surfninjas} alt="surfninjas" />
-        </div> */}
       </div>
     )
   }
