@@ -19,23 +19,23 @@ class HomeComponent extends  React.Component {
     componentDidMount() {
         // debugger
         this.props.fetchAllMovies();
-        document.addEventListener('scroll', this.makeNavbarFading);
+        // document.addEventListener('scroll', this.makeNavbarFading);
 
     }
 
     componentWillUnmount() {
-        document.removeEventListener('scroll', this.makeNavbarFading);
+        // document.removeEventListener('scroll', this.makeNavbarFading);
     }
 
 
 
 
     makeNavbarFading() {
-            if (window.scrollY > 10  && this.state.navbarBackground !== 'nav-black') {
-                this.setState({navbarBackground: 'nav-black'})
-            } else if (window.scrollY === 0) {
-                this.setState({navbarBackground: 'nav-transparent'})
-            }
+            // if (window.scrollY > 10  && this.state.navbarBackground !== 'nav-black') {
+            //     this.setState({navbarBackground: 'nav-black'})
+            // } else if (window.scrollY === 0) {
+            //     this.setState({navbarBackground: 'nav-transparent'})
+            // }
     }
    
     
@@ -91,7 +91,9 @@ class HomeComponent extends  React.Component {
                     </div>
                 </div>
     
-                <HeaderComponent movie = {this.props.movies[Math.floor(Math.random() * 9)]} />
+                {/* <HeaderComponent movie = {this.props.movies[Math.floor(Math.random() * 9)]} /> */}
+                <HeaderComponent movie = {this.props.movies[0]} />
+
 
                 {/* <RowComponent movies = {this.props.movies} fetchMovie = {this.props.fetchMovie} /> */}
                 <div className="browse-genre-rows">

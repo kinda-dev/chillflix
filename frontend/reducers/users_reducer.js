@@ -22,7 +22,7 @@ const usersReducer = (oldState = {}, action) => {
 
         case ADD_TO_LIST:
             let currentUser2 = action.currentUser;
-            currentUser2.myListMovieIds.push(action.movie.id);
+            currentUser2.myListMovieIds.push(action.movie.movie_id);
             return Object.assign({}, oldState, {[currentUser2.id]: currentUser2});
     
         
