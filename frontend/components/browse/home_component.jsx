@@ -17,7 +17,7 @@ class HomeComponent extends  React.Component {
     }
     
     componentDidMount() {
-        //condition logic for hitting db
+        // debugger
         this.props.fetchAllMovies();
         document.addEventListener('scroll', this.makeNavbarFading);
 
@@ -27,32 +27,7 @@ class HomeComponent extends  React.Component {
         document.removeEventListener('scroll', this.makeNavbarFading);
     }
 
-    // renderAllMovies() {
-    //     // return(
-    //     //     <ul>
-    //     //     {this.props.movies.map((movie, i) => (
-    //     //         <li key={`movie-${i}`}>
-    //     //              {movie.title}
-    //     //         </li>
-    //     //     ))}
-    //     //     </ul>
-    //     // );
 
-    //     return(
-    //         this.props.movies.map((movie) => (
-    //             <MovieComponent movie={movie}/>
-    //         ))
-    //     );
-
-    // }
-
-    // renderHeaderMovie(movie = null) {
-    //     index = Math.floor(Math.random() * this.props.movies.length);
-    //     movie || this.props.movies[index];
-    //     return(
-    //         <HeaderComponent movie = {movie} />
-    //     )
-    // }
 
 
     makeNavbarFading() {
@@ -105,7 +80,7 @@ class HomeComponent extends  React.Component {
                                 <div className="hover-profile-menu">    
                                     <div className="profile-menu-arrow-up"><i className="fas fa-caret-up"></i></div>
                                     <div className="home-nav-little-menu-wrap">
-                                        <a class="github-button-wrap" href="https://github.com/kinda-dev" target="_blank"><i class="fab fa-github"> GitHub</i></a>
+                                        <a className="github-button-wrap" href="https://github.com/kinda-dev" target="_blank"><i className="fab fa-github"> GitHub</i></a>
                                         <div className="logout-button" onClick={() => this.props.logout()}>Log Out</div>
                                     </div>
                                 </div>
@@ -122,7 +97,7 @@ class HomeComponent extends  React.Component {
                 <div className="browse-genre-rows">
                     <div className="browse-row">
                         <h2 className="row-title">TRENDING NOW</h2>
-                        <CarouselComponent movies = {this.props.movies} />
+                        <CarouselComponent movies = {this.props.movies} myList = {this.props.currentUser.myListMovieIds} />
                     </div>
                 </div>
 

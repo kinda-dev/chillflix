@@ -8,12 +8,12 @@ class User < ApplicationRecord
 
     after_initialize :ensure_session_token
 
-    has_many :lists,
+    has_one :mylist,
     foreign_key: :profile_id,
     class_name: :MyList
 
-    has_many :movies,
-        through: :list,
+    has_many :list_movies,
+        through: :mylist,
         source: :movie
 
 

@@ -1,4 +1,6 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+
 
 import HomeComponent from './home_component';
 import { logout } from '../../actions/session_actions';
@@ -19,4 +21,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomeComponent);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(HomeComponent));

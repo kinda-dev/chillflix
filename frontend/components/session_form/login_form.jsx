@@ -105,7 +105,7 @@ class LoginForm extends React.Component {
                         <div className="-login-footer-first-child">
                             <div className="login-footer-divider"></div>
                             <footer className="login-footer">
-                                <div className="login-footer-top">Work in progress. Developed by Fabio: <a className="fabio-email" href="mailto:maybe.fabio.com">Mail me for information!! </a><a class="github-button-wrap" href="https://github.com/kinda-dev" target="_blank"><i class="fab fa-github"></i></a></div>
+                                <div className="login-footer-top">Work in progress. Developed by Fabio: <a className="fabio-email" href="mailto:maybe.fabio.com">Mail me for information!! </a><a className="github-button-wrap" href="https://github.com/kinda-dev" target="_blank"><i className="fab fa-github"></i></a></div>
                             </footer>
                             <div className="center-pixel"></div>
                         </div>

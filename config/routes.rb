@@ -3,12 +3,11 @@ Rails.application.routes.draw do
 		resource :user, only: [:create]
 		resource :session, only: [:create, :destroy]
 		resources :genres, only: [:index, :show]
-		resources :movies, only: [:index, :show]
 		resources :movies_genres, only: [:index, :show] 
-		# do
-            # resources :movies, only: [:index]
-        # end
-		resources :my_lists_lists, only: [:index, :show, :create, :destroy]
+		resources :movies, only: [:index, :show]
+		resource :list, only: [:index, :create, :destroy]
+
+		
 
 
 	end

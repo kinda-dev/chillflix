@@ -12,6 +12,10 @@ class CarouselComponent extends React.Component{
     this.nextSlide = this.nextSlide.bind(this);
   }
 
+  componentDidMount() {
+    //  debugger
+  }
+
   previousSlide() {
     const lastIndex = 2;
     const { currentSliderItem } = this.state;
@@ -43,7 +47,7 @@ class CarouselComponent extends React.Component{
           currentSliderItem={this.state.currentSliderItem}
           glyph="‹" />
 
-        <CarouselContent currentSliderItem={this.state.currentSliderItem} movies ={this.props.movies}/>
+        <CarouselContent currentSliderItem={this.state.currentSliderItem} movies ={this.props.movies} myList = {this.props.myList}/>
 
         <CarouselArrow
           direction="right"
