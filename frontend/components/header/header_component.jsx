@@ -7,6 +7,10 @@ class HeaderComponent extends  React.Component {
 
     }
 
+    componentDidMount() {
+        debugger
+    }
+
     render() {
         if (!this.props.movie) return null;
 
