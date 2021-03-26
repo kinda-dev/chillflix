@@ -25,6 +25,11 @@
   justify-content: space-between;
 }
 
+.home-header-left-wrap {
+  align-items: center;
+  display: flex;
+}
+
 .home-header-link {
   position: fixed;
   left: 0;
@@ -35,6 +40,20 @@
   height: 32px;
   padding-left: 50px;
   object-fit: contain;
+}
+
+.home-header-mylist-link-wrap {
+  margin-left: 20px;
+}
+
+.home-header-mylist-link-wrap:hover .home-header-mylist-link {
+  text-decoration: underline;
+}
+
+.home-header-mylist-link {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
 }
 
 .home-profile-menu-wrapper {

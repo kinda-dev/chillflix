@@ -36,7 +36,7 @@ class HomeComponent extends  React.Component {
               <NavbarComponent/>
     
                 {/* <HeaderComponent movie = {this.props.movies[Math.floor(Math.random() * 9)]} /> */}
-                <HeaderComponent movie = {this.props.movies[0]} />
+                <HeaderComponent />
 
 
                 {/* <RowComponent movies = {this.props.movies} fetchMovie = {this.props.fetchMovie} /> */}

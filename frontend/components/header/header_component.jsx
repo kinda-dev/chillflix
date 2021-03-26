@@ -8,15 +8,18 @@ class HeaderComponent extends  React.Component {
     }
 
     render() {
+        if (!this.props.movie) return null;
+
 
         return(
 
             <header className="home-header"
-                style={{
-                    backgroundImage: `url(${this.props.movie.movieImage})`,
-                    backgroundPosition: "center center",
-                    backgroundSize: "cover",
-                }}
+            
+            style={{
+                backgroundImage: `url(${this.props.movie.movieImage})`,
+                backgroundPosition: "center center",
+                backgroundSize: "cover",
+            }}
             >
             <div className="home-header-contents">
                 <h1 className="home-header-movie-title">{this.props.movie.title}</h1>

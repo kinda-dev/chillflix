@@ -49,10 +49,16 @@ class NavbarComponent extends  React.Component {
 
                     <div className="home-navbar-contents">
 
-        
-                            <Link to="/browse" className="home-header-home-link">
-                                <img className="home-header-logo" src="https://chillflix-seeds.s3-us-west-1.amazonaws.com/misc/chillflix_logo.png" alt="Chillflix"/>
-                            </Link>  
+                            <div className="home-header-left-wrap">
+                                <Link to="/browse" className="home-header-home-link">
+                                    <img className="home-header-logo" src="https://chillflix-seeds.s3-us-west-1.amazonaws.com/misc/chillflix_logo.png" alt="Chillflix"/>
+                                </Link>
+                                <div className="home-header-mylist-link-wrap">
+                                    <Link to="/myList" className="home-header-mylist-link">
+                                        My List
+                                    </Link>  
+                                </div>
+                            </div>
 
                             <nav className="home-profile-menu-wrapper">
                                 <div className="profile-img-wrap">

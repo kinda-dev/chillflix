@@ -1,18 +1,14 @@
 import { connect } from 'react-redux';
+import {withRouter} from 'react-router-dom';
 
-import HeaderComponent from './header_container';
+import HeaderComponent from './header_component';
 import { fetchMovie } from '../../actions/movie_actions';
 
-const mapStateToProps = ({ entities: { movie } }) => {
+const mapStateToProps = ( state ) => {
+    let idx = Math.floor(Math.random() * 10 + 1)
     return {
-        movie: Object.values(movie),
+        movie: state.entities.movies[idx],
     };
 };
 
-const mapDispatchToProps = dispatch => {
-    return {
-        fetchMovie: (movieId) => dispatch(fetchMovie(movieId))
-    };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(HeaderComponent);
+export default withRouter(connect(mapStateToProps, null)(HeaderComponent));
