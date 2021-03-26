@@ -1,21 +1,16 @@
 .not-found-outer-wrap {
   color: #fff;
+  height: 100vh;
+  width: 100vw;
 }
 
 .not-found-background {
-  background-image: url("https://chillflix-seeds.s3-us-west-1.amazonaws.com/misc/yoda_404.jpg");
-  // top: -100px;
-
-  min-height: 62vw;
-
-  // z-index: -1;
+  background-image: url(https://chillflix-seeds.s3-us-west-1.amazonaws.com/misc/yoda_404.jpg);
   position: relative;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
-
-  justify-content: center;
+  min-height: 100%;
+  min-width: 100%;
+  object-fit: contain;
+  background-size: cover;
 }
 
 .not-found-text {
@@ -25,9 +20,7 @@
 .error-404 {
   font-size: 4rem;
   min-height: 80px;
-  // z-index: 1;
   position: relative;
-  // color: white;
   font-weight: bold;
 }
 
@@ -43,9 +36,6 @@
 }
 
 .not-found-button {
-  // background-color: #0056b3;
-  // font-weight: bold;
-
   display: inline-block;
   padding: 0.75rem 1.25rem;
   border-radius: 3;

@@ -8,7 +8,7 @@ class HeaderComponent extends  React.Component {
     }
 
     componentDidMount() {
-        debugger
+        // debugger
     }
 
     render() {
