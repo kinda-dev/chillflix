@@ -25,24 +25,26 @@ class myListComponent extends React.Component {
     return (
 
         <div className="my-list-page">
-            <Navbar />
-            <h1 className="my-list-h1">My List</h1>
-            <div className="my-list-page-wrap">
-                {this.state.moviesList.map((videoId) => {
-                    console.log(videoId)
-                    console.log(this.props.movies)
-                    let movie = this.props.movies[videoId - 1]
-                    console.log(movie.title)
-                    return (
-                        <div key={movie.id} className="my-list-movie-wrap">
-                            <MoviePreview movie = {movie} myList = {this.state.moviesList}/>                    
-                            {/* <div>{movie.title}</div> */}
-                            {/* <div className="black">we are here</div> */}
-                        </div>
-                    )
-                })}
+              <Navbar />
+          <div className="my-list-page-inner-wrap">
+              <h1 className="my-list-h1">My List</h1>
+              <div className="my-list-row-wrap">
+                  {this.state.moviesList.map((videoId) => {
+                      console.log(videoId)
+                      console.log(this.props.movies)
+                      let movie = this.props.movies[videoId - 1]
+                      console.log(movie.title)
+                      return (
+                          <div key={movie.id} className="my-list-movie-wrap">
+                              <MoviePreview movie = {movie} myList = {this.state.moviesList}/>                    
+                              {/* <div>{movie.title}</div> */}
+                              {/* <div className="black">we are here</div> */}
+                          </div>
+                      )
+                  })}
 
-            </div>
+              </div>
+          </div>
         </div>
  
 
