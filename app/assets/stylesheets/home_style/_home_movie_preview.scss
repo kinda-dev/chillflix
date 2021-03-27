@@ -78,6 +78,7 @@
   display: block;
   padding: 12px;
   border-radius: 3px;
+  cursor: default;
 }
 
 .movie-preview-video {
@@ -104,6 +105,7 @@
   background: white;
   border-radius: 50%;
   border: solid 2px gray;
+  cursor: pointer;
 }
 
 .movie-info-inner-wrap {

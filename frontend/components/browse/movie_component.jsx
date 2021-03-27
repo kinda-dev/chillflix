@@ -30,6 +30,7 @@ handleList(e) {
 
     if (!this.props.movie) return null;
     let movie = this.props.movie
+    console.log(movie.movieTrailer)
     return (
 
           <li className="slider-item" 
@@ -37,7 +38,6 @@ handleList(e) {
             src={movie.movieImage} 
             // onMouseOver={this.myListButton(movie.id)}
             // onMouseOut={this.handleMouseOut()}
-            onClick={this.handleList}
             >
                 <div className="movie-preview-hover-wrap">
                     <img className="movie-image" src={movie.movieImage} alt={movie.title}/>
@@ -52,7 +52,7 @@ handleList(e) {
                              <div className="movie-buttons-wrap">
                                 <div className='movie-play-button-wrap movie-icon-wrap'
                                   onClick={() => this.props.history.push(`/watch/${movie.id}`)} ><i className="fas fa-play-circle movie-icon"></i></div>
-                                <div className='movie-list-button-wrap movie-icon-wrap'>{this.state.listButton}</div>
+                                <div className='movie-list-button-wrap movie-icon-wrap' onClick={this.handleList}>{this.state.listButton}</div>
                              </div>
                              <div className="movie-info-inner-wrap">
                                 <h2 className="movie-year movie-infos-wrap">{movie.year}</h2>

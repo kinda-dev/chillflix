@@ -33,9 +33,9 @@ class myListComponent extends React.Component {
                       console.log(videoId)
                       console.log(this.props.movies)
                       let movie = this.props.movies[videoId - 1]
-                      console.log(movie.title)
                       return (
-                          <div key={movie.id} className="my-list-movie-wrap">
+                        <div key={videoId - 1} className="my-list-movie-wrap">
+                            {console.log(movie.title)}
                               <MoviePreview movie = {movie} myList = {this.state.moviesList}/>                    
                               {/* <div>{movie.title}</div> */}
                               {/* <div className="black">we are here</div> */}

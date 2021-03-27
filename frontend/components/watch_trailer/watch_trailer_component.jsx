@@ -6,15 +6,41 @@ class WatchTrailer extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-        listButton: this.props.myList.includes(this.props.movieId) ? <i className="fa fa-check-circle movie-icon" ></i> : <i className="fa fa-plus-circle movie-icon" aria-hidden="true"></i>
+      hideElement: 'watch-trailer-play-wrap',
+      showElement: 'hidden'
     };
-
-    // this.handleList = this.handleList.bind(this)
+    
+    this.playMovie = React.createRef();
+    this.startPlaying = this.startPlaying.bind(this)
   }
 
     componentDidMount() {
         this.props.fetchMovie(this.props.movieId)
+        this.playMovie.current.disablePictureInPicture = true
+        // console.log(this.playMovie.current)
+        // this.playMovie.current.muted = false
+        // this.startPlaying()
+
+
+        // this.playMovie.current.muted = false
         // debugger
+
+    }
+
+    startPlaying() {
+      console.log(true)
+
+      this.setState({ 
+        hideElement: 'hidden', 
+        showElement: 'watch-trailer-video'})
+      this.playMovie.current.play()
+
+      
+      // this.playMovie.current.muted = false
+      // this.playMovie.current.play()
+      // this.playMovie.current.pause()
+      // this.playMovie.current.allow="autoplay; fullscreen"
+
 
     }
 
@@ -32,19 +58,32 @@ class WatchTrailer extends React.Component {
 
   render() {
 
-    if (this.props.movie === undefined) return null;
+    if (!this.props.movie) return null;
     let movie = this.props.movie
-    console.log(movie.movieTrailer)
-    return (
+    {console.log(movie.movieTrailer)}
 
-        <div className="watch-trailer-page">
+    return (
+      
+      <div className="watch-trailer-page">
               {/* <Navbar /> */}
+                <div className="watch-trailer-title-close-wrap">
+                  <h1 className="watch-trailer-title">{movie.title}</h1>
+                </div>
           <div className="watch-trailer-page-inner-wrap">
-              <div className="controls-wrap">
-                <h1 className="my-list-h1">{movie.title}</h1>
+              <div className={this.state.hideElement} 
+                onClick={this.startPlaying}
+                style={{
+                  backgroundImage: `url(${movie.movieImage})`,
+                  backgroundPosition: "center center",
+                  backgroundSize: "contain",
+                  backgroundRepeat: "no-repeat"
+              }}>
+                <button className="watch-trailer-play-button">Play Movie</button>
               </div>
               <div className="trailer-wrap">
-                <video className="movie-preview-video" autoPlay controls loop muted><source src={movie.movieTrailer}></source></video>
+                  {console.log(movie.movieTrailer)}
+                {/* <iframe className="watch-trailer-video" ref={this.playMovie} src="https://chillflix-seeds.s3-us-west-1.amazonaws.com/full_stack_video_trailers/war_dogs_trailer.mp4" allow="autoplay; fullscreen"  controls controlsList="nodownload"></iframe> */}
+                <video className={this.state.showElement} ref={this.playMovie} autoPlay={false} controls controlsList="nodownload" loop muted={false}><source src={movie.movieTrailer}></source></video>
               </div>
           </div>
         </div>

@@ -108,7 +108,7 @@ section {
 }
 body {
   line-height: 1;
-  background: #141414;
+  background: black;
 }
 ol,
 ul {
@@ -128,6 +128,14 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus,
+video:focus {
+  outline: none;
 }
 
 button {
