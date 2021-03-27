@@ -68,22 +68,22 @@ class WatchTrailer extends React.Component {
               {/* <Navbar /> */}
                 <div className="watch-trailer-title-close-wrap">
                   <h1 className="watch-trailer-title">{movie.title}</h1>
+                  <div className="watch-trailer-close-button-wrap" onClick={() => this.props.history.goBack()}><i className="far fa-times-circle"></i></div>
                 </div>
           <div className="watch-trailer-page-inner-wrap">
               <div className={this.state.hideElement} 
                 onClick={this.startPlaying}
-                style={{
-                  backgroundImage: `url(${movie.movieImage})`,
-                  backgroundPosition: "center center",
-                  backgroundSize: "contain",
-                  backgroundRepeat: "no-repeat"
-              }}>
+              >
+                      {console.log(this.props.history.location.pathname)}
+
                 <button className="watch-trailer-play-button">Play Movie</button>
               </div>
               <div className="trailer-wrap">
                   {console.log(movie.movieTrailer)}
                 {/* <iframe className="watch-trailer-video" ref={this.playMovie} src="https://chillflix-seeds.s3-us-west-1.amazonaws.com/full_stack_video_trailers/war_dogs_trailer.mp4" allow="autoplay; fullscreen"  controls controlsList="nodownload"></iframe> */}
-                <video className={this.state.showElement} ref={this.playMovie} autoPlay={false} controls controlsList="nodownload" loop muted={false}><source src={movie.movieTrailer}></source></video>
+                {/* <video className="watch-trailer-video" poster={movie.movieImage} ref={this.playMovie} autoPlay={true} controls controlsList="nodownload" loop muted={false}><source src={this.props.movie.movieTrailer}></source></video> */}
+                <video className="watch-trailer-video" poster={movie.movieImage} ref={this.playMovie} autoPlay={false} controls controlsList="nodownload" loop muted={false}><source src="https://chillflix-seeds.s3-us-west-1.amazonaws.com/full_stack_video_trailers/war_dogs_trailer.mp4"></source></video>
+
               </div>
           </div>
         </div>

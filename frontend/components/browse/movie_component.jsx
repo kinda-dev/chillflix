@@ -42,7 +42,6 @@ handleList(e) {
                 <div className="movie-preview-hover-wrap">
                     <img className="movie-image" src={movie.movieImage} alt={movie.title}/>
                     <h1 className="movie-title">{movie.title}</h1>
-
                      <div className="movie-preview-info">
                             
                          <video className="movie-preview-video" autoPlay  loop muted><source src={movie.movieTrailer}></source></video>

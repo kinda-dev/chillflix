@@ -12,12 +12,30 @@
 }
 
 .watch-trailer-title-close-wrap {
-  //   position: absolute;
-  //   z-index: 100;
   color: white;
-  width: 100vw;
+  max-width: 100%;
   height: 10vh;
-  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.watch-trailer-title {
+  font-size: xx-large;
+  cursor: default;
+}
+
+.fa-times-circle {
+  color: gray;
+  cursor: pointer;
+  font-size: xx-large;
+}
+
+.watch-trailer-close-button-wrap:hover .fa-times-circle {
+  color: white;
+  cursor: pointer;
 }
 
 .watch-trailer-play-wrap {
@@ -28,8 +46,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: transparent;
+  background: rgba(0, 0, 0, 0.575);
+  cursor: pointer;
 }
+
+.watch-trailer-play-button {
+  font-size: xx-large;
+}
+
 .watch-trailer-video {
   width: 100vw;
   height: 80vh;
