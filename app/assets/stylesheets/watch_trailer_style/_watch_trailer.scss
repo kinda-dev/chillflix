@@ -1,0 +1,23 @@
+.watch-trailer-page {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.watch-trailer-page-inner-wrap {
+  display: flex;
+}
+
+.controls-wrap {
+  position: absolute;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+}
+
+// .movie-preview-video {
+//   width: 100vw;
+//   height: 100vh;
+// }

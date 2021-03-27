@@ -5,9 +5,12 @@ import WatchTrailer from './watch_trailer_component';
 import { fetchMovie } from '../../actions/movie_actions';
 
 
-const mapStateToProps = ( state ) => {
+const mapStateToProps = ( state, ownProps ) => {
+    // debugger
     return {
+        movieId: parseInt(ownProps.match.params.videoId),
         movie: state.entities.movies,
+        myList: state.entities.users[state.session.id].myListMovieIds
     };
 };
 
