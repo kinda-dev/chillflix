@@ -8,7 +8,7 @@
     require 'open-uri'
   
     User.destroy_all
-    # Movie.destroy_all
+    Movie.delete_all
 
     ActiveRecord::Base.connection.tables.each do |t|
       ActiveRecord::Base.connection.reset_pk_sequence!(t)
@@ -67,7 +67,7 @@
     trailer2 = open('https://chillflix-seeds.s3-us-west-1.amazonaws.com/full_stack_video_trailers/fight_club_trailer.mp4')
     movie2.trailer.attach(io: trailer2, filename: 'fight_club_trailer.mp4')
 
-    trailer3 = open()
+    trailer3 = open('https://chillflix-seeds.s3-us-west-1.amazonaws.com/full_stack_video_trailers/war_dogs_trailer.mp4')
     movie3.trailer.attach(io: trailer3, filename: 'war_dogs_trailer.mp4')
 
     trailer4 = open('https://chillflix-seeds.s3-us-west-1.amazonaws.com/full_stack_video_trailers/inception_trailer.mp4')

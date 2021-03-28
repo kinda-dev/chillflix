@@ -1,0 +1,88 @@
+=> [[32m#<Movie:0x00007ff7b0f1f158[0m
+  id: [1;34m4[0m,
+  title: [31m[1;31m"[0m[31mINCEPTION[1;31m"[0m[31m[0m,
+  description: [31m[1;31m"[0m[31mThe film stars Leonardo DiCaprio as a professional thief who steals information by infiltrating the subconscious of his targets.[1;31m"[0m[31m[0m,
+  rating: [31m[1;31m"[0m[31mPG-13[1;31m"[0m[31m[0m,
+  year: [1;34m2010[0m,
+  duration: [31m[1;31m"[0m[31m2h 28m[1;31m"[0m[31m[0m,
+  created_at: [1;34;4mTue[0m, [1;34m23[0m [1;34;4mMar[0m [1;34m2021[0m [1;34m17[0m:[1;34m45[0m:[1;34m27[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m23[0m [1;34;4mMar[0m [1;34m2021[0m [1;34m17[0m:[1;34m47[0m:[1;34m09[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Movie:0x00007ff7b0f1c638[0m
+  id: [1;34m5[0m,
+  title: [31m[1;31m"[0m[31mLEGEND[1;31m"[0m[31m[0m,
+  description:
+   [31m[1;31m"[0m[31mThe true story of London's most notorious gangsters, twins Reggie and Ronnie Kray. As the brothers rise through the criminal underworld, Ronnie advances the family business with violence and intimidation while Reggie struggles to go legitimate for local girl Frances Shea.[1;31m"[0m[31m[0m,
+  rating: [31m[1;31m"[0m[31mR[1;31m"[0m[31m[0m,
+  year: [1;34m2015[0m,
+  duration: [31m[1;31m"[0m[31m2h 11m[1;31m"[0m[31m[0m,
+  created_at: [1;34;4mTue[0m, [1;34m23[0m [1;34;4mMar[0m [1;34m2021[0m [1;34m17[0m:[1;34m45[0m:[1;34m27[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m23[0m [1;34;4mMar[0m [1;34m2021[0m [1;34m17[0m:[1;34m47[0m:[1;34m33[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Movie:0x00007ff7b0f1c4f8[0m
+  id: [1;34m6[0m,
+  title: [31m[1;31m"[0m[31mTHE TRIAL OF THE CHICAGO 7[1;31m"[0m[31m[0m,
+  description:
+   [31m[1;31m"[0m[31mThe film follows the Chicago Seven, a group of anti–Vietnam War protesters charged with conspiracy and crossing state lines with the intention of inciting riots at the 1968 Democratic National Convention in Chicago.[1;31m"[0m[31m[0m,
+  rating: [31m[1;31m"[0m[31mR[1;31m"[0m[31m[0m,
+  year: [1;34m2020[0m,
+  duration: [31m[1;31m"[0m[31m2h 10m[1;31m"[0m[31m[0m,
+  created_at: [1;34;4mTue[0m, [1;34m23[0m [1;34;4mMar[0m [1;34m2021[0m [1;34m17[0m:[1;34m45[0m:[1;34m27[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m23[0m [1;34;4mMar[0m [1;34m2021[0m [1;34m17[0m:[1;34m47[0m:[1;34m42[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Movie:0x00007ff7b0f1c3b8[0m
+  id: [1;34m7[0m,
+  title: [31m[1;31m"[0m[31mGRAN TORINO[1;31m"[0m[31m[0m,
+  description:
+   [31m[1;31m"[0m[31mThe story follows Walt Kowalski, a recently widowed Korean War veteran alienated from his family and angry at the world. Walt's young neighbor, Thao Vang Lor, is pressured by his cousin into stealing Walt's prized 1972 Ford Gran Torino for his initiation into a gang.[1;31m"[0m[31m[0m,
+  rating: [31m[1;31m"[0m[31mR[1;31m"[0m[31m[0m,
+  year: [1;34m2008[0m,
+  duration: [31m[1;31m"[0m[31m1h 56m[1;31m"[0m[31m[0m,
+  created_at: [1;34;4mTue[0m, [1;34m23[0m [1;34;4mMar[0m [1;34m2021[0m [1;34m17[0m:[1;34m45[0m:[1;34m27[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m23[0m [1;34;4mMar[0m [1;34m2021[0m [1;34m17[0m:[1;34m48[0m:[1;34m24[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Movie:0x00007ff7b0f1c250[0m
+  id: [1;34m8[0m,
+  title: [31m[1;31m"[0m[31mTHE HATEFUL EIGHT[1;31m"[0m[31m[0m,
+  description: [31m[1;31m"[0m[31mIn the dead of a Wyoming winter, a bounty hunter and his prisoner find shelter in a cabin currently inhabited by a collection of nefarious characters.[1;31m"[0m[31m[0m,
+  rating: [31m[1;31m"[0m[31mR[1;31m"[0m[31m[0m,
+  year: [1;34m2015[0m,
+  duration: [31m[1;31m"[0m[31m2h 47m[1;31m"[0m[31m[0m,
+  created_at: [1;34;4mTue[0m, [1;34m23[0m [1;34;4mMar[0m [1;34m2021[0m [1;34m17[0m:[1;34m45[0m:[1;34m28[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m23[0m [1;34;4mMar[0m [1;34m2021[0m [1;34m17[0m:[1;34m45[0m:[1;34m32[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Movie:0x00007ff7b0f1c0e8[0m
+  id: [1;34m9[0m,
+  title: [31m[1;31m"[0m[31mTHE TEORY OF EVERYTHING[1;31m"[0m[31m[0m,
+  description:
+   [31m[1;31m"[0m[31mThe Theory of Everything is the story of the most brilliant and celebrated physicist of our time, Stephen Hawking, and Jane Wilde the arts student he fell in love with whilst studying at Cambridge in the 1960s.[1;31m"[0m[31m[0m,
+  rating: [31m[1;31m"[0m[31mPG-13[1;31m"[0m[31m[0m,
+  year: [1;34m2014[0m,
+  duration: [31m[1;31m"[0m[31m2h 03m[1;31m"[0m[31m[0m,
+  created_at: [1;34;4mTue[0m, [1;34m23[0m [1;34;4mMar[0m [1;34m2021[0m [1;34m17[0m:[1;34m45[0m:[1;34m28[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m23[0m [1;34;4mMar[0m [1;34m2021[0m [1;34m17[0m:[1;34m45[0m:[1;34m32[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Movie:0x00007ff7b0f13f60[0m
+  id: [1;34m10[0m,
+  title: [31m[1;31m"[0m[31mHOOK  [1;31m"[0m[31m[0m,
+  description:
+   [31m[1;31m"[0m[31mWhen Captain James Hook kidnaps his children, an adult Peter Pan must return to Neverland and reclaim his youthful spirit in order to challenge his old enemy. ... With the help of her and the Lost Boys, he must remember how to be Peter Pan again in order to save his children by battling with Captain Hook once again.[1;31m"[0m[31m[0m,
+  rating: [31m[1;31m"[0m[31mPG[1;31m"[0m[31m[0m,
+  year: [1;34m1991[0m,
+  duration: [31m[1;31m"[0m[31m2h 21m[1;31m"[0m[31m[0m,
+  created_at: [1;34;4mTue[0m, [1;34m23[0m [1;34;4mMar[0m [1;34m2021[0m [1;34m17[0m:[1;34m45[0m:[1;34m28[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m23[0m [1;34;4mMar[0m [1;34m2021[0m [1;34m17[0m:[1;34m45[0m:[1;34m33[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Movie:0x00007ff7b0f13dd0[0m
+  id: [1;34m1[0m,
+  title: [31m[1;31m"[0m[31mBACK TO THE FUTURE[1;31m"[0m[31m[0m,
+  description:
+   [31m[1;31m"[0m[31mBack to the Future is an American science fiction/comedy movie directed by Robert Zemeckis and released in 1985. It is about a young man named Marty McFly who accidentally travels into the past and jeopardizes his own future existence.[1;31m"[0m[31m[0m,
+  rating: [31m[1;31m"[0m[31mPG-13[1;31m"[0m[31m[0m,
+  year: [1;34m1985[0m,
+  duration: [31m[1;31m"[0m[31m1h 56m[1;31m"[0m[31m[0m,
+  created_at: [1;34;4mTue[0m, [1;34m23[0m [1;34;4mMar[0m [1;34m2021[0m [1;34m17[0m:[1;34m45[0m:[1;34m27[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m23[0m [1;34;4mMar[0m [1;34m2021[0m [1;34m17[0m:[1;34m45[0m:[1;34m41[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Movie:0x00007ff7b0f13c90[0m
+  id: [1;34m2[0m,
+  title: [31m[1;31m"[0m[31mFIGHT CLUB[1;31m"[0m[31m[0m,
+  description:
+   [31m[1;31m"[0m[31mIt is based on the 1996 novel of the same name by Chuck Palahniuk. Norton plays the unnamed narrator, who is discontented with his white-collar job. He forms a 'fight club' with soap salesman Tyler Durden (Pitt), and becomes embroiled in a relationship with a destitute woman, Marla Singer (Bonham Carter).[1;31m"[0m[31m[0m,
+  rating: [31m[1;31m"[0m[31mPG-13[1;31m"[0m[31m[0m,
+  year: [1;34m1999[0m,
+  duration: [31m[1;31m"[0m[31m2h 31m[1;31m"[0m[31m[0m,
+  created_at: [1;34;4mTue[0m, [1;34m23[0m [1;34;4mMar[0m [1;34m2021[0m [1;34m17[0m:[1;34m45[0m:[1;34m27[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m23[0m [1;34;4mMar[0m [1;34m2021[0m [1;34m17[0m:[1;34m46[0m:[1;34m10[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m]
