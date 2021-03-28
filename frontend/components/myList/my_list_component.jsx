@@ -1,6 +1,6 @@
 import React from 'react';
 import  Navbar from '../navbar/navbar_container';
-import MoviePreview from '../browse/movie_component_container';
+import MovieComponent from '../browse/movie_component_container';
 
 class myListComponent extends React.Component {
   constructor(props){
@@ -12,6 +12,8 @@ class myListComponent extends React.Component {
 }
 
   render() {
+                      // {/* {console.log(this.props.history.location.pathname)}
+
 
     if (this.props.movies.length === 0) return null;
 
@@ -28,7 +30,7 @@ class myListComponent extends React.Component {
                       let movie = this.props.movies[videoId - 1]
                       return (
                         <div key={videoId - 1} className="my-list-movie-wrap">
-                              <MoviePreview movie = {movie} myList = {this.props.userList}/>                    
+                              <MovieComponent movie = {movie} myList = {this.props.userList}/>                    
                           </div>
                       )
                   })}

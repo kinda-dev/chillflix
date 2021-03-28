@@ -6,9 +6,7 @@ class WatchTrailer extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      hideElement: 'watch-trailer-play-wrap',
-      showElement: 'hidden'
-    };
+      hideElement: 'watch-trailer-play-wrap'    };
     
     this.playMovie = React.createRef();
     this.startPlaying = this.startPlaying.bind(this)
@@ -17,22 +15,19 @@ class WatchTrailer extends React.Component {
     componentDidMount() {
         this.props.fetchMovie(this.props.movieId)
         this.playMovie.current.disablePictureInPicture = true
-        // console.log(this.playMovie.current)
-        // this.playMovie.current.muted = false
-        // this.startPlaying()
-
-
-        // this.playMovie.current.muted = false
-        // debugger
+        this.playMovie.current.load()
 
     }
 
     startPlaying() {
       console.log(true)
 
+      this.playMovie.current.load()
       this.setState({ 
-        hideElement: 'hidden', 
-        showElement: 'watch-trailer-video'})
+        hideElement: 'hidden',
+      }) 
+        // showElement: 'watch-trailer-video'})
+      
       this.playMovie.current.play()
 
       
@@ -60,29 +55,30 @@ class WatchTrailer extends React.Component {
 
     if (!this.props.movie) return null;
     let movie = this.props.movie
+    // let trailer = movie.movieTrailer
     {console.log(movie.movieTrailer)}
 
     return (
       
       <div className="watch-trailer-page">
               {/* <Navbar /> */}
-                <div className="watch-trailer-title-close-wrap">
-                  <h1 className="watch-trailer-title">{movie.title}</h1>
-                  <div className="watch-trailer-close-button-wrap" onClick={() => this.props.history.goBack()}><i className="far fa-times-circle"></i></div>
-                </div>
+          <div className="watch-trailer-title-close-wrap">
+            <h1 className="watch-trailer-title">{movie.title}</h1>
+            <div className="watch-trailer-close-button-wrap" onClick={() => this.props.history.goBack()}><i className="far fa-times-circle"></i></div>
+          </div>
           <div className="watch-trailer-page-inner-wrap">
               <div className={this.state.hideElement} 
                 onClick={this.startPlaying}
               >
-                      {console.log(this.props.history.location.pathname)}
+                      {/* {console.log(this.props.history.location.pathname)} */}
 
                 <button className="watch-trailer-play-button">Play Movie</button>
               </div>
               <div className="trailer-wrap">
-                  {console.log(movie.movieTrailer)}
+                  {console.log(this.state.trailer)}
                 {/* <iframe className="watch-trailer-video" ref={this.playMovie} src="https://chillflix-seeds.s3-us-west-1.amazonaws.com/full_stack_video_trailers/war_dogs_trailer.mp4" allow="autoplay; fullscreen"  controls controlsList="nodownload"></iframe> */}
-                {/* <video className="watch-trailer-video" poster={movie.movieImage} ref={this.playMovie} autoPlay={true} controls controlsList="nodownload" loop muted={false}><source src={this.props.movie.movieTrailer}></source></video> */}
-                <video className="watch-trailer-video" poster={movie.movieImage} ref={this.playMovie} autoPlay={false} controls controlsList="nodownload" loop muted={false}><source src="https://chillflix-seeds.s3-us-west-1.amazonaws.com/full_stack_video_trailers/war_dogs_trailer.mp4"></source></video>
+                <video className="watch-trailer-video" poster={movie.movieImage} ref={this.playMovie} autoPlay={false} controls controlsList="nodownload" preload="metadata" loop muted={false}><source src={movie.movieTrailer}></source></video>
+                {/* <video onmouse className="watch-trailer-video" poster={movie.movieImage} ref={this.playMovie} autoPlay={false} controls preload="metadata" controlsList="nodownload" loop muted={false}><source src="https://chillflix-seeds.s3-us-west-1.amazonaws.com/full_stack_video_trailers/war_dogs_trailer.mp4"></source></video> */}
 
               </div>
           </div>

@@ -5,8 +5,7 @@ class CarouselContent extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      currentSliderItem: props.currentSliderItem,
-      listButton: ''
+      currentSliderItem: props.currentSliderItem
     };
   }
 
@@ -14,18 +13,6 @@ class CarouselContent extends React.Component {
 //  debugger
 }
 
-  myListButton(movieId) {
-    if (this.props.myList.includes(movieId)) {
-      this.setState({ listButton: <i className="fa fa-check-circle" ></i> })
-
-    } else {
-      this.setState({ listButton: <i className="fa fa-plus-circle" ></i> })
-
-    } 
-      
-
-
-  }
 
   handleMouseOut() {
     this.setState({ listButton: '' })
@@ -46,8 +33,8 @@ class CarouselContent extends React.Component {
     return (
       <div className="slider-wrap" slide={this.state.currentSliderItem}>
 
-        {this.props.movies.map((movie) => (
-            <MovieComponent movie={movie} myList={this.props.myList} key={movie.id} />
+        {this.props.movies.map((movie, idx) => (
+            <MovieComponent movie={movie} myList={this.props.myList} key={idx} />
           // <li className="slider-item" 
           //   key={movie.id} 
           //   movieid={movie.id} 
@@ -76,8 +63,8 @@ class CarouselContent extends React.Component {
           //   </li>
         ))}
 
-      {this.props.movies.map((movie) => (
-            <MovieComponent movie={movie} myList={this.props.myList} key={movie.id} />
+      {this.props.movies.map((movie, idx) => (
+            <MovieComponent movie={movie} myList={this.props.myList} key={idx} />
 
         ))}
         {/* <div className="slider-item">

@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 class MovieComponent extends React.Component {
   constructor(props){
@@ -49,8 +51,13 @@ handleList(e) {
                             <h1 className="movie-title-hidden">{movie.title}</h1>
                              <h2 className="movie-description">{movie.description}</h2>
                              <div className="movie-buttons-wrap">
+                               <Link to={`/watch/${movie.id}`} location={this.props.location}>
                                 <div className='movie-play-button-wrap movie-icon-wrap'
-                                  onClick={() => this.props.history.push(`/watch/${movie.id}`)} ><i className="fas fa-play-circle movie-icon"></i></div>
+                                  // onClick={() => this.props.history.push(`/watch/${movie.id}`)} 
+                                  ><i className="fas fa-play-circle movie-icon"></i>
+                                </div>
+                              </Link>
+                              
                                 <div className='movie-list-button-wrap movie-icon-wrap' onClick={this.handleList}>{this.state.listButton}</div>
                              </div>
                              <div className="movie-info-inner-wrap">
