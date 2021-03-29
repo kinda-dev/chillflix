@@ -12,7 +12,7 @@ class myListComponent extends React.Component {
 }
 
   render() {
-                      // {/* {console.log(this.props.history.location.pathname)}
+        console.log(this.props.userList)
 
 
     if (this.props.movies.length === 0) return null;
