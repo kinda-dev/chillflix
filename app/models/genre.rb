@@ -7,6 +7,6 @@ class Genre < ApplicationRecord
 
 
     has_many :movies,
-        through: :movies_genres,
+        through: :movies_genre,
         source: :movie
 end

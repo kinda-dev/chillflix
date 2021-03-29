@@ -1,20 +1,20 @@
-class Api::MoviesController < ApplicationController
+class Api::GenresController < ApplicationController
 
     def index 
         # if params[:genre_id]
         #     @movies = Movie.joins(:genres).where(genres: {id: params[:genre_id]})
         # else
-        @movies = Movie.all
         @genres = Genre.all
+        # end
         render :index
     end
 
     def show
-        @movie = Movie.find_by(id: params[:id])
-        if @movie
+        @genre = Genre.find_by(id: params[:id])
+        if @genre
             render :show
         else
-            render json: @movie.errors.full_messages, status: 404
+            render json: @genre.errors.full_messages, status: 404
         end
     end
 

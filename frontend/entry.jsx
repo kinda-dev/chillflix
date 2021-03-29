@@ -6,6 +6,8 @@ import configureStore from './store/store';
 import { login, logout, signup } from './actions/session_actions';
 import { fetchAllMovies, fetchMovie } from './actions/movie_actions';
 import { addToList, deleteFromList } from './actions/list_actions';
+import { fetchAllGenres } from './actions/genre_actions';
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -34,6 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
     window.fetchAllMovies = fetchAllMovies;
     window.fetchMovie = fetchMovie;
 
+  // genres
+    window.fetchAllGenres = fetchAllGenres;
   // list
   window.addToList = addToList;
   window.deleteFromList = deleteFromList;

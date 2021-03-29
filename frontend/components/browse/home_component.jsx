@@ -16,6 +16,7 @@ class HomeComponent extends  React.Component {
     componentDidMount() {
         // debugger
         this.props.fetchAllMovies();
+        // this.props.fetchAllgenres();
  
 
     }
