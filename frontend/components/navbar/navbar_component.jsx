@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 
 
@@ -9,6 +9,9 @@ class NavbarComponent extends  React.Component {
         super(props);
         this.state = {
             navbarBackground: 'nav-transparent',
+            homeLink: (this.props.history.location.pathname === '/browse') ? <div className="same-page">Home</div> : <Link to="/browse" className="home-header-mylist-link">Home</Link>,
+            myListLink: (this.props.history.location.pathname === '/myList') ? <div className="same-page">My List</div> : <Link to="/myList" className="home-header-mylist-link">My List</Link>
+
         };
 
         this.makeNavbarFading =this.makeNavbarFading.bind(this);
@@ -40,7 +43,6 @@ class NavbarComponent extends  React.Component {
     
     render() {
         
-
         return(
             
                 
@@ -54,9 +56,10 @@ class NavbarComponent extends  React.Component {
                                     <img className="home-header-logo" src="https://chillflix-seeds.s3-us-west-1.amazonaws.com/misc/chillflix_logo.png" alt="Chillflix"/>
                                 </Link>
                                 <div className="home-header-mylist-link-wrap">
-                                    <Link to="/myList" className="home-header-mylist-link">
-                                        My List
-                                    </Link>  
+                                    {this.state.homeLink}
+                                </div>
+                                <div className="home-header-mylist-link-wrap">
+                                    {this.state.myListLink}
                                 </div>
                             </div>
 
@@ -83,4 +86,4 @@ class NavbarComponent extends  React.Component {
     }
 }
 
-export default NavbarComponent;
+export default withRouter(NavbarComponent);

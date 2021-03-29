@@ -44,17 +44,19 @@
 
 .home-header-mylist-link-wrap {
   margin-left: 20px;
-  cursor: pointer;
 }
 
 .home-header-mylist-link-wrap:hover .home-header-mylist-link {
-  text-decoration: underline;
+  color: grey;
+  transition: all 0.4s;
 }
 
 .home-header-mylist-link {
   text-decoration: none;
   color: white;
-  font-weight: 700;
+  // font-weight: 700;
+  cursor: pointer;
+  transition: all 0.4s;
 }
 
 .home-profile-menu-wrapper {
@@ -122,4 +124,10 @@
   color: white;
   font-weight: 700;
   cursor: pointer;
+}
+
+.same-page {
+  color: white;
+  font-weight: 700;
+  cursor: default;
 }
