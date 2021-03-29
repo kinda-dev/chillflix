@@ -42,10 +42,14 @@ class HomeComponent extends  React.Component {
 
                 {/* <RowComponent movies = {this.props.movies} fetchMovie = {this.props.fetchMovie} /> */}
                 <div className="browse-genre-rows">
-                    <div className="browse-row">
-                        <h2 className="row-title">TRENDING NOW</h2>
+                    {console.log(this.props.genres)}
+                    {this.props.genres.map((genre) => (
+
+                    <div className="browse-row" key={genre.id}>
+                        <h2 className="row-title">{genre.genre_name}</h2>
                         <CarouselComponent movies = {this.props.movies} myList = {this.props.currentUser.myListMovieIds} />
                     </div>
+                    ))}
                 </div>
 
                 {/* <RowComponent /> */}

@@ -5,11 +5,11 @@ import { withRouter } from 'react-router-dom';
 import HomeComponent from './home_component';
 import { fetchAllMovies, fetchMovie } from '../../actions/movie_actions';
 
-const mapStateToProps = ({ session, entities: { users, movies, genres } }) => {
+const mapStateToProps = ({ session, entities: { users, movies } }) => {
     return {
         currentUser: users[session.id],
         movies: Object.values(movies),
-        genres: genres
+        genres: movies.genres
 
     };
 };
