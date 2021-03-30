@@ -15,8 +15,8 @@ class HomeComponent extends  React.Component {
     
     componentDidMount() {
         // debugger
+        this.props.fetchAllGenres();
         // this.props.fetchAllMovies();
-        this.props.fetchAllMovies();
  
 
     }
@@ -26,7 +26,8 @@ class HomeComponent extends  React.Component {
     
     render() {
         
-        if (this.props.movies.length === 0) return null;
+        if (this.props.genres.length === 0) return null;
+
 
         return(
             
@@ -39,18 +40,18 @@ class HomeComponent extends  React.Component {
 
 
                 <div className="browse-genre-rows">
-                    {console.log(this.props.genres)}
                     {this.props.genres.map((genre) => (
-
+                   
                     <div className="browse-row" key={genre.id}>
-                    {console.log(genre.id)}
 
-                        <h2 className="row-title">{genre.genre_name}</h2>
+                        <h2 className="row-title" >{genre.genre_name}</h2>
                         <CarouselComponent  myList = {this.props.currentUser.myListMovieIds} genreMovies={genre.genreMovies} />
 
                     </div>
                     ))}
                 </div>
+
+                
 
                 
                 <p className="random-pixel">A</p>

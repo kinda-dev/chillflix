@@ -24,14 +24,14 @@ class CarouselContent extends React.Component {
 
   render() {
 
-    if (!this.props.genres.length === 0) return null;
+    // if (!this.props.genres.length === 0) return null;
     console.log(this.props.genreMovies)
     console.log(this.props.movies)
 
 
 
-            {this.props.genreMovies.map((movieId) => (
-              console.log(this.props.movies[movieId - 1].title)
+            {this.props.genreMovies.map((movie) => (
+              console.log(movie.title)
         ))}
     return (
       // <div className="slider-wrap" slide={this.state.currentSliderItem}>
@@ -45,8 +45,8 @@ class CarouselContent extends React.Component {
 
       <div className="slider-wrap" slide={this.state.currentSliderItem}>
 
-        {this.props.genreMovies.map((movieId) => (
-            <MovieComponent movie={this.props.movies[movieId - 1]} myList={this.props.myList} key={movieId - 1} />
+        {this.props.genreMovies.map((movie) => (
+            <MovieComponent movie={movie} myList={this.props.myList} key={movie.id} />
         ))}
 
       </div>

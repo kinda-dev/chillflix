@@ -6,7 +6,7 @@ class CarouselComponent extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      currentSliderItem: 0
+      currentSliderItem: 1
     };
     this.previousSlide = this.previousSlide.bind(this);
     this.nextSlide = this.nextSlide.bind(this);
