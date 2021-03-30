@@ -12,7 +12,7 @@ class myListComponent extends React.Component {
 }
 
   render() {
-        console.log(this.props.userList)
+        console.log(this.props.currentUser)
 
 
     if (this.props.movies.length === 0) return null;
@@ -24,13 +24,13 @@ class myListComponent extends React.Component {
           <div className="my-list-page-inner-wrap">
               <h1 className="my-list-h1">My List</h1>
               <div className="my-list-row-wrap">
-                  {this.props.userList.map((videoId) => {
+                  {this.props.currentUser.myListMovieIds.map((videoId) => {
                       console.log(videoId)
                       console.log(this.props.movies)
                       let movie = this.props.movies[videoId - 1]
                       return (
                         <div key={videoId - 1} className="my-list-movie-wrap">
-                              <MovieComponent movie = {movie} myList = {this.props.userList}/>                    
+                              <MovieComponent movie = {movie} myList = {this.props.currentUser.myListMovieIds}/>                    
                           </div>
                       )
                   })}

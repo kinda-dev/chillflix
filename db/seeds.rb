@@ -117,31 +117,31 @@
     movie10.image.attach(io: image10, filename: 'hook_image.jpg')
 
     image11 = open('https://chillflix-seeds.s3-us-west-1.amazonaws.com/full_stack_movies_images/extremely_wicked_image.jpg')
-    movie11.image.attach(io: image10, filename: 'extremely_wicked_image.jpg')
+    movie11.image.attach(io: image11, filename: 'extremely_wicked_image.jpg')
     
     image12 = open('https://chillflix-seeds.s3-us-west-1.amazonaws.com/full_stack_movies_images/free_state_of_jones_image.jpg')
-    movie12.image.attach(io: image10, filename: 'free_state_of_jones_image.jpg')
+    movie12.image.attach(io: image12, filename: 'free_state_of_jones_image.jpg')
 
     image13 = open('https://chillflix-seeds.s3-us-west-1.amazonaws.com/full_stack_movies_images/mollys_game_image.jpg')
-    movie13.image.attach(io: image10, filename: 'mollys_game_image.jpg')
+    movie13.image.attach(io: image13, filename: 'mollys_game_image.jpg')
 
     image14 = open('https://chillflix-seeds.s3-us-west-1.amazonaws.com/full_stack_movies_images/pineapple_express_image.jpg')
-    movie14.image.attach(io: image10, filename: 'pineapple_express_image.jpg')
+    movie14.image.attach(io: image14, filename: 'pineapple_express_image.jpg')
 
     image15 = open('https://chillflix-seeds.s3-us-west-1.amazonaws.com/full_stack_movies_images/superbad_image.jpg')
-    movie15.image.attach(io: image10, filename: 'superbad_image.jpg')
+    movie15.image.attach(io: image15, filename: 'superbad_image.jpg')
 
     image16 = open('https://chillflix-seeds.s3-us-west-1.amazonaws.com/full_stack_movies_images/the_ballad_of_buster_scruggs_image.jpg')
-    movie16.image.attach(io: image10, filename: 'the_ballad_of_buster_scruggs_image.jpg')
+    movie16.image.attach(io: image16, filename: 'the_ballad_of_buster_scruggs_image.jpg')
 
     image17 = open('https://chillflix-seeds.s3-us-west-1.amazonaws.com/full_stack_movies_images/the_boy_who_harnessed_the_wind_image.jpg')
-    movie17.image.attach(io: image10, filename: 'the_boy_who_harnessed_the_wind_image.jpg')
+    movie17.image.attach(io: image17, filename: 'the_boy_who_harnessed_the_wind_image.jpg')
 
     image18 = open('https://chillflix-seeds.s3-us-west-1.amazonaws.com/full_stack_movies_images/the_dirt_image.jpg')
-    movie18.image.attach(io: image10, filename: 'the_dirt_image.jpg')
+    movie18.image.attach(io: image18, filename: 'the_dirt_image.jpg')
  
     image19 = open('https://chillflix-seeds.s3-us-west-1.amazonaws.com/full_stack_movies_images/the_highwaymen_image.jpg')
-    movie19.image.attach(io: image10, filename: 'the_highwaymen_image.jpg')
+    movie19.image.attach(io: image19, filename: 'the_highwaymen_image.jpg')
    
     # trailers clips
 
@@ -176,31 +176,31 @@
     movie10.trailer.attach(io: trailer10, filename: 'hook_trailer.mp4')
 
     trailer11 = open('https://chillflix-seeds.s3-us-west-1.amazonaws.com/full_stack_video_trailers/extremely_wicked_trailer.mp4')
-    movie11.trailer.attach(io: trailer10, filename: 'extremely_wicked_trailer.mp4')
+    movie11.trailer.attach(io: trailer11, filename: 'extremely_wicked_trailer.mp4')
 
     trailer12 = open('https://chillflix-seeds.s3-us-west-1.amazonaws.com/full_stack_video_trailers/free_state_of_jones_trailer.mp4')
-    movie12.trailer.attach(io: trailer10, filename: 'free_state_of_jones_trailer.mp4')
+    movie12.trailer.attach(io: trailer12, filename: 'free_state_of_jones_trailer.mp4')
 
     trailer13 = open('https://chillflix-seeds.s3-us-west-1.amazonaws.com/full_stack_video_trailers/mollys_game_trailer.mp4')
-    movie13.trailer.attach(io: trailer10, filename: 'mollys_game_trailer.mp4')
+    movie13.trailer.attach(io: trailer13, filename: 'mollys_game_trailer.mp4')
 
     trailer14 = open('https://chillflix-seeds.s3-us-west-1.amazonaws.com/full_stack_video_trailers/pineapple_express_trailer.mp4')
-    movie14.trailer.attach(io: trailer10, filename: 'pineapple_express_trailer.mp4')
+    movie14.trailer.attach(io: trailer14, filename: 'pineapple_express_trailer.mp4')
 
     trailer15 = open('https://chillflix-seeds.s3-us-west-1.amazonaws.com/full_stack_video_trailers/superbad_trailer.mp4')
-    movie15.trailer.attach(io: trailer10, filename: 'superbad_trailer.mp4')
+    movie15.trailer.attach(io: trailer15, filename: 'superbad_trailer.mp4')
 
     trailer16 = open('https://chillflix-seeds.s3-us-west-1.amazonaws.com/full_stack_video_trailers/the_ballad_of_buster_scruggs_trailer.mp4')
-    movie16.trailer.attach(io: trailer10, filename: 'the_ballad_of_buster_scruggs_trailer.mp4')
+    movie16.trailer.attach(io: trailer16, filename: 'the_ballad_of_buster_scruggs_trailer.mp4')
 
     trailer17 = open('https://chillflix-seeds.s3-us-west-1.amazonaws.com/full_stack_video_trailers/the_boy_who_harnessed_the_wind_trailer.mp4')
-    movie17.trailer.attach(io: trailer10, filename: 'the_boy_who_harnessed_the_wind_trailer.mp4')
+    movie17.trailer.attach(io: trailer17, filename: 'the_boy_who_harnessed_the_wind_trailer.mp4')
 
     trailer18 = open('https://chillflix-seeds.s3-us-west-1.amazonaws.com/full_stack_video_trailers/the_dirt_trailer.mp4')
-    movie18.trailer.attach(io: trailer10, filename: 'the_dirt_trailer.mp4')
+    movie18.trailer.attach(io: trailer18, filename: 'the_dirt_trailer.mp4')
 
     trailer19 = open('https://chillflix-seeds.s3-us-west-1.amazonaws.com/full_stack_video_trailers/the_highwaymen_trailer.mp4')
-    movie19.trailer.attach(io: trailer10, filename: 'the_highwaymen_trailer.mp4')
+    movie19.trailer.attach(io: trailer19, filename: 'the_highwaymen_trailer.mp4')
 
 
 

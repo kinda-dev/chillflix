@@ -18,6 +18,7 @@ class NavbarComponent extends  React.Component {
     }
     
     componentDidMount() {
+        this.props.fetchAllGenres();
         document.addEventListener('scroll', this.makeNavbarFading);
  
 
@@ -42,6 +43,7 @@ class NavbarComponent extends  React.Component {
     
     
     render() {
+        if (this.props.genres.length === 0) return null;
         
         return(
             

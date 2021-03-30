@@ -1,4 +1,4 @@
-import  { RECEIVE_GENRE } from '../actions/genre_actions';
+import  { RECEIVE_GENRE, RECEIVE_GENRES } from '../actions/genre_actions';
 
 const genresReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
@@ -9,6 +9,8 @@ const genresReducer = (oldState = {}, action) => {
             nextState[action.genre.id] = action.genre;
             console.table(nextState[action.genre.id])
             return nextState[action.genre.id];
+        case RECEIVE_GENRES:
+            return action.genres;
         default:
             return oldState;    
     }

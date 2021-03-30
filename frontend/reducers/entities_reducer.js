@@ -7,7 +7,7 @@ import genresReducer from "./genres_reducer";
 const entitiesReducer = combineReducers({
   users: usersReducer,
   movies: moviesReducer,
-  genre: genresReducer,
+  genres: genresReducer,
 });
 
 export default entitiesReducer;

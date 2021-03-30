@@ -15,8 +15,8 @@ class HomeComponent extends  React.Component {
     
     componentDidMount() {
         // debugger
+        // this.props.fetchAllMovies();
         this.props.fetchAllMovies();
-        // this.props.fetchAllgenres();
  
 
     }
@@ -32,43 +32,25 @@ class HomeComponent extends  React.Component {
             
             
             <div className='home-outer-wrap' >
-                {console.log('render')}
                 
               <NavbarComponent/>
     
-                {/* <HeaderComponent movie = {this.props.movies[Math.floor(Math.random() * 9)]} /> */}
                 <HeaderComponent />
 
 
-                {/* <RowComponent movies = {this.props.movies} fetchMovie = {this.props.fetchMovie} /> */}
                 <div className="browse-genre-rows">
                     {console.log(this.props.genres)}
                     {this.props.genres.map((genre) => (
 
                     <div className="browse-row" key={genre.id}>
+                    {console.log(genre.id)}
+
                         <h2 className="row-title">{genre.genre_name}</h2>
-                        <CarouselComponent movies = {this.props.movies} myList = {this.props.currentUser.myListMovieIds} />
+                        <CarouselComponent  myList = {this.props.currentUser.myListMovieIds} genreMovies={genre.genreMovies} />
+
                     </div>
                     ))}
                 </div>
-
-                {/* <RowComponent /> */}
-
-
-
-                
-                {/* <div className="all-movies">
-                    {this.renderAllMovies()}
-                </div> */}
-
-                {/* following rows to display different genres */}
-
-                {/* <div className="row">
-                    <h2 className="row-title">Top Trending</h2>
-                    <ul className="row-elements">
-                        {this.renderAllMovies()}
-                    </ul>
-                </div> */}
 
                 
                 <p className="random-pixel">A</p>

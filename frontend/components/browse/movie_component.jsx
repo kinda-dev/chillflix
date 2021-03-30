@@ -6,19 +6,19 @@ class MovieComponent extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-        listButton: this.props.myList.includes(this.props.movie.id) ? <i className="fa fa-check-circle movie-icon" ></i> : <i className="fa fa-plus-circle movie-icon" aria-hidden="true"></i>
+        listButton: this.props.currentUser.myListMovieIds.includes(this.props.movie.id) ? <i className="fa fa-check-circle movie-icon" ></i> : <i className="fa fa-plus-circle movie-icon" aria-hidden="true"></i>
     };
 
     this.handleList = this.handleList.bind(this)
   }
 
   componentDidMount() {
-//  debugger
-}
+  
+  }
 
 handleList(e) {
     e.preventDefault()
-    if (this.props.myList.includes(this.props.movie.id)) {
+    if (this.props.currentUser.myListMovieIds.includes(this.props.movie.id)) {
         this.props.deleteFromList(this.props.movie.id, this.props.currentUser)
         this.setState({ listButton: <i className="fa fa-plus-circle movie-icon" ></i> })
     } else {
@@ -32,9 +32,8 @@ handleList(e) {
 
     if (!this.props.movie) return null;
     let movie = this.props.movie
-    console.log(movie.movieTrailer)
     return (
-
+      
           <li className="slider-item" 
             movieid={movie.id} 
             src={movie.movieImage} 
@@ -46,7 +45,7 @@ handleList(e) {
                     <h1 className="movie-title">{movie.title}</h1>
                      <div className="movie-preview-info">
                             
-                         <video className="movie-preview-video" autoPlay  loop muted><source src={movie.movieTrailer}></source></video>
+                         {/* <video className="movie-preview-video" autoPlay  loop muted><source src={movie.movieTrailer}></source></video> */}
                          <div className="movie-info">
                             <h1 className="movie-title-hidden">{movie.title}</h1>
                              <h2 className="movie-description">{movie.description}</h2>

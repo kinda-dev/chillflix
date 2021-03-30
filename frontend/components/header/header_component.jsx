@@ -9,6 +9,8 @@ class HeaderComponent extends  React.Component {
 
     componentDidMount() {
         // debugger
+        // const idx = Math.floor(Math.random() * (19 - 1)) + 1
+        // this.props.fetchMovie(idx)
     }
 
     render() {
@@ -22,7 +24,8 @@ class HeaderComponent extends  React.Component {
             style={{
                 backgroundImage: `url(${this.props.movie.movieImage})`,
                 backgroundPosition: "center center",
-                backgroundSize: "cover",
+                backgroundSize: "contain",
+                backgroundRepeat: "no-repeat"
             }}
             >
             <div className="home-header-contents">

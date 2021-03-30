@@ -1,6 +1,6 @@
 import React from 'react';
 import CarouselArrow from './carousel_arrow';
-import CarouselContent from './carousel_content';
+import CarouselContent from './carousel_content_container';
 
 class CarouselComponent extends React.Component{
   constructor(props){
@@ -39,6 +39,7 @@ class CarouselComponent extends React.Component{
   }
 
   render(){
+
     return(
       <div className="carousel">
         <CarouselArrow
@@ -47,7 +48,7 @@ class CarouselComponent extends React.Component{
           currentSliderItem={this.state.currentSliderItem}
           glyph="‹" />
 
-        <CarouselContent currentSliderItem={this.state.currentSliderItem} movies ={this.props.movies} myList = {this.props.myList}/>
+        <CarouselContent currentSliderItem={this.state.currentSliderItem} myList = {this.props.myList} genreMovies={this.props.genreMovies} />
 
         <CarouselArrow
           direction="right"

@@ -4,11 +4,11 @@ import { fetchAllMovies } from '../../actions/movie_actions';
 
 import myListComponent from './my_list_component';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = ({ session, entities: { users, movies, genres } }) => {
     // debugger
     return {
-        movies: Object.values(state.entities.movies),
-        userList: state.entities.users[state.session.id].myListMovieIds
+        currentUser: users[session.id],
+        movies: Object.values(movies),
     };
 };
 

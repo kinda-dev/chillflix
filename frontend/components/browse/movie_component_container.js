@@ -6,6 +6,7 @@ import MovieComponent from './movie_component';
 import { addToList, deleteFromList } from '../../actions/list_actions';
 
 const mapStateToProps = ({ session, entities: { users } }) => {
+    // debugger
     return {
         currentUser: users[session.id],
     };

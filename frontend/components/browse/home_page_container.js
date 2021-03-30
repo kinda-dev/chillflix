@@ -4,12 +4,14 @@ import { withRouter } from 'react-router-dom';
 
 import HomeComponent from './home_component';
 import { fetchAllMovies, fetchMovie } from '../../actions/movie_actions';
+import { fetchAllGenres } from '../../actions/genre_actions';
 
-const mapStateToProps = ({ session, entities: { users, movies } }) => {
+
+const mapStateToProps = ({ session, entities: { users, movies, genres } }) => {
     return {
         currentUser: users[session.id],
         movies: Object.values(movies),
-        genres: movies.genres
+        genres: Object.values(genres)
 
     };
 };
@@ -17,7 +19,9 @@ const mapStateToProps = ({ session, entities: { users, movies } }) => {
 const mapDispatchToProps = dispatch => {
     return {
         fetchAllMovies: () => dispatch(fetchAllMovies()),
-        fetchMovie: (movieId) => dispatch(fetchMovie(movieId))
+        fetchMovie: (movieId) => dispatch(fetchMovie(movieId)),
+        fetchAllGenres: () => dispatch(fetchAllGenres())
+
     };
 };
 
