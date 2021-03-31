@@ -13,6 +13,9 @@ class MovieComponent extends React.Component {
   }
 
   componentDidMount() {
+    this.setState({ listButton: 
+      this.props.currentUser.myListMovieIds.includes(this.props.movie.id) ? <i className="fa fa-check-circle movie-icon" ></i> : <i className="fa fa-plus-circle movie-icon" aria-hidden="true"></i> })
+
   
   }
 

@@ -18,7 +18,7 @@ class NavbarComponent extends  React.Component {
     }
     
     componentDidMount() {
-        this.props.fetchAllGenres();
+        // this.props.fetchAllGenres();
         document.addEventListener('scroll', this.makeNavbarFading);
  
 
@@ -43,7 +43,7 @@ class NavbarComponent extends  React.Component {
     
     
     render() {
-        if (this.props.genres.length === 0) return null;
+        // if (this.props.genres.length === 0) return null;
         
         return(
             
@@ -62,6 +62,9 @@ class NavbarComponent extends  React.Component {
                                 </div>
                                 <div className="home-header-mylist-link-wrap">
                                     {this.state.myListLink}
+                                </div>
+                                <div className="home-header-mylist-link-wrap">
+                                    <Link to={{pathname: "/browse/genre", state: {genreId: 2}}} className="home-header-mylist-link" params={{ genreId: 1}}>Genre</Link>
                                 </div>
                             </div>
 

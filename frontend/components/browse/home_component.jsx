@@ -26,7 +26,7 @@ class HomeComponent extends  React.Component {
     
     render() {
         
-        if (this.props.genres.length === 0) return null;
+        if (this.props.genres.length < 4) return null;
 
 
         return(
@@ -50,82 +50,6 @@ class HomeComponent extends  React.Component {
                     </div>
                     ))}
                 </div>
-
-                
-
-                
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-                <p className="random-pixel">A</p>
-
-
 
 
             </div>
