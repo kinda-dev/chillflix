@@ -9,6 +9,7 @@ const mapStateToProps = ({ session, entities: { users, movies, genres } }, ownPr
     return {
         currentUser: users[session.id],
         genre: genres,
+        genreId: parseInt(ownProps.match.params.genreId)
     };
 };
 

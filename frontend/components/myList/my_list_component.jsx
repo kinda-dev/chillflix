@@ -15,7 +15,7 @@ class myListComponent extends React.Component {
         console.log(this.props.currentUser)
 
 
-        if (!this.props.genre.genreMovies) return null;
+        if (this.props.genre.genre_name !== "Top Trending") return null;
 
 
     return (

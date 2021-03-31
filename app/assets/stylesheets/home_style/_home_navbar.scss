@@ -60,6 +60,38 @@
   font-size: small;
 }
 
+.navbar-genres-list-wrap {
+  display: none;
+}
+
+.navbar-genres-list-inner-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.my-list-hover:hover .navbar-genres-list-wrap {
+  display: block;
+  position: absolute;
+  color: white;
+  padding-top: 5px;
+  font-size: small;
+
+  border: 1px solid red;
+}
+
+.navbar-genre-item {
+  padding: 3px;
+  cursor: pointer;
+  background-color: rgba(20, 20, 20, 0.9);
+  border: 1px solid rgba(156, 154, 154, 0.76);
+  transition: all 0.4s;
+}
+
+.navbar-genre-item-hover:hover .navbar-genre-item {
+  color: gray;
+  transition: all 0.4s;
+}
+
 .home-profile-menu-wrapper {
   position: fixed;
   right: 65px;
@@ -131,5 +163,11 @@
   color: white;
   font-weight: 700;
   cursor: default;
+  transition: all 0.4s;
+}
+
+.same-page-genres {
+  color: white;
+  font-weight: 700;
   transition: all 0.4s;
 }
