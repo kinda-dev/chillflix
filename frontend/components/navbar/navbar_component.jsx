@@ -71,16 +71,16 @@ class NavbarComponent extends  React.Component {
                                     <div className="navbar-genres-list-wrap">
                                         <div className="navbar-genres-list-inner-wrap">
                                             <div className="navbar-genre-item-hover">
-                                                <div className="navbar-genre-item" value={1} onClick={() => this.props.history.push(`/browse/genre/${1}`)}>Top trending</div>
+                                                <div className="navbar-genre-item" onClick={() => this.props.history.push(`/browse/genre/${1}`)}>Top trending</div>
                                             </div>
                                             <div className="navbar-genre-item-hover">
-                                                <div className="navbar-genre-item" value={2} onClick={() => this.props.history.push(`/browse/genre/${2}`)}>Drama</div>
+                                                <div className="navbar-genre-item" onClick={() => this.props.history.push(`/browse/genre/${2}`)}>Drama</div>
                                             </div>
                                             <div className="navbar-genre-item-hover">
-                                                <div className="navbar-genre-item" value={3} onClick={() => this.props.history.push(`/browse/genre/${3}`)}>Comedies</div>
+                                                <div className="navbar-genre-item" onClick={() => this.props.history.push(`/browse/genre/${3}`)}>Comedies</div>
                                             </div>
                                             <div className="navbar-genre-item-hover">
-                                                <div className="navbar-genre-item" value={4} onClick={() => this.props.history.push(`/browse/genre/${4}`)}>Based on Real Life</div>
+                                                <div className="navbar-genre-item" onClick={() => this.props.history.push(`/browse/genre/${4}`)}>Based on Real Life</div>
                                             </div>
                                         </div>
                                     </div>

@@ -8,9 +8,17 @@ class genreComponent extends React.Component {
 
   }
 
-  componentDidMount() {
+    componentDidMount() {
     //   debugger
       this.props.fetchGenre(this.props.genreId)
+    }
+
+
+
+    componentDidUpdate(prevProps) {
+      if (this.props.genreId !== prevProps.genreId) {
+        this.props.fetchGenre(this.props.genreId);
+      }
     }
     
     render() {
