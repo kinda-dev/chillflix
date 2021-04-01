@@ -83,8 +83,9 @@ class NavbarComponent extends  React.Component {
     }
 
     handleSubmit(e) {
+        // debugger
         e.preventDefault()
-        const input = this.state.search
+        const input = this.state.searched
         const inputNoExtraSpaces = input.trim().split(/ +/).join(' ');
         if (inputNoExtraSpaces !== '') (this.openSearchResult(this.state.searched))
     }
@@ -117,67 +118,66 @@ class NavbarComponent extends  React.Component {
 
                     <div className="home-navbar-contents">
 
-                            <div className="home-header-left-wrap">
-                                <Link to="/browse" className="home-header-home-link">
-                                    <img className="home-header-logo" src="https://chillflix-seeds.s3-us-west-1.amazonaws.com/misc/chillflix_logo.png" alt="Chillflix"/>
-                                </Link>
-                                <div className="home-header-mylist-link-wrap">
-                                    {this.state.homeLink}
-                                </div>
-                                <div className="home-header-mylist-link-wrap">
-                                    {this.state.myListLink}
-                                </div>
-                                <div className="home-header-mylist-link-wrap my-list-hover">
-                                    <div className={this.state.genresLink}>Genre</div>
-                                    <div className="navbar-genres-list-wrap">
-                                        <div className="navbar-genres-list-inner-wrap">
-                                            <div className="navbar-genre-item-hover">
-                                                <div className="navbar-genre-item" onClick={() => this.props.history.push(`/browse/genre/${1}`)}>Top trending</div>
-                                            </div>
-                                            <div className="navbar-genre-item-hover">
-                                                <div className="navbar-genre-item" onClick={() => this.props.history.push(`/browse/genre/${2}`)}>Drama</div>
-                                            </div>
-                                            <div className="navbar-genre-item-hover">
-                                                <div className="navbar-genre-item" onClick={() => this.props.history.push(`/browse/genre/${3}`)}>Comedies</div>
-                                            </div>
-                                            <div className="navbar-genre-item-hover">
-                                                <div className="navbar-genre-item" onClick={() => this.props.history.push(`/browse/genre/${4}`)}>Based on Real Life</div>
-                                            </div>
+                        <div className="home-header-left-wrap">
+                            <Link to="/browse" className="home-header-home-link">
+                                <img className="home-header-logo" src="https://chillflix-seeds.s3-us-west-1.amazonaws.com/misc/chillflix_logo.png" alt="Chillflix"/>
+                            </Link>
+                            <div className="home-header-mylist-link-wrap">
+                                {this.state.homeLink}
+                            </div>
+                            <div className="home-header-mylist-link-wrap">
+                                {this.state.myListLink}
+                            </div>
+                            <div className="home-header-mylist-link-wrap my-list-hover">
+                                <div className={this.state.genresLink}>Genre</div>
+                                <div className="navbar-genres-list-wrap">
+                                    <div className="navbar-genres-list-inner-wrap">
+                                        <div className="navbar-genre-item-hover">
+                                            <div className="navbar-genre-item" onClick={() => this.props.history.push(`/browse/genre/${1}`)}>Top trending</div>
+                                        </div>
+                                        <div className="navbar-genre-item-hover">
+                                            <div className="navbar-genre-item" onClick={() => this.props.history.push(`/browse/genre/${2}`)}>Drama</div>
+                                        </div>
+                                        <div className="navbar-genre-item-hover">
+                                            <div className="navbar-genre-item" onClick={() => this.props.history.push(`/browse/genre/${3}`)}>Comedies</div>
+                                        </div>
+                                        <div className="navbar-genre-item-hover">
+                                            <div className="navbar-genre-item" onClick={() => this.props.history.push(`/browse/genre/${4}`)}>Based on Real Life</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="home-header-right-wrap">
-
-                                <div className="home-header-mylist-link-wrap">
-                                    <div className="home-header-search-wrap">
-
+                        </div>
+                        <div className="home-header-right-wrap">
+                            {/* <div className="home-header-mylist-link-wrap"> */}
+                                <div className="home-header-search-wrap">
+                                    <div className="home-header-inner-search-wrap">
                                         <form onSubmit={this.handleSubmit} value={this.state.searched}>
-                                            <input placeholder="Enter a Movie Title" type="text" value={this.state.search} onChange={this.handleSearch}/>
+                                            <input className="home-header-search-input" placeholder="Enter a Movie Title" type="text" value={this.state.search} onChange={this.handleSearch}/>
                                             <div className="navbar-search-list-wrap">
                                                 <div className="navbar-genres-list-inner-wrap">
-                                                    {(this.state.search !== '') ?
+                                                    {(this.state.searched !== '') ?
                                                     <div className="navbar-genre-item" onClick={this.handleSubmit} >{this.state.searched}</div>
                                                     : ''}
                                                 </div>
                                             </div>
                                         </form>
+                                        <div className="home-header-search-button-wrap" onClick={this.handleSubmit}><i className="fas fa-search"></i></div>
                                     </div>
                                 </div>
-                                <nav className="home-profile-menu-wrapper">
-                                    <div className="profile-img-wrap">
-                                        <img className="profile-img" src="https://chillflix-seeds.s3-us-west-1.amazonaws.com/misc/profile_img.png" alt="ProfileImg"/>
+                            {/* </div> */}
+                            <nav className="home-profile-menu-wrapper">
+                                <div className="profile-img-wrap">
+                                    <img className="profile-img" src="https://chillflix-seeds.s3-us-west-1.amazonaws.com/misc/profile_img.png" alt="ProfileImg"/>
+                                </div>
+                                <div className="hover-profile-menu">    
+                                    <div className="home-nav-little-menu-wrap">
+                                        <a className="github-button-wrap" href="https://github.com/kinda-dev" target="_blank"><i className="fab fa-github"> GitHub</i></a>
+                                        <div className="logout-button" onClick={() => this.props.logout()}>Log Out</div>
                                     </div>
-
-                                    <div className="hover-profile-menu">    
-                                        <div className="profile-menu-arrow-up"><i className="fas fa-caret-up"></i></div>
-                                        <div className="home-nav-little-menu-wrap">
-                                            <a className="github-button-wrap" href="https://github.com/kinda-dev" target="_blank"><i className="fab fa-github"> GitHub</i></a>
-                                            <div className="logout-button" onClick={() => this.props.logout()}>Log Out</div>
-                                        </div>
-                                    </div>
-                                </nav>
-                            </div>
+                                </div>
+                            </nav>
+                        </div>
 
                     </div>
                 </div>
