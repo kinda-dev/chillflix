@@ -92,6 +92,16 @@
   transition: all 0.4s;
 }
 
+.navbar-search-list-wrap {
+  display: block;
+  position: absolute;
+  color: white;
+  padding-top: 5px;
+  font-size: small;
+
+  border: 1px solid red;
+}
+
 .home-profile-menu-wrapper {
   position: fixed;
   right: 65px;

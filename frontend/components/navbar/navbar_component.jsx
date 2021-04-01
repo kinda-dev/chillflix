@@ -11,18 +11,26 @@ class NavbarComponent extends  React.Component {
             navbarBackground: 'nav-transparent',
             homeLink: (this.props.history.location.pathname === '/browse') ? <div className="same-page">Home</div> : <Link to="/browse" className="home-header-mylist-link">Home</Link>,
             myListLink: (this.props.history.location.pathname === '/myList') ? <div className="same-page">My List</div> : <Link to="/myList" className="home-header-mylist-link">My List</Link>,
-            genresLink: (this.props.history.location.pathname === `/browse/genre/:genreId`) ? 'same-page-genres' : 'home-header-mylist-link'
+            genresLink: (this.props.history.location.pathname === `/browse/genre/:genreId`) ? 'same-page-genres' : 'home-header-mylist-link',
+            movies: '',
+            search: '',
+            searched: ''
         };
 
         this.makeNavbarFading =this.makeNavbarFading.bind(this);
         this.handleClick = this.handleClick.bind(this)
+        this.setMovies = this.setMovies.bind(this)
+        this.handleSearch = this.handleSearch.bind(this)
+
     }
     
     componentDidMount() {
-        // this.props.fetchAllGenres();
         document.addEventListener('scroll', this.makeNavbarFading);
- 
-
+        this.props.fetchAllMovies()
+            .then(() => {
+                this.setMovies()
+                
+            });
     }
 
     componentWillUnmount() {
@@ -39,19 +47,62 @@ class NavbarComponent extends  React.Component {
                 this.setState({navbarBackground: 'nav-transparent'})
             }
     }
+
+    setMovies() {
+        const movies = {}
+        this.props.movies.map((movie) => {
+            let title = movie.title
+            let id = movie.id
+            movies[id] = title
+        })
+
+        this.setState({
+            movies: Object.values(movies)
+        })
+        // console.log(this.state.movies)
+    //   const whatever = Object.values(this.state.movies)
+    //   console.log(this.state.movies)
+    //   console.log(whatever)
+    //   console.log(whatever.includes(`WAR`))
+    //   console.log(whatever.filter(ele => ele.includes('THE')))
+    // console.log(whatever.findIndex(ele => ele === 'WAR DOGS'))
+    }
+    
+    handleSearch(e) {
+        this.setState({search: e.target.value})
+        this.searchFunction(this.state.search)
+    }
    
     handleClick(e) {
         debugger
+        this.props.fetchAllMovies()
+    }
+
+    searchFunction(input) {
+        const searchedMovies = {}
+        let filteredMovies = this.state.movies.filter(ele => ele.includes(input))
+        filteredMovies.forEach((movie, idx) => {
+            searchedMovies[idx] = movie
+        })
+        this.setState({searched: Object.values(searchedMovies)})
+    }
+
+    renderMovie() {
+        this.state.searched.forEach((movie) =>{
+            return(
+                <div className="navbar-genre-item">{movie}</div>
+            )
+        }) 
     }
     
     
     render() {
-        // if (this.props.genres.length === 0) return null;
-        
+        if (this.props.movies.lentgh === 0) return null;
         return(
             
-                
-                <div className={`home-navbar ${this.state.navbarBackground}`}>
+            
+            <div className={`home-navbar ${this.state.navbarBackground}`}>
+                    {/* {(this.state.movies === '') ? this.setMovies() : ''} */}
 
 
                     <div className="home-navbar-contents">
@@ -84,6 +135,17 @@ class NavbarComponent extends  React.Component {
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                                <div className="home-header-mylist-link-wrap">
+                                    <form>
+                                        <input placeholder="Enter a Movie Title" type="text" value={this.state.search} onChange={this.handleSearch}/>
+                                        <div className="navbar-search-list-wrap">
+                                            <div className="navbar-genres-list-inner-wrap">
+                                                {(this.state.search !== '') ?
+                                                this.renderMovie() : ''}
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
 

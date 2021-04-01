@@ -25,14 +25,7 @@ class CarouselContent extends React.Component {
   render() {
 
     // if (!this.props.genres.length === 0) return null;
-    console.log(this.props.genreMovies)
-    console.log(this.props.movies)
 
-
-
-            {this.props.genreMovies.map((movie) => (
-              console.log(movie.title)
-        ))}
     return (
       // <div className="slider-wrap" slide={this.state.currentSliderItem}>
 
