@@ -21,6 +21,8 @@ class NavbarComponent extends  React.Component {
         this.handleClick = this.handleClick.bind(this)
         this.setMovies = this.setMovies.bind(this)
         this.handleSearch = this.handleSearch.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
+
 
     }
     
@@ -69,8 +71,10 @@ class NavbarComponent extends  React.Component {
     }
     
     handleSearch(e) {
-        this.setState({search: e.target.value.toUpperCase()})
-        this.searchFunction(this.state.search)
+        this.setState({search: e.target.value})
+        const input = this.state.search.toUpperCase()
+        const inputNoExtraSpaces = input.trim().split(/ +/).join(' ');
+        this.searchFunction(inputNoExtraSpaces)
     }
    
     handleClick(e) {
@@ -78,24 +82,29 @@ class NavbarComponent extends  React.Component {
         
     }
 
+    handleSubmit(e) {
+        e.preventDefault()
+        const input = this.state.search
+        const inputNoExtraSpaces = input.trim().split(/ +/).join(' ');
+        if (inputNoExtraSpaces !== '') (this.openSearchResult(this.state.searched))
+    }
+
     searchFunction(input) {
-        const searchedMovies = {}
         let filteredMovies = this.state.movies.filter(ele => ele.includes(input))
         filteredMovies.forEach((movie, idx) => {
             this.setState({searched: movie})
         })
-        
-        // this.renderMovie()
     }
 
-    renderMovie() {
-      
-            return(
-                <div className="navbar-genre-item">{movie}</div>
-            )
-    
+    openSearchResult(searchedMovie) {
+    console.log(this.state.movies.findIndex(ele => ele === searchedMovie) + 1)
+
+    const movieId = this.state.movies.findIndex(ele => ele === searchedMovie) + 1
+
+    this.props.history.push(`/watch/${movieId}`)
+
     }
-    
+     
     
     render() {
         if (this.props.movies.lentgh === 0) return null;
@@ -137,34 +146,38 @@ class NavbarComponent extends  React.Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="home-header-mylist-link-wrap">
-                                    <form>
-                                        <input placeholder="Enter a Movie Title" type="text" value={this.state.search} onChange={this.handleSearch}/>
-                                        <div className="navbar-search-list-wrap">
-                                            <div className="navbar-genres-list-inner-wrap">
-                                                {(this.state.search !== '') ?
-                                                                <div className="navbar-genre-item" onClick={this.handleClick} >{this.state.searched}</div>
-                                                                : ''}
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
                             </div>
+                            <div className="home-header-right-wrap">
 
-                            <nav className="home-profile-menu-wrapper">
-                                <div className="profile-img-wrap">
-                                    <img className="profile-img" src="https://chillflix-seeds.s3-us-west-1.amazonaws.com/misc/profile_img.png" alt="ProfileImg"/>
-                                </div>
+                                <div className="home-header-mylist-link-wrap">
+                                    <div className="home-header-search-wrap">
 
-                                <div className="hover-profile-menu">    
-                                    <div className="profile-menu-arrow-up"><i className="fas fa-caret-up"></i></div>
-                                    <div className="home-nav-little-menu-wrap">
-                                        <a className="github-button-wrap" href="https://github.com/kinda-dev" target="_blank"><i className="fab fa-github"> GitHub</i></a>
-                                        <div className="logout-button" onClick={() => this.props.logout()}>Log Out</div>
+                                        <form onSubmit={this.handleSubmit} value={this.state.searched}>
+                                            <input placeholder="Enter a Movie Title" type="text" value={this.state.search} onChange={this.handleSearch}/>
+                                            <div className="navbar-search-list-wrap">
+                                                <div className="navbar-genres-list-inner-wrap">
+                                                    {(this.state.search !== '') ?
+                                                    <div className="navbar-genre-item" onClick={this.handleSubmit} >{this.state.searched}</div>
+                                                    : ''}
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
-                            </nav>
-                            
+                                <nav className="home-profile-menu-wrapper">
+                                    <div className="profile-img-wrap">
+                                        <img className="profile-img" src="https://chillflix-seeds.s3-us-west-1.amazonaws.com/misc/profile_img.png" alt="ProfileImg"/>
+                                    </div>
+
+                                    <div className="hover-profile-menu">    
+                                        <div className="profile-menu-arrow-up"><i className="fas fa-caret-up"></i></div>
+                                        <div className="home-nav-little-menu-wrap">
+                                            <a className="github-button-wrap" href="https://github.com/kinda-dev" target="_blank"><i className="fab fa-github"> GitHub</i></a>
+                                            <div className="logout-button" onClick={() => this.props.logout()}>Log Out</div>
+                                        </div>
+                                    </div>
+                                </nav>
+                            </div>
 
                     </div>
                 </div>
