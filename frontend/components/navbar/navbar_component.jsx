@@ -69,30 +69,31 @@ class NavbarComponent extends  React.Component {
     }
     
     handleSearch(e) {
-        this.setState({search: e.target.value})
+        this.setState({search: e.target.value.toUpperCase()})
         this.searchFunction(this.state.search)
     }
    
     handleClick(e) {
         debugger
-        this.props.fetchAllMovies()
+        
     }
 
     searchFunction(input) {
         const searchedMovies = {}
         let filteredMovies = this.state.movies.filter(ele => ele.includes(input))
         filteredMovies.forEach((movie, idx) => {
-            searchedMovies[idx] = movie
+            this.setState({searched: movie})
         })
-        this.setState({searched: Object.values(searchedMovies)})
+        
+        // this.renderMovie()
     }
 
     renderMovie() {
-        this.state.searched.forEach((movie) =>{
+      
             return(
                 <div className="navbar-genre-item">{movie}</div>
             )
-        }) 
+    
     }
     
     
@@ -142,7 +143,8 @@ class NavbarComponent extends  React.Component {
                                         <div className="navbar-search-list-wrap">
                                             <div className="navbar-genres-list-inner-wrap">
                                                 {(this.state.search !== '') ?
-                                                this.renderMovie() : ''}
+                                                                <div className="navbar-genre-item" onClick={this.handleClick} >{this.state.searched}</div>
+                                                                : ''}
                                             </div>
                                         </div>
                                     </form>
