@@ -15,7 +15,9 @@ export const receiveMovies = (movies) => ({
 
   export const fetchAllMovies = () => dispatch => {
       return APIUtil.fetchAllMovies()
-        .then(movies => dispatch(receiveMovies(movies)))
+        .then(movies => {
+          debugger
+           return dispatch(receiveMovies(movies))})
   };
 
   

@@ -10,27 +10,6 @@ class CarouselContent extends React.Component {
     };
   }
 
-  componentDidMount() {
-//  debugger
-}
-
-  myListButton(movieId) {
-    if (this.props.myList.includes(movieId)) {
-      this.setState({ listButton: <i className="fa fa-check-circle" ></i> })
-
-    } else {
-      this.setState({ listButton: <i className="fa fa-plus-circle" ></i> })
-
-    } 
-      
-
-
-  }
-
-  handleMouseOut() {
-    this.setState({ listButton: '' })
-  }
-
   static getDerivedStateFromProps(nextProps, prevState) {
     if (nextProps.currentSliderItem !== prevState.currentSliderItem) {
       return { currentSliderItem: nextProps.currentSliderItem };
@@ -80,60 +59,6 @@ class CarouselContent extends React.Component {
             <MovieComponent movie={movie} myList={this.props.myList} key={movie.id} />
 
         ))}
-        {/* <div className="slider-item">
-          <img src={window.thepest} alt="thepest" />
-        </div>
-        <div className="slider-item">
-          <img src={window.thepest} alt="thepest" />
-        </div>
-        <div className="slider-item">
-          <img src={window.thepest} alt="thepest" />
-        </div>
-        <div className="slider-item">
-          <img src={window.thepest} alt="thepest" />
-        </div>
-        <div className="slider-item">
-          <img src={window.thepest} alt="thepest" />
-        </div>
-        <div className="slider-item">
-          <img src={window.thepest} alt="thepest" />
-        </div>
-        <div className="slider-item">
-          <img src={window.kindergartencop} alt="kindergartencop" />
-        </div>
-        <div className="slider-item">
-          <img src={window.kindergartencop} alt="kindergartencop" />
-        </div>
-        <div className="slider-item">
-          <img src={window.kindergartencop} alt="kindergartencop" />
-        </div>
-        <div className="slider-item">
-          <img src={window.kindergartencop} alt="kindergartencop" />
-        </div>
-        <div className="slider-item">
-          <img src={window.kindergartencop} alt="kindergartencop" />
-        </div>
-        <div className="slider-item">
-          <img src={window.kindergartencop} alt="kindergartencop" />
-        </div>
-        <div className="slider-item">
-          <img src={window.surfninjas} alt="surfninjas" />
-        </div>
-        <div className="slider-item">
-          <img src={window.surfninjas} alt="surfninjas" />
-        </div>
-        <div className="slider-item">
-          <img src={window.surfninjas} alt="surfninjas" />
-        </div>
-        <div className="slider-item">
-          <img src={window.surfninjas} alt="surfninjas" />
-        </div>
-        <div className="slider-item">
-          <img src={window.surfninjas} alt="surfninjas" />
-        </div>
-        <div className="slider-item">
-          <img src={window.surfninjas} alt="surfninjas" />
-        </div> */}
       </div>
     )
   }
