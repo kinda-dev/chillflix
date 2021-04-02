@@ -9,7 +9,7 @@
   
     User.destroy_all
     Movie.delete_all
-    MyList.destroy_all
+    MyList.delete_all
     Genre.destroy_all
     MoviesGenre.destroy_all
 
