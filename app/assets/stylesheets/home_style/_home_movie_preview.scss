@@ -7,13 +7,15 @@
   height: 180px;
   list-style: none;
   cursor: default;
+  display: block;
 }
 
 .movie-image {
-  max-height: 100%;
+  height: 168px;
   display: flex;
-  max-width: 100%;
+  width: 298px;
   border-radius: 3px;
+  object-fit: cover;
 }
 
 .slider-item :hover .movie-image {
@@ -30,12 +32,13 @@
 
 .movie-title {
   font-weight: 800;
-  font-size: 20px;
+  font-size: 15px;
   text-align: end;
   padding-right: 5px;
   background-color: rgba(0, 0, 0, 0.144);
   border-radius: 3px;
   display: flex;
+  margin-top: 5px;
 }
 
 .slider-item :hover .movie-preview-info {

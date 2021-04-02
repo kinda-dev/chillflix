@@ -36,9 +36,12 @@ class genreComponent extends React.Component {
               <div className="my-list-row-wrap">
                   {this.props.genre.genreMovies.map((movie) => {
                       return (
+                        <div className="grid-item-wrap">
+
                         <div key={movie.id} className="my-list-movie-wrap">
                               <MovieComponent movie = {movie} myList = {this.props.currentUser.myListMovieIds}/>                    
                           </div>
+                        </div>
                       )
                   })}
 

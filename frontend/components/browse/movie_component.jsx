@@ -21,6 +21,9 @@ class MovieComponent extends React.Component {
 
 handleList(e) {
     e.preventDefault()
+    console.log(this.props.movie.id)
+    console.log(this.props.movie.title)
+
     if (this.props.currentUser.myListMovieIds.includes(this.props.movie.id)) {
         this.props.deleteFromList(this.props.movie.id, this.props.currentUser)
         this.setState({ listButton: <i className="fa fa-plus-circle movie-icon" ></i> })
