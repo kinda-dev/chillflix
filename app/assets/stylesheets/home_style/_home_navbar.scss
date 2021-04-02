@@ -208,37 +208,28 @@
   height: 100%;
 }
 
-.home-nav-little-menu-wrap {
-  position: absolute;
+.navbar-profile-menu-item-hover {
+  min-width: 125px;
+}
+
+.navbar-profile-menu-item-hover:hover .navbar-profile-menu-item {
+  color: gray;
+  transition: all 0.4s;
+}
+
+.navbar-profile-menu-item {
+  padding: 3px;
+  cursor: pointer;
   background-color: rgba(20, 20, 20, 0.9);
   border: 1px solid rgba(156, 154, 154, 0.76);
-  padding-top: 10px;
-  padding-left: 5px;
-  padding-right: 5px;
-
-  width: 125px;
-  z-index: 1;
-  text-align: left;
-  height: 60px;
-  margin-top: 5px;
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
+  transition: all 0.4s;
+  display: block;
+  text-decoration: none;
+  color: white;
 }
 
-.github-button-wrap {
-  padding-bottom: 10px;
-  color: white;
-  font-size: large;
-  cursor: pointer;
-}
-
-.logout-button {
-  padding-top: 10px;
-  border-top: 1px solid rgba(156, 154, 154, 0.76);
-  color: white;
-  font-weight: 700;
-  cursor: pointer;
+.fix-fonts {
+  font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .same-page {

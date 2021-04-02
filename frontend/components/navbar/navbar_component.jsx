@@ -164,11 +164,21 @@ class NavbarComponent extends  React.Component {
                                 <div className="profile-img-wrap">
                                     <img className="profile-img" src="https://chillflix-seeds.s3-us-west-1.amazonaws.com/misc/profile_img.png" alt="ProfileImg"/>
                                 </div>
-                                <div className="hover-profile-menu">    
-                                    <div className="home-nav-little-menu-wrap">
-                                        <a className="github-button-wrap" href="https://github.com/kinda-dev" target="_blank"><i className="fab fa-github"> GitHub</i></a>
-                                        <div className="logout-button" onClick={() => this.props.logout()}>Log Out</div>
+                                <div className="hover-profile-menu"> 
+                                    <div className="navbar-profile-menu-item-hover">
+                                        <a className="navbar-profile-menu-item" href="https://www.linkedin.com/in/fabio-raffaele-bortone" target="_blank"><i className="fab fa-linkedin"></i> LinkedIn</a>
                                     </div>
+                                    <div className="navbar-profile-menu-item-hover">
+                                        <a className="navbar-profile-menu-item" href="https://github.com/kinda-dev" target="_blank"><i className="fab fa-github"></i> GitHub</a>
+                                    </div>
+                                    <div className="navbar-profile-menu-item-hover">
+                                        <a className="navbar-profile-menu-item" href="mailto:maybe.fabio@gmail.com" target="_blank"><i className="fas fa-at"></i> E-mail</a>
+                                    </div>
+                                    <div className="navbar-profile-menu-item-hover">
+                                        <div className="navbar-profile-menu-item" onClick={() => this.props.logout()}>Log Out</div>
+                                    </div>
+
+
                                 </div>
                             </nav>
                         </div>
