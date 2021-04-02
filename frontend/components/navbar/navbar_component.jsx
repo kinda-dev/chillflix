@@ -22,7 +22,7 @@ class NavbarComponent extends  React.Component {
         this.setMovies = this.setMovies.bind(this)
         this.handleSearch = this.handleSearch.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
-
+        this.clearFields = this.clearFields.bind(this)
 
     }
     
@@ -33,6 +33,11 @@ class NavbarComponent extends  React.Component {
                 this.setMovies()
                 
             });
+    }
+
+    componentWillUnmount() {
+        clearTimeout(this.clearFields)
+        this.clearFields = 0
     }
 
     componentWillUnmount() {
@@ -105,6 +110,17 @@ class NavbarComponent extends  React.Component {
     this.props.history.push(`/watch/${movieId}`)
 
     }
+
+    clearFields() {
+        setTimeout(() => {
+            // alert("Hello")
+            this.setState({
+                    search: '',
+                    searched: ''
+                })
+                    
+        }, 2000)
+    }
      
     
     render() {
@@ -151,13 +167,13 @@ class NavbarComponent extends  React.Component {
                         <div className="home-header-right-wrap">
                             {/* <div className="home-header-mylist-link-wrap"> */}
                                 <div className="home-header-search-wrap">
-                                    <div className="home-header-inner-search-wrap">
+                                    <div className="home-header-inner-search-wrap" onBlur={this.clearFields}>
                                         <form onSubmit={this.handleSubmit} value={this.state.searched}>
                                             <input className="home-header-search-input" placeholder="Enter a Movie Title" type="text" value={this.state.search} onChange={this.handleSearch}/>
                                             <div className="navbar-search-list-wrap">
                                                 <div className="navbar-genres-list-inner-wrap">
                                                     {(this.state.searched !== '') ?
-                                                    <div className="navbar-genre-item" onClick={this.handleSubmit} >{this.state.searched}</div>
+                                                    <div className="navbar-search-item" onClick={this.handleSubmit} >{this.state.searched}</div>
                                                     : ''}
                                                 </div>
                                             </div>
