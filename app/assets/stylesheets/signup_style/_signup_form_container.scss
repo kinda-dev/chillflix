@@ -1,3 +1,27 @@
+.signup-outer-wrap {
+  height: 100vh;
+  cursor: default;
+}
+
+.signup-header {
+  height: 10vh;
+}
+
+.signup-body {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-footer-wrapper {
+  background-color: #f3f3f3;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .signup-form-container {
   padding: 2% 37%;
   margin: 0 auto 15px;
@@ -142,14 +166,24 @@
   text-decoration: none;
 }
 
-.fabio-link {
-  color: #0071eb;
-  text-decoration: none;
-}
-
 .not-terms-of-use {
   margin-top: 15px;
   font-size: 13px;
   color: 8c8c8c;
   text-align: left;
+}
+
+.signup-footer-button-wrap {
+  padding-left: 10px;
+  color: black;
+  transition: all 0.4s;
+}
+
+.signup-footer-link {
+  font-size: x-large;
+}
+
+.signup-footer-button-wrap:hover .signup-footer-link {
+  color: grey;
+  transition: all 0.4s;
 }

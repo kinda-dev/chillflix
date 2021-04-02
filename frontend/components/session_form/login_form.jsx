@@ -56,7 +56,14 @@ class LoginForm extends React.Component {
     render() {
         return(
             
-            <div className="login-outer-wrap">
+            <div className="login-outer-wrap"
+                style={{
+                    backgroundImage: "url(https://chillflix-seeds.s3-us-west-1.amazonaws.com/misc/first-background.jpg)",
+                    backgroundPosition: "center center",
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat"
+                }}
+            >
 
 
                 <header className="login-header">
@@ -67,7 +74,6 @@ class LoginForm extends React.Component {
                     </div>
                 </header>
 
-                <div className="login-sections">
 
                     <div className="login-body">
                         <div className="login-background"></div>  
@@ -90,23 +96,21 @@ class LoginForm extends React.Component {
                             <div className="sing-up-link-login-form">
                                 <p className="demo-user-wrap"><button onClick={this.handleDemoLogin} className="demo-user-button">Demo User</button></p>
                                 <div className="sign-up-new">New to Chillflix? <Link className="sign-up-link" to="/">Sign up now</Link>.</div>
-                                <p className="not-terms-of-use" >This page was made by Fabio. <a className="fabio-link" href="https://github.com/kinda-dev" target="_blank">Learn more.</a></p>
+                                <p className="not-terms-of-use" >This page was made by Fabio. <a className="fabio-link" href="https://www.linkedin.com/in/fabio-raffaele-bortone" target="_blank">Learn more.</a></p>
                             </div>
                         </div>
                         <div className="center-pixel"></div>
                     </div>
 
                     <div className="login-footer-wrapper">   
-                        <div className="-login-footer-first-child">
-                            <div className="login-footer-divider"></div>
-                            <footer className="login-footer">
-                                <div className="login-footer-top">Work in progress. Developed by Fabio: <a className="fabio-email" href="mailto:maybe.fabio.com">Mail me for information!! </a><a className="github-button-wrap" href="https://github.com/kinda-dev" target="_blank"><i className="fab fa-github"></i></a></div>
-                            </footer>
-                            <div className="center-pixel"></div>
+                        <div className="login-footer-top">Developed by Fabio:
+                            <a className="login-footer-button-wrap" href="https://www.linkedin.com/in/fabio-raffaele-bortone" target="_blank"><i className="fab fa-linkedin login-footer-link"></i></a>
+                            <a className="login-footer-button-wrap" href="https://github.com/kinda-dev" target="_blank"><i className="fab fa-github login-footer-link"></i></a>
+                            <a className="login-footer-button-wrap" href="mailto:maybe.fabio@gmail.com" target="_blank"><i className="fas fa-at login-footer-link"></i></a>
                         </div>
                     </div> 
                 
-                </div>
+              
 
             </div>
         )

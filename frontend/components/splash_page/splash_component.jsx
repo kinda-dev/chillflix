@@ -91,7 +91,7 @@ class SplashComponent extends  React.Component {
                                 <div className="splash-television-animation-container">
                                     <img className="tv-img" src="https://chillflix-seeds.s3-us-west-1.amazonaws.com/misc/tv.png" alt="televisionImage"/>
                                     <div className="splash-videoanimation">
-                                        <video className="splash-video" controls autoPlay loop muted><source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v"></source></video>
+                                        <video className="splash-video" controls autoPlay loop muted><source src="https://chillflix-seeds.s3-us-west-1.amazonaws.com/misc/splash-page-video.m4v"></source></video>
                                         <div className="splash-television-animation-text"></div>
                                     </div>
                                 </div>
@@ -103,15 +103,13 @@ class SplashComponent extends  React.Component {
 
                     </section>
 
-                        <div className="splash-footer-wrapper">   
-                            <div className="-splash-footer-first-child">
-                                <div className="splash-footer-divider"></div>
-                                <footer className="splash-footer">
-                                    <div className="splash-footer-top">Work in progress. Developed by Fabio: <a className="fabio-email" href="mailto:maybe.fabio.com">Mail me for information!! </a><a className="github-button-wrap" href="https://github.com/kinda-dev" target="_blank"><i className="fab fa-github"></i></a></div>
-                                </footer>
-                                <div className="center-pixel"></div>
-                            </div>
-                        </div> 
+                    <div className="splash-footer-wrapper">   
+                        <div className="footer-top">Developed by Fabio:
+                            <a className="footer-button-wrap" href="https://www.linkedin.com/in/fabio-raffaele-bortone" target="_blank"><i className="fab fa-linkedin footer-link"></i></a>
+                            <a className="footer-button-wrap" href="https://github.com/kinda-dev" target="_blank"><i className="fab fa-github footer-link"></i></a>
+                            <a className="footer-button-wrap" href="mailto:maybe.fabio@gmail.com" target="_blank"><i className="fas fa-at footer-link"></i></a>
+                        </div>
+                    </div> 
 
                 </div>   
 

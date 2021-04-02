@@ -9,20 +9,6 @@
   color: #fff;
 }
 
-.login-background {
-  background-image: url("https://chillflix-seeds.s3-us-west-1.amazonaws.com/misc/first-background.jpg");
-  top: -100px;
-
-  min-height: 100vw;
-
-  z-index: 0;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
-}
-
 @import "_login_form_container";
 
 .center-pixel {

@@ -1,7 +1,48 @@
+.login-outer-wrap {
+  cursor: default;
+  height: 100vh;
+}
+
+.login-header {
+  height: 10vh;
+}
+
+.login-body {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-footer-wrapper {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.login-footer-top {
+  color: grey;
+}
+
+.login-footer-button-wrap {
+  padding-left: 10px;
+  color: white;
+  transition: all 0.4s;
+}
+
+.login-footer-link {
+  font-size: x-large;
+}
+
+.login-footer-button-wrap:hover .login-footer-link {
+  color: grey;
+  transition: all 0.4s;
+}
 .login-form-container {
   min-height: 660px;
   padding: 60px 68px 40px;
-  margin-bottom: 90px;
   background-color: rgba(0, 0, 0, 0.75);
   border-radius: 4px;
 
@@ -14,6 +55,8 @@
   z-index: 1;
 
   position: relative;
+  justify-content: center;
+  // align-items: center;
 }
 
 .login-form-box {
@@ -147,6 +190,7 @@
 
 .sign-up-link {
   text-decoration: none;
+  color: white;
 }
 
 .sign-up-link:hover {

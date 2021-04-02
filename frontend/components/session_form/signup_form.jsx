@@ -126,12 +126,10 @@ class SignupForm extends  React.Component {
                     </div>
 
                     <div className="signup-footer-wrapper">   
-                        <div className="-signup-footer-first-child">
-                            <div className="signup-footer-divider"></div>
-                            <footer className="signup-footer">
-                                <div className="signup-footer-top">Work in progress. Developed by Fabio: <a className="fabio-email" href="mailto:maybe.fabio.com">Mail me for information!! </a><a className="github-button-wrap" href="https://github.com/kinda-dev" target="_blank"><i className="fab fa-github"></i></a></div>
-                            </footer>
-                            <div className="center-pixel"></div>
+                        <div className="signup-footer-top">Developed by Fabio:
+                            <a className="signup-footer-button-wrap" href="https://www.linkedin.com/in/fabio-raffaele-bortone" target="_blank"><i className="fab fa-linkedin signup-footer-link"></i></a>
+                            <a className="signup-footer-button-wrap" href="https://github.com/kinda-dev" target="_blank"><i className="fab fa-github signup-footer-link"></i></a>
+                            <a className="signup-footer-button-wrap" href="mailto:maybe.fabio@gmail.com" target="_blank"><i className="fas fa-at signup-footer-link"></i></a>
                         </div>
                     </div> 
 
