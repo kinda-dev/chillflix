@@ -5,9 +5,9 @@ export const DELETE_FROM_LIST = 'DELETE_FROM_LIST';
 export const RECEIVE_LIST_MOVIES = "RECEIVE_LIST_MOVIES"
 
 
-const receiveListMovie = (movieId, currentUser) => ({
+const receiveListMovie = (movie, currentUser) => ({
     type: ADD_TO_LIST,
-    movieId,
+    movie,
     currentUser
    
 });
@@ -19,9 +19,9 @@ const deleteListMovie = (movieId, currentUser) => ({
 });
 
 
-export const addToList = (movieId, currentUser) => dispatch => {
-    return APIUtil.addToList(movieId)
-        .then(movieId => dispatch(receiveListMovie(movieId, currentUser)))
+export const addToList = (movie, currentUser) => dispatch => {
+    return APIUtil.addToList(movie)
+        .then(movie => dispatch(receiveListMovie(movie, currentUser)))
 };
 
 

@@ -15,14 +15,15 @@ const usersReducer = (oldState = {}, action) => {
 
         case DELETE_FROM_LIST:
             let currentUser = action.currentUser;
-            let idx = currentUser.myListMovieIds.indexOf(action.movie.id);
+            let idx = currentUser.myListMovieIds.indexOf(action.movieId);
             delete currentUser.myListMovieIds[idx];
-            return Object.assign({}, state, {[currentUser.id]: currentUser});
+            
+            return Object.assign({}, oldState, {[currentUser.id]: currentUser});
 
         case ADD_TO_LIST:
             let currentUser2 = action.currentUser;
-            currentUser2.myListMovieIds.push(action.movie.id);
-            return Object.assign({}, state, {[currentUser2.id]: currentUser2});
+            currentUser2.myListMovieIds.push(action.movie.movie_id);
+            return Object.assign({}, oldState, {[currentUser2.id]: currentUser2});
     
         
         default:

@@ -19,10 +19,6 @@
 // Components
 @import "components/_body";
 
-// Main container
-.body-container {
-  background-color: black;
-}
 // Splash Page
 
 @import "splash_page_style/_splash_main";
@@ -35,6 +31,11 @@
 
 // Signup Page
 @import "signup_style/_signup_main";
+
+// My List
+@import "my_list_style/_my_list";
+
+@import "watch_trailer_style/_watch_trailer";
 
 // Not-found Page
 @import "components/error_404";
