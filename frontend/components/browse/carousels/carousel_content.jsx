@@ -41,7 +41,6 @@ class CarouselContent extends React.Component {
         {this.props.genreMovies.map((movie) => (
             <MovieComponent movie={movie} myList={this.props.myList} key={movie.id} />
         ))}
-
       </div>
     )
   }
