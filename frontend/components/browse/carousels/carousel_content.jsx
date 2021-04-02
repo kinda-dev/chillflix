@@ -10,8 +10,6 @@ class CarouselContent extends React.Component {
   }
 
   componentDidMount() {
-    // debugger
-    // this.props.fetchAllGenres()
   }
 
 
@@ -24,18 +22,7 @@ class CarouselContent extends React.Component {
 
   render() {
 
-    // if (!this.props.genres.length === 0) return null;
-
     return (
-      // <div className="slider-wrap" slide={this.state.currentSliderItem}>
-
-      //   {this.props.movies.map((movie, idx) => (
-      //     this.props.genreMovies.includes(movie.id) ? <MovieComponent movie={movie} myList={this.props.myList} key={idx} /> : ''
-          
-      //   ))}
-
-      // </div>
-
       <div className="slider-wrap" slide={this.state.currentSliderItem}>
 
         {this.props.genreMovies.map((movie) => (

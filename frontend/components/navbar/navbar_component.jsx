@@ -20,7 +20,6 @@ class NavbarComponent extends  React.Component {
         this.clear = null
 
         this.makeNavbarFading =this.makeNavbarFading.bind(this);
-        this.handleClick = this.handleClick.bind(this)
         this.setMovies = this.setMovies.bind(this)
         this.handleSearch = this.handleSearch.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -65,13 +64,6 @@ class NavbarComponent extends  React.Component {
         this.setState({
             movies: Object.values(movies)
         })
-        // console.log(this.state.movies)
-    //   const whatever = Object.values(this.state.movies)
-    //   console.log(this.state.movies)
-    //   console.log(whatever)
-    //   console.log(whatever.includes(`WAR`))
-    //   console.log(whatever.filter(ele => ele.includes('THE')))
-    // console.log(whatever.findIndex(ele => ele === 'WAR DOGS'))
     }
     
     handleSearch(e) {
@@ -81,13 +73,8 @@ class NavbarComponent extends  React.Component {
         this.searchFunction(inputNoExtraSpaces)
     }
    
-    handleClick(e) {
-        debugger
-        
-    }
 
     handleSubmit(e) {
-        // debugger
         e.preventDefault()
         const input = this.state.searched
         const inputNoExtraSpaces = input.trim().split(/ +/).join(' ');
@@ -102,17 +89,12 @@ class NavbarComponent extends  React.Component {
     }
 
     openSearchResult(searchedMovie) {
-    console.log(this.state.movies.findIndex(ele => ele === searchedMovie) + 1)
-
-    const movieId = this.state.movies.findIndex(ele => ele === searchedMovie) + 1
-
-    this.props.history.push(`/watch/${movieId}`)
-
+        const movieId = this.state.movies.findIndex(ele => ele === searchedMovie) + 1
+        this.props.history.push(`/watch/${movieId}`)
     }
 
     clearFields() {
         this.clear = setTimeout(() => {
-            // alert("Hello")
             this.setState({
                     search: '',
                     searched: ''
@@ -128,7 +110,6 @@ class NavbarComponent extends  React.Component {
             
             
             <div className={`home-navbar ${this.state.navbarBackground}`}>
-                    {/* {(this.state.movies === '') ? this.setMovies() : ''} */}
 
 
                     <div className="home-navbar-contents">
@@ -164,7 +145,6 @@ class NavbarComponent extends  React.Component {
                             </div>
                         </div>
                         <div className="home-header-right-wrap">
-                            {/* <div className="home-header-mylist-link-wrap"> */}
                                 <div className="home-header-search-wrap">
                                     <div className="home-header-inner-search-wrap" onBlur={this.clearFields}>
                                         <form onSubmit={this.handleSubmit} value={this.state.searched}>
@@ -180,7 +160,6 @@ class NavbarComponent extends  React.Component {
                                         <div className="home-header-search-button-wrap" onClick={this.handleSubmit}><i className="fas fa-search"></i></div>
                                     </div>
                                 </div>
-                            {/* </div> */}
                             <nav className="home-profile-menu-wrapper">
                                 <div className="profile-img-wrap">
                                     <img className="profile-img" src="https://chillflix-seeds.s3-us-west-1.amazonaws.com/misc/profile_img.png" alt="ProfileImg"/>

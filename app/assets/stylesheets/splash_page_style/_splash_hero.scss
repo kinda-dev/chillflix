@@ -5,7 +5,6 @@
 
   position: relative;
   border-bottom: 8px solid #222;
-  // padding: 50px 5%;
   margin-bottom: 0;
   background: 0 0;
   color: #fff;
@@ -14,8 +13,6 @@
 .hero-background {
   background-image: url("https://chillflix-seeds.s3-us-west-1.amazonaws.com/misc/first-background.jpg");
   top: -100px;
-
-  // top: -70px; when reduced size
 
   z-index: 0;
   position: absolute;

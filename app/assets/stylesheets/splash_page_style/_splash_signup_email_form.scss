@@ -1,130 +1,104 @@
-.pre-signup-form-container{
-    position: relative;
-    width: 100%;
-    padding: 75px 0;
-    max-width: 950px;
-    margin: 0 auto;
-    text-align: center;
-    z-index: 1;
+.pre-signup-form-container {
+  position: relative;
+  width: 100%;
+  padding: 75px 0;
+  max-width: 950px;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 1;
 
-    font-size: 1.625rem;
-    font-weight: 400;
+  font-size: 1.625rem;
+  font-weight: 400;
 }
 
-.splash-first-sentence{
-    font-size: 4rem;
-    max-width: 800px;
-    margin: 0 auto;
-    font-weight: bold;
-
-    // font-size: 1.75rem; for resizing
+.splash-first-sentence {
+  font-size: 4rem;
+  max-width: 800px;
+  margin: 0 auto;
+  font-weight: bold;
 }
 
-.splash-second-sentence{
-    font-size: 1.625rem;
-    margin: 1rem auto;
-    max-width: 640px;
-    font-weight: 400;
-
-    // font-size: 1.125rem;  for resizing
+.splash-second-sentence {
+  font-size: 1.625rem;
+  margin: 1rem auto;
+  max-width: 640px;
+  font-weight: 400;
 }
 
-.pre-signup-form-box{
-    margin-top: 0em;
+.pre-signup-form-box {
+  margin-top: 0em;
 
-    max-width: 950px;
-    padding-top: .85rem;
-    display: flex;
-    // -webkit-box-orient: vertical;
-    // -webkit-box-direction: normal;
-
-    flex-direction: column;
+  max-width: 950px;
+  padding-top: 0.85rem;
+  display: flex;
+  flex-direction: column;
 }
 
-.splash-third-sentence{
-    max-width: none;
-    padding-bottom: 20px;
-    font-size: 1.2rem;
+.splash-third-sentence {
+  max-width: none;
+  padding-bottom: 20px;
+  font-size: 1.2rem;
 
-    padding: 0 5%;
-    margin: 0 auto;
-    font-weight: 400;
-
-    // max-width: 450px;
-    // font-size: 23px; for resizing
+  padding: 0 5%;
+  margin: 0 auto;
+  font-weight: 400;
 }
 
-.pre-signup-inputs-lockup{
-    text-align: center;
+.pre-signup-inputs-lockup {
+  text-align: center;
 
-    display: flex;
-    // -webkit-box-orient: normal;
-    // -webkit-box-direction: horizontal;
-    flex-direction: row;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
 }
 
-.pre-signup-input{
-    height: 70px;
-    min-width: 500px;
-    border-top-right-radius: 0;
-    padding: 10px 10px 0;
-    width: 100%;
-    box-shadow: none;
+.pre-signup-input {
+  height: 70px;
+  min-width: 500px;
+  border-top-right-radius: 0;
+  padding: 10px 10px 0;
+  width: 100%;
+  box-shadow: none;
 
-    // height: 48px; for resizing
-
-    box-sizing: border-box;
-    font-size: 16px;
-    border: solid 1px #8c8c8c;
-    border-radius: 2px;
-    display: block;
-    appearance: none;
-    color: black;
-    line-height: normal;
-
-    // position: relative;
+  box-sizing: border-box;
+  font-size: 16px;
+  border: solid 1px #8c8c8c;
+  border-radius: 2px;
+  display: block;
+  appearance: none;
+  color: black;
+  line-height: normal;
 }
 
-.pre-signup-button{
-    margin: 0;
-    border-bottom-left-radius: 0;
-    border-left: 1px solid #333;
-    font-size: 1.625rem;
-    height: 70px;
-    padding: 0 1em;
-    // position: relative;
-    text-size-adjust: 100%;
-    min-width: 215px;
-
-    // font-size: 1rem;
-    // min-height: 40px;
-    // margin: 0.5em auto; for resizing
-
-    // display: inline-flex;
-    // width: 100%;
+.pre-signup-button {
+  margin: 0;
+  border-bottom-left-radius: 0;
+  border-left: 1px solid #333;
+  font-size: 1.625rem;
+  height: 70px;
+  padding: 0 1em;
+  text-size-adjust: 100%;
+  min-width: 215px;
 }
 
-.pre-signup-button-text{
-    padding: 0.5rem 0;
-    text-align: center;
-    flex: 1 1auto;
-    // width: 100%;
+.pre-signup-button-text {
+  padding: 0.5rem 0;
+  text-align: center;
+  flex: 1 1auto;
 }
 
-.splash-sign-up-error{
-    color: #ffa00a;
-    text-align: left;
-    margin-bottom: -6px;
-    padding: 6px 3px;
-    font-size: 15px;
-    font-weight: 400;
-    padding-left: 14%;
+.splash-sign-up-error {
+  color: #ffa00a;
+  text-align: left;
+  margin-bottom: -6px;
+  padding: 6px 3px;
+  font-size: 15px;
+  font-weight: 400;
+  padding-left: 14%;
 }
 
-.random-obj{
-    font-size: 1.2rem;
-    font-weight: 400;
-    margin: 0.75em 0 0.25em;
+.random-obj {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 0.75em 0 0.25em;
 }
-

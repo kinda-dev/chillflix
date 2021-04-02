@@ -6,8 +6,6 @@ import configureStore from './store/store';
 import { login, logout, signup } from './actions/session_actions';
 import { fetchAllMovies, fetchMovie } from './actions/movie_actions';
 import { addToList, deleteFromList } from './actions/list_actions';
-// import { fetchAllGenres } from './actions/genre_actions';
-
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -27,23 +25,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const rootEl = document.getElementById("root");
 
-  // TEST START
-    window.getState = store.getState;
-    window.dispatch = store.dispatch;
-  // window.login = login;
-    window.logout = logout;
-  // window.signup = signup;
-    window.fetchAllMovies = fetchAllMovies;
-    window.fetchMovie = fetchMovie;
-
-  // genres
-    // window.fetchAllGenres = fetchAllGenres;
-  // list
-  window.addToList = addToList;
-  window.deleteFromList = deleteFromList;
-
-  // TEST END
-
   ReactDOM.render(<Root store={store}/>, rootEl);
-  // ReactDOM.render(<h1>you are here</h1>, rootEl);
 });

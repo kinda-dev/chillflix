@@ -8,9 +8,6 @@ class HeaderComponent extends  React.Component {
     }
 
     componentDidMount() {
-        // debugger
-        // const idx = Math.floor(Math.random() * (19 - 1)) + 1
-        // this.props.fetchMovie(idx)
     }
 
     render() {

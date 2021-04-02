@@ -6,7 +6,6 @@ import { fetchMovie } from '../../actions/movie_actions';
 
 
 const mapStateToProps = ( state, ownProps ) => {
-    // debugger
     return {
         movieId: parseInt(ownProps.match.params.videoId),
         movie: state.entities.movies,

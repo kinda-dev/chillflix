@@ -7,8 +7,6 @@
   height: 180px;
   list-style: none;
   cursor: default;
-
-  // background-image: url("https://www.themarysue.com/wp-content/uploads/2020/03/hook.jpg");
 }
 
 .movie-image {
@@ -38,15 +36,10 @@
   background-color: rgba(0, 0, 0, 0.144);
   border-radius: 3px;
   display: flex;
-  // position: absolute;
 }
 
 .slider-item :hover .movie-preview-info {
   display: block;
-  // position: relative;
-  // z-index: 5;
-  // width: 400px;
-  // height: 240px;
   background-image: none;
   display: flex;
 }
@@ -54,7 +47,6 @@
 .movie-title-hidden {
   font-weight: 800;
   font-size: 30px;
-  // text-align: end;
 }
 
 .movie-description {

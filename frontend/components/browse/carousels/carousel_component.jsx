@@ -13,7 +13,6 @@ class CarouselComponent extends React.Component{
   }
 
   componentDidMount() {
-    //  debugger
   }
 
   previousSlide() {

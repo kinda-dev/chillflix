@@ -95,10 +95,9 @@ class SignupForm extends  React.Component {
                     </div>
                 </header>
 
-                {/* <div className="signup-sections"> */}
+
 
                     <div className="signup-body">
-                        {/* <div className="signup-background"></div>   */}
                         <div className="signup-form-container">
 
                                 <h2 className="signup-first-sentence">STEP 2 OF 2</h2>
@@ -111,7 +110,6 @@ class SignupForm extends  React.Component {
                                     <input className="signup-input-email" placeholder="Email" type="text" value={this.state.email} onChange={this.handleEmail} />
                                     <div>{this.renderEmailError()}</div>
                                 </div>
-                                {/* <br/> */}
                                 <div className="signup-input-little-box">
                                     <input className="signup-input-password" placeholder="Add a password" type="password" value={this.state.password} onChange={this.handlePassword}/>
                                     <div >{this.renderPasswordError()}</div>
@@ -120,10 +118,7 @@ class SignupForm extends  React.Component {
                                     <button className="signup-button" >Complete Registration</button>
                             </form>
                                 <br/>
-                            {/* <div className="sing-up-link-signup-form">
-                                <div className="sign-up-new">New to Chillflix? <Link className="sign-up-link" to="/">Sign up now</Link>.</div>
-                                <p className="not-terms-of-use" >This page was made by Fabio. <a className="fabio-link" href="https://en.wikipedia.org/wiki/Fabio" target="_blank">Learn more.</a></p>
-                            </div> */}
+
                         <p className="demo-user-wrap"><button onClick={this.handleDemoLogin} className="demo-user-button">Demo User</button></p>
                         </div>
                         <div className="center-pixel"></div>
@@ -140,7 +135,6 @@ class SignupForm extends  React.Component {
                         </div>
                     </div> 
 
-                {/* </div> */}
 
             </div>
         )
@@ -148,21 +142,3 @@ class SignupForm extends  React.Component {
 }
 
 export default SignupForm;
-
-
-                    // <div className="signup-background"></div>
-                    // <div className="signup-form-container">
-                    //     <h2 className="signup-first-sentence">Create a password to start your membership.</h2>
-                    //     <h3 className="signup-second-sentence">Last step and you're done! We hate paperwork, too.</h3>
-                    //     <form onSubmit={this.handleSubmit} className="signup-form-box">
-                    //         <br/>
-                    //         {/* <div>{this.state.email}</div> */}
-                    //         <input className="signup-input" placeholder="Email" type="text" value={this.state.email} onChange={this.handleEmail} />
-                    //         <br/>
-                    //         <input className="signup-input" placeholder="Add a password" type="password" value={this.state.password} onChange={this.handlePassword}/>
-                    //         <br/>
-                    //         {this.renderErrors()}
-                    //         <br/>
-                    //             <button className="signup-button">Complete Registration</button>
-                    //     </form>
-                    // </div>

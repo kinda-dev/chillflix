@@ -26,8 +26,7 @@ class SplashComponent extends  React.Component {
         } else {
             this.props.history.push('/signup')
         }
-        // const user = Object.assign({}, this.state);
-        // this.props.signup(user);
+
     }
 
     componentDidUpdate() {
@@ -55,10 +54,8 @@ class SplashComponent extends  React.Component {
                         <div className="hero-background"></div>
 
                          <div className="pre-signup-form-container">
-                             {/* <div className="pre-signup-form-text"> */}
                                  <h2 className="splash-first-sentence">Unlimited movies, TV shows, and more.</h2>
                                  <h4 className="splash-second-sentence">Watch anywhere. Cancel anytime.</h4>
-                             {/* </div> */}
 
                              <form onSubmit={this.handleSubmit} className="pre-signup-form-box">
                                  

@@ -7,7 +7,6 @@ const genresReducer = (oldState = {}, action) => {
     switch(action.type) {
         case RECEIVE_GENRE:
             nextState[action.genre.id] = action.genre;
-            console.table(nextState[action.genre.id])
             return nextState[action.genre.id];
         case RECEIVE_GENRES:
             return action.genres;

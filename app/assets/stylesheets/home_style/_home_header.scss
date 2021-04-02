@@ -5,17 +5,10 @@
   color: white;
 }
 
-// .home-header-image {
-//   background-position: center-center;
-//   background-size: cover;
-// }
-
 .home-header-contents {
   margin-left: 50px;
   padding-top: 140px;
   max-width: 640px;
-  // background-color: violet;
-  // min-height: 400px;
   height: 370px;
 }
 
@@ -51,7 +44,6 @@
 
 .home-header-play-button-hover:hover .home-header-play-button {
   background-color: rgba(255, 255, 255, 0.582);
-  // border-radius: 3px;
   transition: all 0.2s;
 }
 

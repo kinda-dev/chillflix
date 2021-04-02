@@ -1,34 +1,7 @@
-.signup-body{
-    // padding: 0 35%;
-
-    // position: relative;
-    // border-bottom: 1px solid #e6e6e6;
-
-    // margin-bottom: 0;
-    // background: 0 0;
-    // color: black;
-
-    padding-bottom: 95px
-}
-
-// .login-background{
-//     background-image: image_url('first-background.jpg');
-//     top: -100px;
-
-//     min-height: 100vw;
-
-//     z-index: 0;
-//     position: absolute;
-//     left: 0;
-//     right: 0;
-//     bottom: 0;
-//     overflow: hidden;
-// }
-
 @import "_signup_form_container";
 
-.center-pixel{
-    top: 50%;
-    left: 50%;
-    position: absolute;
+.center-pixel {
+  top: 50%;
+  left: 50%;
+  position: absolute;
 }

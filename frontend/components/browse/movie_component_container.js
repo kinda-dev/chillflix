@@ -9,7 +9,6 @@ import { fetchMovie } from '../../actions/movie_actions'
 const mapStateToProps = ({ session, entities: { users, movies } }) => {
     return {
         currentUser: users[session.id],
-        // movie: movies
     };
 };
 

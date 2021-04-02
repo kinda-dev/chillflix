@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// import { login, resetErrors } from '../../actions/session_actions';
 
 class LoginForm extends React.Component {
     constructor(props) {
@@ -40,10 +39,6 @@ class LoginForm extends React.Component {
         this.props.login(user).then(() => this.props.history.push('/browse'));
     }
     
-    // componentDidMount() {
-    //     this.props.resetErrors();
-    // }
-
     componentWillUnmount() {
         this.props.resetErrors();
     }

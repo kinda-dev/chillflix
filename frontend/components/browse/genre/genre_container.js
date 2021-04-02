@@ -5,7 +5,6 @@ import { fetchGenre, fetchAllGenres } from '../../../actions/genre_actions';
 import genreComponent from './genre_component';
 
 const mapStateToProps = ({ session, entities: { users, movies, genres } }, ownProps) => {
-    // debugger
     return {
         currentUser: users[session.id],
         genre: genres,

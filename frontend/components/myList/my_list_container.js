@@ -7,7 +7,6 @@ import { fetchGenre, fetchAllGenres } from '../../actions/genre_actions';
 import myListComponent from './my_list_component';
 
 const mapStateToProps = ({ session, entities: { users, movies, genres } }) => {
-    // debugger
     return {
         currentUser: users[session.id],
         movies: Object.values(movies),

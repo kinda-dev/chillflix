@@ -40,22 +40,18 @@ handleList(e) {
           <li className="slider-item" 
             movieid={movie.id} 
             src={movie.movieImage} 
-            // onMouseOver={this.myListButton(movie.id)}
-            // onMouseOut={this.handleMouseOut()}
             >
                 <div className="movie-preview-hover-wrap">
                     <img className="movie-image" src={movie.movieImage} alt={movie.title}/>
                     <h1 className="movie-title">{movie.title}</h1>
                      <div className="movie-preview-info">
                             
-                         {/* <video className="movie-preview-video" autoPlay  loop muted><source src={movie.movieTrailer}></source></video> */}
                          <div className="movie-info">
                             <h1 className="movie-title-hidden">{movie.title}</h1>
                              <h2 className="movie-description">{movie.description}</h2>
                              <div className="movie-buttons-wrap">
                                <Link to={`/watch/${movie.id}`} location={this.props.location}>
                                 <div className='movie-play-button-wrap movie-icon-wrap'
-                                  // onClick={() => this.props.history.push(`/watch/${movie.id}`)} 
                                   ><i className="fas fa-play-circle movie-icon"></i>
                                 </div>
                               </Link>

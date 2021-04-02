@@ -1,94 +1,82 @@
 .splash-television-element {
-    padding: 70px 45px;
-    position: relative;
-    border-bottom: 8px solid #222;
-    margin-bottom: 0;
-    background: 0 0;
-    color: #fff;
-    
-    // padding: 50px 5%; for resizing
+  padding: 70px 45px;
+  position: relative;
+  border-bottom: 8px solid #222;
+  margin-bottom: 0;
+  background: 0 0;
+  color: #fff;
 }
 
-.splash-television-first-child{
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    // flex-wrap: wrap;
-    // flex-direction: row;
+.splash-television-first-child {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
 }
 
-.splash-television-text-container{
-    margin: -5% 0; //wathc on tv?
+.splash-television-text-container {
+  margin: -5% 0;
 
-    width: 52%;
-    height: 100%;
-    -webkit-box-flex: 0;
-    flex: 0 1 auto;
-    padding: 0 3rem 0 0;
-    z-index: 3;
+  width: 52%;
+  height: 100%;
+  -webkit-box-flex: 0;
+  flex: 0 1 auto;
+  padding: 0 3rem 0 0;
+  z-index: 3;
 }
 
-.television-first-sentence{
-    font-size:  3.125rem;
-    line-height: 1.1;
-    margin-bottom: 0.5rem;
+.television-first-sentence {
+  font-size: 3.125rem;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
 }
 
-.television-second-sentence{
-    font-size: 1.625rem;
-    font-weight: 400;
-    margin: 0.75em 0 0.25em;
+.television-second-sentence {
+  font-size: 1.625rem;
+  font-weight: 400;
+  margin: 0.75em 0 0.25em;
 }
 
-.splash-television-image-container{
-    width: 48%;
-    height: 100%;
-    display: flex;
-    -webkit-box-flex: 0;
-    flex: 0 1 auto;
-    box-sizing: border-box;
+.splash-television-image-container {
+  width: 48%;
+  height: 100%;
+  display: flex;
+  -webkit-box-flex: 0;
+  flex: 0 1 auto;
+  box-sizing: border-box;
 }
 
-.splash-television-animation-container{
-    margin: -10% -5% -5% 0;
-    position: relative;
-    overflow: hidden;
+.splash-television-animation-container {
+  margin: -10% -5% -5% 0;
+  position: relative;
+  overflow: hidden;
 }
 
-.tv-img{
-    position: relative;
-    z-index: 2;
-    max-width: 100%;
-    height: auto;
-    border: 0;
+.tv-img {
+  position: relative;
+  z-index: 2;
+  max-width: 100%;
+  height: auto;
+  border: 0;
 }
 
-.splash-videoanimation{
-    width: 100%;
-    height: 100%;
-    max-width: 73%;
-    max-height: 54%;
-    position: absolute;
-    top: 46%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+.splash-videoanimation {
+  width: 100%;
+  height: 100%;
+  max-width: 73%;
+  max-height: 54%;
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.splash-video{
-    width: 100%;
-    height: 100%;
-    display: inline-block;
-    vertical-align: baseline;
-    object-fit: contain;
+.splash-video {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  vertical-align: baseline;
+  object-fit: contain;
 }
-
-// .first-splash-text {
-//     display: block;
-//     justify-content: center;
-//     position: relative;
-// }
-

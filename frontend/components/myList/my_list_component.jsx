@@ -12,7 +12,6 @@ class myListComponent extends React.Component {
   }
 
   render() {
-        console.log(this.props.currentUser)
 
 
         if (this.props.genre.genre_name !== "Top Trending") return null;
@@ -26,8 +25,6 @@ class myListComponent extends React.Component {
               <h1 className="my-list-h1">My List</h1>
               <div className="my-list-row-wrap">
                   {this.props.currentUser.myListMovieIds.map((videoId) => {
-                      console.log(videoId)
-                      console.log(this.props.genre.genreMovies)
                       let movie = this.props.genre.genreMovies[videoId - 1]
                       return (
                         <div key={videoId - 1} className="my-list-movie-wrap">

@@ -9,16 +9,10 @@ import NavbarComponent from './../navbar/navbar_container'
 class HomeComponent extends  React.Component {
     constructor(props) {
         super(props);
-
-        // this.makeNavbarFading =this.makeNavbarFading.bind(this);
     }
     
     componentDidMount() {
-        // debugger
         this.props.fetchAllGenres();
-        // this.props.fetchAllMovies();
- 
-
     }
    
     
