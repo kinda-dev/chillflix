@@ -17,6 +17,8 @@ class NavbarComponent extends  React.Component {
             searched: ''
         };
 
+        this.clear = null
+
         this.makeNavbarFading =this.makeNavbarFading.bind(this);
         this.handleClick = this.handleClick.bind(this)
         this.setMovies = this.setMovies.bind(this)
@@ -36,12 +38,9 @@ class NavbarComponent extends  React.Component {
     }
 
     componentWillUnmount() {
-        clearTimeout(this.clearFields)
-        this.clearFields = 0
-    }
-
-    componentWillUnmount() {
         document.removeEventListener('scroll', this.makeNavbarFading);
+        clearTimeout(this.clear)
+        this.clear = 0
     }
 
 
@@ -112,7 +111,7 @@ class NavbarComponent extends  React.Component {
     }
 
     clearFields() {
-        setTimeout(() => {
+        this.clear = setTimeout(() => {
             // alert("Hello")
             this.setState({
                     search: '',
