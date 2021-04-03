@@ -11,7 +11,7 @@ class NavbarComponent extends  React.Component {
             navbarBackground: 'nav-transparent',
             homeLink: (this.props.history.location.pathname === '/browse') ? <div className="same-page">Home</div> : <Link to="/browse" className="home-header-mylist-link">Home</Link>,
             myListLink: (this.props.history.location.pathname === '/myList') ? <div className="same-page">My List</div> : <Link to="/myList" className="home-header-mylist-link">My List</Link>,
-            genresLink: (this.props.history.location.pathname === `/browse/genre/:genreId`) ? 'same-page-genres' : 'home-header-mylist-link',
+            genresLink: ((this.props.history.location.pathname !== '/browse') && (this.props.history.location.pathname !== '/myList')) ? 'same-page-genres' : 'home-header-mylist-link',
             movies: '',
             search: '',
             searched: ''
@@ -125,7 +125,7 @@ class NavbarComponent extends  React.Component {
                                 {this.state.myListLink}
                             </div>
                             <div className="home-header-mylist-link-wrap my-list-hover">
-                                <div className={this.state.genresLink}>Genre</div>
+                                <div className={this.state.genresLink} id="default-cursor">Genre</div>
                                 <div className="navbar-genres-list-wrap">
                                     <div className="navbar-genres-list-inner-wrap">
                                         <div className="navbar-genre-item-hover">
