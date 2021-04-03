@@ -27,7 +27,7 @@
     movie6 = Movie.create!(title: 'THE TRIAL OF THE CHICAGO 7', description: "The film follows the Chicago Seven, a group of anti–Vietnam War protesters charged with conspiracy and crossing state lines with the intention of inciting riots at the 1968 Democratic National Convention in Chicago.", rating: 'R', year: 2020, duration: '2h 10m')
     movie7 = Movie.create!(title: 'GRAN TORINO', description: "The story follows Walt Kowalski, a recently widowed Korean War veteran alienated from his family and angry at the world. Walt's young neighbor, Thao Vang Lor, is pressured by his cousin into stealing Walt's prized 1972 Ford Gran Torino for his initiation into a gang.", rating: 'R', year: 2008, duration: '1h 56m')
     movie8 = Movie.create!(title: 'THE HATEFUL EIGHT', description: "In the dead of a Wyoming winter, a bounty hunter and his prisoner find shelter in a cabin currently inhabited by a collection of nefarious characters.", rating: 'R', year: 2015, duration: '2h 47m')
-    movie9 = Movie.create!(title: 'THE TEORY OF EVERYTHING', description: "The Theory of Everything is the story of the most brilliant and celebrated physicist of our time, Stephen Hawking, and Jane Wilde the arts student he fell in love with whilst studying at Cambridge in the 1960s.", rating: 'PG-13', year: 2014, duration: '2h 03m')
+    movie9 = Movie.create!(title: 'THE THEORY OF EVERYTHING', description: "The Theory of Everything is the story of the most brilliant and celebrated physicist of our time, Stephen Hawking, and Jane Wilde the arts student he fell in love with whilst studying at Cambridge in the 1960s.", rating: 'PG-13', year: 2014, duration: '2h 03m')
     movie10 = Movie.create!(title: 'HOOK', description: "When Captain James Hook kidnaps his children, an adult Peter Pan must return to Neverland and reclaim his youthful spirit in order to challenge his old enemy. With the help of her and the Lost Boys, he must remember how to be Peter Pan again in order to save his children by battling with Captain Hook once again.", rating: 'PG', year: 1991, duration: '2h 21m')
     movie11 = Movie.create!(title: 'EXTREMELY WICKED', description: "Extremely Wicked, Shockingly Evil and Vile delivers a sobering, graphic dramatization of Ted Bundy's murderous life.", rating: 'R', year: 2019, duration: '1h 48m')
     movie12 = Movie.create!(title: 'FREE STATE OF JONES', description: "In 1863, Mississippi farmer Newt Knight serves as a medic for the Confederate Army. Opposed to slavery, Knight would rather help the wounded than fight the Union.", rating: 'R', year: 2016, duration: '2h 20m')
@@ -44,7 +44,7 @@
     genre1 = Genre.create!(genre_name: "Top Trending")
     genre2 = Genre.create!(genre_name: "Drama")
     genre3 = Genre.create!(genre_name: "Comedies")
-    genre4 = Genre.create!(genre_name: "Base on Real Life")
+    genre4 = Genre.create!(genre_name: "Based on Real Life")
     
     #playlists
 
