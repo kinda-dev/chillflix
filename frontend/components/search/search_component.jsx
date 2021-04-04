@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 
 
@@ -10,8 +10,6 @@ class SearchComponent extends  React.Component {
         super(props);
         this.state = {
             search: '',
-            
-            // input: search.trim().split(/ +/).join(' ')
         };
         
         this.handleSearch = this.handleSearch.bind(this)
@@ -60,9 +58,6 @@ class SearchComponent extends  React.Component {
     
     handleSearch(e) {
         this.setState({search: e.target.value})
-        // const input = this.state.search.toUpperCase()
-        // const inputNoExtraSpaces = input.trim().split(/ +/).join(' ');
-        // this.searchFunction(inputNoExtraSpaces)
     }
    
 
@@ -74,7 +69,6 @@ class SearchComponent extends  React.Component {
     }
 
     searchFunction() {
-        // debugger
         let input = this.state.search.toUpperCase()
         let inputNoExtraSpaces = input.trim().split(/ +/).join(' ');
         let filteredMovies = Object.values(this.movies).filter(ele => ele.title.includes(inputNoExtraSpaces))
@@ -87,24 +81,13 @@ class SearchComponent extends  React.Component {
                 
             )
         } else {
-            // filteredMovies.map((movie) => {
-                // console.log(movie.title)
-                return (
-                    // <div className="grid-item-wrap">
-                    //     <div key={movie.id} className="my-list-movie-wrap">
-                // <h1 key={movie.id} className="navbar-search-item">Movie found</h1>
-
-                            // {/* <MovieComponent movie = {movie} myList = {this.props.currentUser.myListMovieIds}/>                     */}
-                        // {/* </div>
-                    // </div> */}
-                    filteredMovies
+            return (
+                filteredMovies
             )
-        // })
-    }
+        }
     }
 
     clearFields() {
-        // this.hideElement.current.style.display = "none"
         this.clear = setTimeout(() => {
             this.setState({
                     search: ''
@@ -114,8 +97,6 @@ class SearchComponent extends  React.Component {
     }
 
     openSearchResult(e) {
-        // debugger
-        // e.preventDefault()
         const movieId = parseInt(e.target.id)
         this.props.history.push(`/watch/${movieId}`)
     }
@@ -123,9 +104,6 @@ class SearchComponent extends  React.Component {
      
     
     render() {
-        
-        let input = this.state.search
-        let inputNoExtraSpaces = input.trim().split(/ +/).join(' ');
 
         return(
             
@@ -144,7 +122,6 @@ class SearchComponent extends  React.Component {
                                                 <h1 className="navbar-search-item">No result matches your search</h1> 
                                                 :
                                                 this.searchFunction().map((movie) => {
-                                                    {console.log(this.searchFunction())}
                                                     return (
                                                         <div key={movie.id} className="navbar-genre-item-hover">
                                                             <h1 key={movie.id} id={movie.id} className="navbar-genre-item" onClick={this.openSearchResult}>{movie.title}</h1> 
