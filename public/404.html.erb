@@ -2,20 +2,18 @@
 <html>
 <head>
   <title>Chillflix - The page you were looking for doesn't exist (404)</title>
+  <link rel="stylesheet" href="../app/assets/stylesheets/components/_error_404.scss">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
-  <script src="https://kit.fontawesome.com/e93199a89e.js" crossorigin="anonymous"></script> 
 
   <script type='text/javascript'>
      
     
   </script>
   <%= favicon_link_tag 'https://chillflix-seeds.s3-us-west-1.amazonaws.com/misc/favicon.png' %>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
 </head>
 
 <body class="body">
@@ -25,9 +23,9 @@
         <div className="not-found-text">
         <h1 className="error-404">404 - Not Found</h1>
         <h2 className="not-found-sentence">Error occoured has, apologize we do.</h2>
-        <Link to="/browse" className="not-found-home-link">
-            <button className="not-found-button">Home You Go</button>
-        </Link>
+        <a href="https://http://chillflix.herokuapp.com/" className="not-found-home-link">
+          <button className="not-found-button">Home You Go</button>
+        </a>
         <div className="center-pixel"></div>
         </div>
 
@@ -35,3 +33,5 @@
   </div>
 </body>
 </html>
+
+

@@ -1,0 +1,26 @@
+.search-result-wrap {
+  background-color: rgba(20, 20, 20, 0.9);
+  display: flex;
+  position: relative;
+}
+
+.navbar-search-item {
+  display: block;
+  color: white;
+  cursor: default;
+}
+
+.home-header-search-elements-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-search-list-wrap {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-result-list {
+  transition: all 0.4s;
+}
