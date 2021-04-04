@@ -72,9 +72,7 @@ class SearchComponent extends  React.Component {
         let input = this.state.search.toUpperCase()
         let inputNoExtraSpaces = input.trim().split(/ +/).join(' ');
         let filteredMovies = Object.values(this.movies).filter(ele => ele.title.includes(inputNoExtraSpaces))
-        console.log(filteredMovies)
         if (inputNoExtraSpaces === '' || filteredMovies.length === 0) {
-            console.log('no match')
             filteredMovies = []
             return (
                 filteredMovies
@@ -117,20 +115,19 @@ class SearchComponent extends  React.Component {
                     </div>
                         <div className="search-result-list-wrap" ref={this.hideElement}>
                             {(this.state.search !== '' && this.state.search.trim().split(/ +/).join(' ') !== '') ?
-                                            <div className="search-result-list">
-                                            {(this.searchFunction().length == 0) ?
-                                                <h1 className="navbar-search-item">No result matches your search</h1> 
-                                                :
-                                                this.searchFunction().map((movie) => {
-                                                    return (
-                                                        <div key={movie.id} className="navbar-genre-item-hover">
-                                                            <h1 key={movie.id} id={movie.id} className="navbar-genre-item" onClick={this.openSearchResult}>{movie.title}</h1> 
-                                                        </div>
-                                                    )
-                                                })
-                                            }
+                                <div className="search-result-list">
+                                {(this.searchFunction().length == 0) ?
+                                    <h1 className="navbar-search-item">No result matches your search</h1> 
+                                    :
+                                    this.searchFunction().map((movie) => {
+                                        return (
+                                            <div key={movie.id} className="navbar-genre-item-hover">
+                                                <h1 key={movie.id} id={movie.id} className="navbar-genre-item" onClick={this.openSearchResult}>{movie.title}</h1> 
                                             </div>
-
+                                        )
+                                    })
+                                }
+                                </div>
                             : ''}
                         </div>
                 </div>
