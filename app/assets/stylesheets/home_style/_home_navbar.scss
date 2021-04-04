@@ -4,7 +4,7 @@
   padding-top: 19px;
   padding-bottom: 19px;
   width: 100%;
-  z-index: 100;
+  z-index: 150;
 
   transition-timing-function: ease-in;
   transition: all 1s;
@@ -78,6 +78,7 @@
 }
 
 .navbar-genre-item {
+  color: white;
   padding: 3px;
   cursor: pointer;
   background-color: rgba(20, 20, 20, 0.9);
