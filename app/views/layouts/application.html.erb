@@ -2,10 +2,20 @@
 <html>
   <head>
     <title>ChillFlix</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-
+    
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+    <meta property="og:video" content="https://chillflix-seeds.s3-us-west-1.amazonaws.com/misc/chillflix_video_anim.mp4" />
+    <meta name="title" property="og:title" content="Chillflix" />
+    <meta
+      property="og:description"
+      content="Chillflix is a netflix clone that allows users to watch video movie trailers on demand."
+    />
+    <meta property="og:url" content="http://chillflix.herokuapp.com/" />
+    <meta name="author" content="Fabio R Bortone" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
 
     <script src="https://kit.fontawesome.com/e93199a89e.js" crossorigin="anonymous"></script> 
 
