@@ -16,8 +16,6 @@ class HomeComponent extends  React.Component {
     }
    
     
-    
-    
     render() {
         
         if (this.props.genres.length < 4) return null;

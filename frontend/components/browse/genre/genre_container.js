@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import {withRouter} from 'react-router-dom';
-import { fetchGenre, fetchAllGenres } from '../../../actions/genre_actions';
+import { fetchGenre } from '../../../actions/genre_actions';
 
 import genreComponent from './genre_component';
 
