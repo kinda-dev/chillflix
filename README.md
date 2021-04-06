@@ -14,11 +14,11 @@ I have created functionalities such as User Auth, Movie trailers Index + Movie s
 
 - [Technologies used](#Technologies)
 - [Features](#features)
-- [User Authentication](#1.-User-Authentication)
-- [Movie trailers Index + Movie show Pages](#2.-Movie-trailers-Index-+-Movie-show-Pages)
-- [Genres](#3.-Genres)
-- [Search](#4.-Search)
-- [Playlist](#5.-Playlist)
+- [User Authentication](###1.-User-Authentication)
+- [Movie trailers Index + Movie show Pages](###2.-Movie-trailers-Index-+-Movie-show-Pages)
+- [Genres](###3.-Genres)
+- [Search](###4.-Search)
+- [Playlist](###5.-Playlist)
 
 ---
 
