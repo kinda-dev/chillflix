@@ -8,17 +8,23 @@ It's been developed using Ruby, Ruby on Rails, PostgresQL, Ajax, React, Redux, H
 
 Chillflix, a full stack Netflix clone, is a video streaming application that allows users to watch trailers on demand.
 
-I have created functionality such as User Auth, Movie trailers Index + Movie show Pages, Genres, Search feature, and Movies Playlist
+I have created functionalities such as User Auth, Movie trailers Index + Movie show Pages, Genres, Search feature, and Movies Playlist.
 
 ## Table of Contents
 
 - [Technologies used](#Technologies)
 - [Features](#features)
 - [User Authentication](#1.-User-Authentication)
+- [Movie trailers Index + Movie show Pages](#2.-Movie-trailers-Index-+-Movie-show-Pages)
+- [Genres](#3.-Genres)
+- [Search](#4.-Search)
+- [Playlist](#5.-Playlist)
+
+---
 
 # Technologies Used
 
-Ruby, Ruby on Rails, PostgresQL, Ajax, React, Redux, HTML5, Scss.
+Ruby, Ruby on Rails, PostgresQL, Ajax, React, Redux, Aws, HTML5, Scss.
 
 ---
 
@@ -190,109 +196,176 @@ export default withRouter(connect(mapStateToProps, mapDispatchToProps)(genreComp
 
 ### 4. Search
 
-The `Google Maps API` is featured both on the Business Index page and Business Show page. With the Business Index page, a `marker_util.js` file is created in combination with the latitude and longitude values of a Business and is respectively shown on the Map.
+The Search feature is managed filtering the user's input and updating the `redux` slice of state that allows the rendering of the trailers which title matches the input.
+On click the selected movie is fetched from the database through its index, accessing data in `constant time`.
 
 ```
-let mapLoc
-    if (Array.isArray(this.props.businesses)) {
-      mapLoc = {
-        center: {
-          lat: +this.props.businesses[0].lat,
-          lng: +this.props.businesses[0].lng,
-        },
-        zoom: 10,
-        mapTypeControl: false,
-        scaleControl: false,
-        streetViewControl: false,
-        rotateControl: false,
-        fullscreenControl: true,
-      }
-    } else {
-      mapLoc = {
-        center: {
-          lat: +this.props.businesses.lat,
-          lng: +this.props.businesses.lng,
-        },
-        zoom: 10,
-        mapTypeControl: false,
-        scaleControl: false,
-        streetViewControl: false,
-        rotateControl: false,
-        fullscreenControl: true,
-      }
+handleSearch(e) {
+        this.setState({search: e.target.value})
     }
 
-    this.map = new google.maps.Map(this.mapNode, mapLoc)
-    this.MarkerManager = new MarkerManager(this.map)
-    this.MarkerManager.updateMarkers(this.props.businesses)
+
+    handleSubmit(e) {
+        e.preventDefault()
+        const input = this.state.searched
+        const inputNoExtraSpaces = input.trim().split(/ +/).join(' ');
+        if (inputNoExtraSpaces !== '') (this.openSearchResult(this.state.searched))
+    }
+
+    searchFunction() {
+        let input = this.state.search.toUpperCase()
+        let inputNoExtraSpaces = input.trim().split(/ +/).join(' ');
+        let filteredMovies = Object.values(this.movies).filter(ele => ele.title.includes(inputNoExtraSpaces))
+        if (inputNoExtraSpaces === '' || filteredMovies.length === 0) {
+            filteredMovies = []
+            return (
+                filteredMovies
+
+            )
+        } else {
+            return (
+                filteredMovies
+            )
+        }
+    }
+
+    clearFields() {
+        this.clear = setTimeout(() => {
+            this.setState({
+                    search: ''
+                })
+
+        }, 100)
+    }
+
+    openSearchResult(e) {
+        const movieId = parseInt(e.target.id)
+        this.props.history.push(`/watch/${movieId}`)
+    }
+
+    render() {
+
+        return(
+
+            <div className="home-header-search-wrap">
+                <div className="home-header-search-elements-wrap" onBlur={this.clearFields}>
+                    <div className="home-header-inner-search-wrap">
+                        <input className="home-header-search-input" placeholder="Enter a Movie Title" type="text" value={this.state.search} onChange={this.handleSearch}/>
+                        <div className="home-header-search-button-wrap"><i className="fas fa-search"></i></div>
+                    </div>
+                        <div className="search-result-list-wrap" ref={this.hideElement}>
+                            {(this.state.search !== '' && this.state.search.trim().split(/ +/).join(' ') !== '') ?
+                                <div className="search-result-list">
+                                {(this.searchFunction().length == 0) ?
+                                    <h1 className="navbar-search-item">No result matches your search</h1>
+                                    :
+                                    this.searchFunction().map((movie) => {
+                                        return (
+                                            <div key={movie.id} className="navbar-genre-item-hover">
+                                                <h1 key={movie.id} id={movie.id} className="navbar-genre-item" onClick={this.openSearchResult}>{movie.title}</h1>
+                                            </div>
+                                        )
+                                    })
+                                }
+                                </div>
+                            : ''}
+                        </div>
+                </div>
+            </div>
+
+
+
+
+        )
+    }
+}
 ```
 
 ---
 
-5. Business Index with Specific Categories
+### 5. Playlist
 
-With `selectors`, connecting a container to the Business Index component allowed for easy filters of specific businesses depending on their category such as American, Italian, and Thai.
-
-```
-export const getAmericanBiz = (state) => {
-  return Object.values(state.entities.businesses).filter(
-    (business) => business.category === 'American (Traditional)'
-  )
-}
-
-export const getItalianBiz = (state) => {
-  return Object.values(state.entities.businesses).filter(
-    (business) => business.category === 'Italian'
-  )
-}
-
-export const getThaiBiz = (state) => {
-  return Object.values(state.entities.businesses).filter(
-    (business) => business.category === 'Thai'
-  )
-}
-
-export const getJapaneseBiz = (state) => {
-  return Object.values(state.entities.businesses).filter(
-    (business) => business.category === 'Japanese'
-  )
-}
-
-export const getChineseBiz = (state) => {
-  return Object.values(state.entities.businesses).filter(
-    (business) => business.category === 'Chinese'
-  )
-}
-
-export const getKoreanBiz = (state) => {
-  return Object.values(state.entities.businesses).filter(
-    (business) => business.category === 'Korean'
-  )
-}
-
-export const getCofTeaBiz = (state) => {
-  return Object.values(state.entities.businesses).filter(
-    (business) => business.category === 'Coffee & Tea'
-  )
-}
-```
-
-6. Useful, Funny, Cool
-
-With a `review_tags` table added, Users are able to interact with other Users reviews and classify a review as "useful", "funny", or "cool". From the backend to frontend, creating the association required the 3 tables of `users`, `reviews` and `review_tags`.
-
-Using `componentDidUpdate()` and obtaining the previous properties of a Review Tag, incrementing or decrementing tag counts became available in real time.
+The Search feature is managed filtering the user's input and updating the `redux` slice of state that allows the rendering of the trailers which title matches the input.
+On click the selected movie is fetched from the database through its index, accessing data in `constant time`.
 
 ```
-  componentDidUpdate(prevProps) {
-    const { fetchReviews, business, review } = this.props
-    let didUpdate =
-      this.props.coolSum !== prevProps.coolSum ||
-      this.props.usefulSum !== prevProps.usefulSum ||
-      this.props.funnySum !== prevProps.funnySum
-
-    if (review.tagCount && prevProps.review.tagCount && didUpdate) {
-      fetchReviews(business.id)
+handleSearch(e) {
+        this.setState({search: e.target.value})
     }
-  }
+
+
+    handleSubmit(e) {
+        e.preventDefault()
+        const input = this.state.searched
+        const inputNoExtraSpaces = input.trim().split(/ +/).join(' ');
+        if (inputNoExtraSpaces !== '') (this.openSearchResult(this.state.searched))
+    }
+
+    searchFunction() {
+        let input = this.state.search.toUpperCase()
+        let inputNoExtraSpaces = input.trim().split(/ +/).join(' ');
+        let filteredMovies = Object.values(this.movies).filter(ele => ele.title.includes(inputNoExtraSpaces))
+        if (inputNoExtraSpaces === '' || filteredMovies.length === 0) {
+            filteredMovies = []
+            return (
+                filteredMovies
+
+            )
+        } else {
+            return (
+                filteredMovies
+            )
+        }
+    }
+
+    clearFields() {
+        this.clear = setTimeout(() => {
+            this.setState({
+                    search: ''
+                })
+
+        }, 100)
+    }
+
+    openSearchResult(e) {
+        const movieId = parseInt(e.target.id)
+        this.props.history.push(`/watch/${movieId}`)
+    }
+
+    render() {
+
+        return(
+
+            <div className="home-header-search-wrap">
+                <div className="home-header-search-elements-wrap" onBlur={this.clearFields}>
+                    <div className="home-header-inner-search-wrap">
+                        <input className="home-header-search-input" placeholder="Enter a Movie Title" type="text" value={this.state.search} onChange={this.handleSearch}/>
+                        <div className="home-header-search-button-wrap"><i className="fas fa-search"></i></div>
+                    </div>
+                        <div className="search-result-list-wrap" ref={this.hideElement}>
+                            {(this.state.search !== '' && this.state.search.trim().split(/ +/).join(' ') !== '') ?
+                                <div className="search-result-list">
+                                {(this.searchFunction().length == 0) ?
+                                    <h1 className="navbar-search-item">No result matches your search</h1>
+                                    :
+                                    this.searchFunction().map((movie) => {
+                                        return (
+                                            <div key={movie.id} className="navbar-genre-item-hover">
+                                                <h1 key={movie.id} id={movie.id} className="navbar-genre-item" onClick={this.openSearchResult}>{movie.title}</h1>
+                                            </div>
+                                        )
+                                    })
+                                }
+                                </div>
+                            : ''}
+                        </div>
+                </div>
+            </div>
+
+
+
+
+        )
+    }
+}
 ```
