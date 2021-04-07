@@ -91,7 +91,7 @@ class SearchComponent extends  React.Component {
                     search: ''
                 })
                     
-        }, 100)
+        }, 500)
     }
 
     openSearchResult(e) {
