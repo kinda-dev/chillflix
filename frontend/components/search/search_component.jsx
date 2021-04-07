@@ -95,6 +95,9 @@ class SearchComponent extends  React.Component {
     }
 
     openSearchResult(e) {
+        console.log(parseInt(e.target.id))
+        console.log(parseInt(e.currentTarget.id))
+
         const movieId = parseInt(e.target.id)
         this.props.history.push(`/watch/${movieId}`)
     }
