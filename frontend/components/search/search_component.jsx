@@ -19,7 +19,8 @@ class SearchComponent extends  React.Component {
     }
     
     componentDidMount() {
-        this.props.fetchAllMovies();
+        // this.props.fetchAllMovies();
+        console.log(this.props.movies)
     }
 
     componentWillUnmount() {
@@ -28,6 +29,7 @@ class SearchComponent extends  React.Component {
     }
     
     handleSearch(e) {
+        if (this.props.movies.length === 0) this.props.fetchAllMovies();
         this.setState({search: e.target.value})
     }
 
@@ -70,7 +72,7 @@ class SearchComponent extends  React.Component {
     }
 
     render() {
-        if (this.props.movies.length === 0) return null;
+        // if (this.props.movies.length === 0) return null;
         console.log('movies:', this.props.movies);
         return(
             
