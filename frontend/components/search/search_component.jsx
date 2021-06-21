@@ -72,7 +72,7 @@ class SearchComponent extends  React.Component {
     }
 
     render() {
-        // if (this.props.movies.length === 0) return null;
+
         console.log('movies:', this.props.movies);
         return(
             
