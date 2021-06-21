@@ -8,19 +8,14 @@ class SearchComponent extends  React.Component {
             search: ''
         };
         
-        this.handleSearch = this.handleSearch.bind(this)
-        this.searchFunction = this.searchFunction.bind(this)
-        this.openSearchResult = this.openSearchResult.bind(this)
-        this.clearFields = this.clearFields.bind(this)
+        this.handleSearch = this.handleSearch.bind(this);
+        this.searchFunction = this.searchFunction.bind(this);
+        this.openSearchResult = this.openSearchResult.bind(this);
+        this.clearFields = this.clearFields.bind(this);
         
         this.hideElement = React.createRef();
-        this.clear = null
+        this.clear = null;
 
-    }
-    
-    componentDidMount() {
-        // this.props.fetchAllMovies();
-        console.log(this.props.movies)
     }
 
     componentWillUnmount() {
@@ -30,14 +25,7 @@ class SearchComponent extends  React.Component {
     
     handleSearch(e) {
         if (this.props.movies.length === 0) this.props.fetchAllMovies();
-        this.setState({search: e.target.value})
-    }
-
-    handleSubmit(e) {
-        e.preventDefault()
-        const input = this.state.searched
-        const inputNoExtraSpaces = input.trim().split(/ +/).join(' ');
-        if (inputNoExtraSpaces !== '') (this.openSearchResult(this.state.searched))
+        this.setState({search: e.target.value});
     }
 
     searchFunction() {
@@ -45,7 +33,7 @@ class SearchComponent extends  React.Component {
         let inputNoExtraSpaces = input.trim().split(/ +/).join(' ');
         let filteredMovies = Object.values(this.props.movies).filter(ele => ele.title.includes(inputNoExtraSpaces))
         if (inputNoExtraSpaces === '' || filteredMovies.length === 0) {
-            filteredMovies = []
+            filteredMovies = [];
             return (
                 filteredMovies
                 
@@ -73,7 +61,6 @@ class SearchComponent extends  React.Component {
 
     render() {
 
-        console.log('movies:', this.props.movies);
         return(
             
             <div className="home-header-search-wrap">
@@ -85,7 +72,7 @@ class SearchComponent extends  React.Component {
                         <div className="search-result-list-wrap" ref={this.hideElement}>
                             {(this.state.search !== '' && this.state.search.trim().split(/ +/).join(' ') !== '') ?
                                 <div className="search-result-list">
-                                {(this.searchFunction().length == 0) ?
+                                { (this.searchFunction().length == 0) ?
                                     <h1 className="navbar-search-item">No result matches your search</h1> 
                                     :
                                     this.searchFunction().map((movie) => {
