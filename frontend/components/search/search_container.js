@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import {withRouter} from 'react-router-dom';
-
+import { fetchAllMovies } from '../../actions/movie_actions';
 import SearchComponent from './search_component';
 
 const mapStateToProps = ({ session, entities: { users, movies } }) => {
