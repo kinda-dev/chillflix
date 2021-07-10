@@ -6,8 +6,6 @@ Chillflix, a full stack Netflix clone, is a video streaming application that all
 
 It's been developed using Ruby, Ruby on Rails, PostgresQL, Ajax, React, Redux, HTML5, Scss.
 
-Chillflix, a full stack Netflix clone, is a video streaming application that allows users to watch trailers on demand.
-
 I have created functionalities such as User Auth, Movie trailers Index + Movie show Pages, Genres, Search feature, and Movies Playlist.
 
 ## Table of Contents
